@@ -37,5 +37,5 @@ export const ErrorText = styled.div`
   font-weight: 500;
   font-size: 0.8rem;
   color: #c90707;
-  padding: 0.5rem 0 0 0; /* Ajuste o padding para um melhor alinhamento */
+  padding: 0.5rem 0 0 0;
 `;

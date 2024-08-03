@@ -8,7 +8,6 @@ export default function FormInput(props) {
         <Input
           name={props.name ?? "input"}
           type={props.type ?? "type"}
-          value={props.value ?? "value"}
           placeholder={props.placeholder ?? "placeholder"}
           onChange={props.onChange}
           style={

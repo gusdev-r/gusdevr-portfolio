@@ -8,5 +8,11 @@ export const Button = styled.button`
   border: none;
   background-color: ${(props) => props.color || "black"};
   color: white;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease, box-shadow 0.3s ease;
+  padding: 2px;
+  margin: 5px;
+
+  &:hover {
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
+  }
 `;

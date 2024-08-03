@@ -13,18 +13,18 @@ export const Label = styled.label`
   padding-left: 3px;
   padding-bottom: 2px;
   margin: 0rem 0rem 0.6rem 0.3rem;
-  font-size: 1.23rem;
+  font-size: 15px;
 `;
 
 export const Input = styled.input`
   height: 2.4rem;
   width: 19rem;
-  border-radius: 14px;
+  border-radius: 10px;
   border: 0.01rem solid hsl(0, 0%, 70%);
-  font-size: 1rem;
+  font-size: 15px;
   padding-left: 1rem;
   color: hsl(0, 0%, 70%);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.065);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.015);
   &:focus {
     outline: none;
     border-color: hsl(0, 0%, 50%);

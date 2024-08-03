@@ -1,11 +1,22 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+  }
+`;
 
 export const Container = styled.div`
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    to right,
+    rgb(34, 34, 34),
+    rgba(249, 249, 249, 0.476) 160%
+  );
+  font-family: Arial;
 `;
 
 export const ModalBox = styled.div`
@@ -14,9 +25,9 @@ export const ModalBox = styled.div`
   border-radius: 14px;
   background-color: rgb(18, 96, 23);
   background: linear-gradient(
-    to top,
-    rgb(63, 63, 63),
-    rgba(192, 192, 192, 1) 100%
+    to right,
+    rgb(34, 34, 34),
+    rgba(249, 249, 249, 0.476) 160%
   );
   display: flex;
   box-shadow: 0px 0px 15px 8px rgba(44, 44, 44, 0.086);
@@ -51,8 +62,8 @@ export const FormBox = styled.div`
 `;
 
 export const SubTitle = styled.text`
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 500;
   margin-top: 8px;
-  margin-bottom: 3.1rem;
+  margin-bottom: 1.8rem;
 `;

@@ -1,4 +1,12 @@
-import { Container, FormBox, Logo, LogoBox, ModalBox, SubTitle } from "./style";
+import {
+  GlobalStyle,
+  Container,
+  FormBox,
+  Logo,
+  LogoBox,
+  ModalBox,
+  SubTitle,
+} from "./style";
 import UniversalTitle from "../../components/UniversalTitle/title";
 import UniversalButton from "../../components/UniversalButton/button";
 import FormInput from "../../components/FormInput/formInput";
@@ -7,6 +15,7 @@ import logo from "../../assets/images/snug.png";
 export default function Singup(props) {
   return (
     <>
+      <GlobalStyle />
       <Container>
         <ModalBox>
           <LogoBox>
@@ -19,9 +28,9 @@ export default function Singup(props) {
             </UniversalTitle>
             <SubTitle> Faça deste o melhor lugar para o seu bolso! </SubTitle>
             <FormInput
-              name={"Nome"}
+              name={"Usuário"}
               type={"text"}
-              placeholder={"Insira seu nome"}
+              placeholder={"Insira seu usuário"}
             />
             <FormInput
               name={"Email"}

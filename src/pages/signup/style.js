@@ -16,7 +16,6 @@ export const Container = styled.div`
     rgb(34, 34, 34),
     rgba(249, 249, 249, 0.476) 160%
   );
-  font-family: Arial;
 `;
 
 export const ModalBox = styled.div`

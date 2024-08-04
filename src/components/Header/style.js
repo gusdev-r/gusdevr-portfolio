@@ -30,7 +30,7 @@ export const ContainerElements = styled.li`
 export const Element = styled.a`
   text-decoration: none;
   padding: 0.5rem 1rem;
-  color: ${(props) => props.color || "6e6d6d"};
+  color: ${(props) => props.color || "#6e6d6d"};
   cursor: pointer;
   transition: all ease 0.5s;
   font-size: 15px;

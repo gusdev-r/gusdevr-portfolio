@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const HeaderComp = styled.header`
-  height: 9rem;
+  height: 7.3rem;
   width: 100%;
-  position: fixed;
+  position: relative;
   background-color: hsl(0, 0%, 9%);
   display: flex;
   align-items: center;
@@ -117,8 +117,8 @@ export const FormControl = styled.input`
 `;
 
 export const Button = styled.button`
-  height: 2.6rem;
-  width: 5.7rem;
+  height: 2.4rem;
+  width: 5.5rem;
   border-radius: 8px;
   cursor: pointer;
   border: 3px solid white;

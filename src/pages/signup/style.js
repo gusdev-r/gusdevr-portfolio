@@ -3,24 +3,29 @@ import styled, { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
-  }
-`;
-
-export const Container = styled.div`
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(
     to right,
     rgb(34, 34, 34),
     rgba(249, 249, 249, 0.476) 160%
   );
+  }
+`;
+
+export const Container = styled.div`
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 export const ModalBox = styled.div`
-  height: 80vh;
-  width: 70vw;
+  height: 73vh;
+  width: 68vw;
   border-radius: 14px;
   background-color: rgb(18, 96, 23);
   background: linear-gradient(
@@ -30,6 +35,8 @@ export const ModalBox = styled.div`
   );
   display: flex;
   box-shadow: 0px 0px 15px 8px rgba(44, 44, 44, 0.086);
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 `;
 
 export const LogoBox = styled.div`

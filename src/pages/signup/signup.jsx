@@ -11,12 +11,14 @@ import UniversalTitle from "../../components/UniversalTitle/title";
 import UniversalButton from "../../components/UniversalButton/button";
 import FormInput from "../../components/FormInput/formInput";
 import logo from "../../assets/images/snug.png";
+import { Header } from "../../components/Header/header";
 
 export default function Singup(props) {
   return (
     <>
       <GlobalStyle />
       <Container>
+        <Header />
         <ModalBox>
           <LogoBox>
             <Logo src={logo} alt="logo" />

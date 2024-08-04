@@ -1,10 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
-
-export const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-  }
-`;
+import styled from "styled-components";
 
 export const HeaderComp = styled.header`
   height: 9rem;
@@ -14,31 +8,36 @@ export const HeaderComp = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
-  /* box-shadow: 0px 0px 15px 8px rsgba(44, 44, 44, 0.086); */
-
-  .btnClass {
-    background-color: white;
-    border-radius: 14px;
-    color: black;
-    padding: 10px;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-    border: none;
-    cursor: pointer;
-  }
+  top: 0;
+  right: 0;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
 `;
 
-export const ContainerElements = styled.div`
+export const ContainerElements = styled.li`
   display: flex;
   align-items: center;
   gap: 5rem;
   padding: 20px 30px 20px 60px;
-  /* background-color: red; */
+  &.active > a {
+    color: #6c757d;
+  }
+  &.disabled > a {
+    color: #6c757d;
+    pointer-events: none;
+  }
 `;
 
-export const Element = styled.div`
-  color: ${(props) => props.color || "white"};
+export const Element = styled.a`
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: ${(props) => props.color || "6e6d6d"};
+  cursor: pointer;
+  transition: all ease 0.5s;
+  font-size: 15px;
+  &:hover {
+    color: ${(props) => props.bgColorHover || "white"};
+    font-size: 15.5px;
+  }
 `;
 
 export const LogoBox = styled.div`
@@ -47,7 +46,6 @@ export const LogoBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  /* background-color: blue; */
 `;
 
 export const Logo = styled.img`
@@ -59,77 +57,8 @@ export const ContainerButtons = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  align-items: center;
   justify-content: center;
   margin-left: 50px;
-  /* background-color: blue; */
-`;
-
-// export const SingBtns = styled.button`
-//   height: 2.6rem;
-//   width: 6.1rem;
-//   border-radius: 14px;
-//   cursor: pointer;
-//   border: none;
-//   background-color: ${(props) => props.bgColor || "black"};
-//   color: ${(props) => props.color || "white"};
-//   transition: background-color 0.5s ease, box-shadow 0.3s ease;
-//   padding: 2px;
-//   margin: 5px;
-
-//   &:hover {
-//     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
-//   }
-// `;
-
-// ----------------------
-
-export const TestContainer = styled.div`
-  height: 100vh;
-  /* width: 100vw; */
-  background-color: grey;
-`;
-
-export const NavbarCollapse = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-// Container navbar
-export const NavbarNav = styled.ul`
-  display: flex;
-  align-items: center;
-  gap: 5rem;
-  padding: 20px 30px 20px 60px;
-  background-color: black;
-`;
-
-// Elementos da navbar
-export const NavItem = styled.li`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  margin-left: 50px;
-  &.active > a {
-    color: #6c757d;
-  }
-  &.disabled > a {
-    color: #6c757d;
-    pointer-events: none;
-  }
-`;
-
-export const NavLink = styled.a`
-  text-decoration: none;
-  color: #000;
-  padding: 0.5rem 1rem;
-  &:hover {
-    color: #007bff;
-  }
 `;
 
 export const Dropdown = styled.div`
@@ -142,74 +71,77 @@ export const DropdownMenu = styled.div`
   top: 100%;
   left: 0;
   z-index: 1000;
-  display: flex;
   flex-direction: column;
   padding: 0.5rem 0;
-  margin: 0.125rem 0 0;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
+  margin: 0.5rem 0 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #636363;
 
   ${Dropdown}:hover & {
-    display: block;
+    display: flex;
   }
 `;
 
 export const DropdownItem = styled.a`
-  display: block;
-  width: 100%;
-  padding: 0.25rem 1.5rem;
-  clear: both;
-  font-weight: 400;
-  color: #212529;
-  text-align: inherit;
-  white-space: nowrap;
-  background-color: transparent;
-  border: 0;
+  padding: 0.25rem 1rem;
+  color: #000;
   text-decoration: none;
-
+  transition: all 0.4s;
   &:hover {
-    background-color: #f8f9fa;
+    background-color: #303030;
+    color: #fff;
   }
 `;
 
 export const FormInline = styled.form`
-  display: flex;
+  position: relative;
+  display: block;
+  width: 30rem;
   align-items: center;
   margin: 0.5rem 0.5rem;
   padding: 0.5rem 0.5rem;
-  /* background-color: blue; */
 `;
 
 export const FormControl = styled.input`
   display: block;
-  width: 30rem;
-  padding: 0.375rem 0.75rem;
+  width: 100%;
+  padding: 0.375rem 2.5rem 0.375rem 0.75rem;
   font-size: 14px;
   line-height: 1.6;
   color: #495057;
   background-color: #fff;
-  /* background-clip: padding-box; */
-  /* border: 1px solid #ced4da; */
   border: none;
-  outline: 1px solid #ced4da;
+  outline: none;
   border-radius: 6px;
-  /* background-color: blue; */
 `;
 
 export const Button = styled.button`
   height: 2.6rem;
-  width: 6.1rem;
-  border-radius: 14px;
+  width: 5.7rem;
+  border-radius: 8px;
   cursor: pointer;
-  border: none;
-  background-color: ${(props) => props.bgColor || "black"};
+  border: 3px solid white;
+  background-color: transparent;
   color: ${(props) => props.color || "white"};
+
   transition: background-color 0.5s ease, box-shadow 0.3s ease;
   padding: 2px;
   margin-left: 10px;
-
   &:hover {
-    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
+    background-color: ${(props) => props.bgColorHover || "#8e8e8e"};
+    color: ${(props) => props.colorHover || "#8e8e8e"};
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    font-weight: 700;
   }
+`;
+
+export const Icon = styled.img`
+  position: absolute;
+  top: 50%;
+  left: 28.45rem;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
 `;

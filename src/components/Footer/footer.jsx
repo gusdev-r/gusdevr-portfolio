@@ -1,4 +1,4 @@
-import logo from "../../assets/images/snug.png"; // Atualize o caminho conforme necessário
+import logo from "../../assets/images/snug.png";
 import {
   FooterContainer,
   LogoBox,
@@ -8,6 +8,8 @@ import {
   Divider,
   PolicyLinks,
   PolicyLink,
+  DevelopedByContainer,
+  DeveloperLink,
   Copyright,
   GlobalStyle,
   LinksContainer,
@@ -23,6 +25,21 @@ const Footer = () => {
           <Logo src={logo} alt="Logo" />
         </LogoBox>
 
+        <DevelopedByContainer>
+          <DeveloperLink
+            href="https://www.instagram.com/vincenzicode/"
+            target="_blank"
+          >
+            Developed by @vincenzicode
+          </DeveloperLink>
+          <DeveloperLink
+            href="https://www.instagram.com/gusdev_r/2"
+            target="_blank"
+          >
+            Developed by @gusdev_r
+          </DeveloperLink>
+        </DevelopedByContainer>
+
         <LinksContainer>
           <MainLinks>
             <MainLink href="#">Link One</MainLink>
@@ -37,7 +54,7 @@ const Footer = () => {
             <PolicyLink href="#">Terms of Service</PolicyLink>
             <PolicyLink href="#">Cookie Settings</PolicyLink>
           </PolicyLinks>
-          <Copyright>&copy; 2024 Your Company. All rights reserved.</Copyright>
+          <Copyright>&copy; 2024 Snug. All rights reserved.</Copyright>
         </LinksContainer>
       </FooterContainer>
     </>

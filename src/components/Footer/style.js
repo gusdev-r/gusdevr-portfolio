@@ -28,7 +28,6 @@ export const LogoBox = styled.div`
 export const Logo = styled.img`
   height: 100%;
   max-width: 19rem;
-  /* background-color: red; */
 `;
 
 export const LinksContainer = styled.div`
@@ -36,7 +35,6 @@ export const LinksContainer = styled.div`
   flex-direction: column;
   width: 60%;
   align-items: center;
-  /* background-color: yellow; */
 `;
 
 export const MainLinks = styled.div`
@@ -47,14 +45,16 @@ export const MainLinks = styled.div`
 `;
 
 export const MainLink = styled.a`
-  color: white;
+  color: gray;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   padding: 4px;
+  transition: color 0.3s ease;
+
   &:hover {
+    color: white;
     text-decoration: underline;
   }
-  /* background-color: blue; */
 `;
 
 export const Divider = styled.div`
@@ -69,7 +69,6 @@ export const PolicyLinks = styled.div`
   justify-content: center;
   gap: 70px;
   margin-bottom: 20px;
-  /* background-color: gray; */
   padding: 2px;
 `;
 
@@ -77,9 +76,30 @@ export const PolicyLink = styled.a`
   color: white;
   text-decoration: none;
   font-size: 12px;
-  /* background-color: purple; */
   padding: 2px;
+  transition: color 0.3s ease;
+
   &:hover {
+    color: gray;
+    text-decoration: underline;
+  }
+`;
+
+export const DevelopedByContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-top: 10px;
+`;
+
+export const DeveloperLink = styled.a`
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: gray;
     text-decoration: underline;
   }
 `;
@@ -88,7 +108,6 @@ export const Copyright = styled.div`
   font-size: 12px;
   color: white;
   text-align: center;
-  /* background-color: gray; */
   margin-top: 20px;
   width: 100%;
 `;

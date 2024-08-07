@@ -1,18 +1,11 @@
-import styled, { createGlobalStyle } from "styled-components";
-
-export const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-  }
-`;
+import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
-  height: 7.8rem;
   width: 100%;
   background-color: hsl(0, 0%, 9%);
   display: flex;
   align-items: center;
+  position: relative;
   justify-content: space-between;
   padding: 20px 0;
 `;
@@ -47,7 +40,7 @@ export const MainLinks = styled.div`
 export const MainLink = styled.a`
   color: gray;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 13px;
   padding: 4px;
   transition: color 0.3s ease;
 
@@ -75,7 +68,7 @@ export const PolicyLinks = styled.div`
 export const PolicyLink = styled.a`
   color: white;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 11px;
   padding: 2px;
   transition: color 0.3s ease;
 
@@ -105,7 +98,7 @@ export const DeveloperLink = styled.a`
 `;
 
 export const Copyright = styled.div`
-  font-size: 12px;
+  font-size: 9px;
   color: white;
   text-align: center;
   margin-top: 20px;

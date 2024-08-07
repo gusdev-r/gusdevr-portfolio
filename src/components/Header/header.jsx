@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import icon_search from "../../assets/images/search-icon.png";
 import logo from "../../assets/images/snug.png";
 import {
@@ -22,7 +22,8 @@ export const Header = () => {
 
   const handleSearch = () => {
     // logic to work with the search state if this is used by you
-    console.log(searchContent);
+    // eslint-disable-next-line no-unused-expressions
+    searchContent;
   };
 
   const handleChange = (event) => {
@@ -35,8 +36,36 @@ export const Header = () => {
     }
   };
 
+  const [showHeader, setShowHeader] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleControllHeader = () => {
+      const scrollPosition =
+        window.scrollY || document.documentElement.scrollTop;
+      const scrollDifference = scrollPosition - prevScrollPos;
+      if (scrollDifference > 0 && scrollPosition > 5.5 * 16) {
+        setShowHeader(false);
+      } else {
+        setShowHeader(true);
+      }
+
+      setPrevScrollPos(scrollPosition);
+    };
+
+    window.addEventListener("scroll", handleControllHeader);
+
+    return () => {
+      window.removeEventListener("scroll", handleControllHeader);
+    };
+  }, [prevScrollPos]);
+
   return (
-    <HeaderComp>
+    <HeaderComp
+      style={{
+        transform: showHeader ? "translateY(0)" : "translateY(-60%)",
+      }}
+    >
       <LogoBox>
         <Logo src={logo} alt="logo" />
       </LogoBox>
@@ -49,16 +78,16 @@ export const Header = () => {
             onChange={handleChange}
             onKeyDown={handleKeyDown}
           />
-          <Icon onClick={handleSearch} src={icon_search} alt="search-icon" />
+          {/* <Icon onClick={handleSearch} src={icon_search} alt="search-icon" /> */}
         </FormInline>
         <Element>Link 1</Element>
         <Element>Link 2</Element>
         <Dropdown>
           <Element role="button">Options</Element>
           <DropdownMenu>
-            <DropdownItem href="#">Action 1</DropdownItem>
-            <DropdownItem href="#">Action 2</DropdownItem>
-            <DropdownItem href="#">Action 3</DropdownItem>
+            <DropdownItem href="#">Ação 1</DropdownItem>
+            <DropdownItem href="#">Ação 2</DropdownItem>
+            <DropdownItem href="#">Ação 3</DropdownItem>
           </DropdownMenu>
         </Dropdown>
         <ContainerButtons>

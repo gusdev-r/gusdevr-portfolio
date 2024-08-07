@@ -10,18 +10,16 @@ export const FormInputContainer = styled.div`
 
 export const Label = styled.label`
   font-weight: 500;
-  padding-left: 3px;
-  padding-bottom: 2px;
-  margin: 0rem 0rem 0.6rem 0.3rem;
-  font-size: 15px;
+  margin: 0px 0px 2px 0px;
+  font-size: 16px;
 `;
 
 export const Input = styled.input`
-  height: 2.4rem;
-  width: 19rem;
-  border-radius: 10px;
+  height: 2.8rem;
+  width: 22rem;
+  border-radius: 13px;
   border: 0.01rem solid hsl(0, 0%, 70%);
-  font-size: 15px;
+  font-size: 14px;
   padding-left: 1rem;
   color: hsl(0, 0%, 70%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.015);

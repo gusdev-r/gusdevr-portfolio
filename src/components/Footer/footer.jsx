@@ -1,25 +1,22 @@
 import logo from "../../assets/images/snug.png";
 import {
-  FooterContainer,
-  LogoBox,
-  Logo,
-  MainLinks,
-  MainLink,
-  Divider,
-  PolicyLinks,
-  PolicyLink,
+  Copyright,
   DevelopedByContainer,
   DeveloperLink,
-  Copyright,
-  GlobalStyle,
+  Divider,
+  FooterContainer,
   LinksContainer,
+  Logo,
+  LogoBox,
+  MainLink,
+  MainLinks,
+  PolicyLink,
+  PolicyLinks,
 } from "./style";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <>
-      <GlobalStyle />
-
       <FooterContainer>
         <LogoBox>
           <Logo src={logo} alt="Logo" />
@@ -60,5 +57,3 @@ const Footer = () => {
     </>
   );
 };
-
-export default Footer;

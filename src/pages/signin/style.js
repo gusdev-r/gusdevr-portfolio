@@ -1,10 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
-
-export const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-  }
-`;
+import styled from "styled-components";
 
 export const Container = styled.div`
   height: 100vh;
@@ -16,13 +10,12 @@ export const Container = styled.div`
     rgb(34, 34, 34),
     rgba(249, 249, 249, 0.476) 160%
   );
-  font-family: Arial;
 `;
 
 export const ModalBox = styled.div`
   height: 80vh;
   width: 70vw;
-  border-radius: 14px;
+  border-radius: 13px;
   background-color: rgb(18, 96, 23);
   background: linear-gradient(
     to right,

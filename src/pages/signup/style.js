@@ -1,31 +1,21 @@
-import styled, { createGlobalStyle } from "styled-components";
-
-export const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background: linear-gradient(
-    to right,
-    rgb(34, 34, 34),
-    rgba(249, 249, 249, 0.476) 160%
-  );
-  }
-`;
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: linear-gradient(
+    to right,
+    rgb(34, 34, 34),
+    rgba(249, 249, 249, 0.476) 160%
+  );
 `;
 
 export const ModalBox = styled.div`
   height: 73vh;
   width: 68vw;
-  border-radius: 14px;
+  border-radius: 13px;
   background-color: rgb(18, 96, 23);
   background: linear-gradient(
     to right,
@@ -34,8 +24,8 @@ export const ModalBox = styled.div`
   );
   display: flex;
   box-shadow: 0px 0px 15px 8px rgba(44, 44, 44, 0.086);
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
 `;
 
 export const LogoBox = styled.div`
@@ -60,8 +50,8 @@ export const FormBox = styled.div`
   justify-content: center;
   flex-direction: column;
 
-  border-top-right-radius: 14px;
-  border-bottom-right-radius: 14px;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
   box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
   background-color: hsl(0, 0%, 100%);
 `;
@@ -69,6 +59,5 @@ export const FormBox = styled.div`
 export const SubTitle = styled.text`
   font-size: 16px;
   font-weight: 500;
-  margin-top: 8px;
-  margin-bottom: 1.8rem;
+  margin-bottom: 2rem;
 `;

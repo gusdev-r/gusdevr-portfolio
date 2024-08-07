@@ -1,22 +1,21 @@
-import {
-  GlobalStyle,
-  Container,
-  FormBox,
-  Logo,
-  LogoBox,
-  ModalBox,
-  SubTitle,
-} from "./style";
-import UniversalTitle from "../../components/UniversalTitle/title";
-import UniversalButton from "../../components/UniversalButton/button";
-import FormInput from "../../components/FormInput/formInput";
 import logo from "../../assets/images/snug.png";
+import { Footer } from "../../components/Footer/footer";
+import FormInput from "../../components/FormInput/formInput";
 import { Header } from "../../components/Header/header";
+import UniversalButton from "../../components/UniversalButton/button";
+import UniversalTitle from "../../components/UniversalTitle/title";
+import { Container, FormBox, Logo, LogoBox, ModalBox, SubTitle } from "./style";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
+import formValidation from "./validation";
 
-export default function Singup(props) {
+export default function Singup() {
+  // eslint-disable-next-line no-unused-vars
+  const { register, handleSubmit, reset } = useForm({
+    resolver: yupResolver(formValidation),
+  });
   return (
     <>
-      <GlobalStyle />
       <Container>
         <Header />
         <ModalBox>
@@ -42,11 +41,12 @@ export default function Singup(props) {
             <FormInput
               name={"Senha"}
               type={"password"}
-              placeholder={"Insira seu password"}
+              placeholder={"Insira seu senha"}
             />
-            <UniversalButton> Registrar </UniversalButton>
+            <UniversalButton type="submit"> Cadastrar </UniversalButton>
           </FormBox>
         </ModalBox>
+        <Footer />
       </Container>
     </>
   );

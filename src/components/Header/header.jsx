@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import icon_search from "../../assets/images/search-icon.png";
 import logo from "../../assets/images/snug.png";
 import {
   Button,
@@ -12,7 +11,6 @@ import {
   FormControl,
   FormInline,
   HeaderComp,
-  Icon,
   Logo,
   LogoBox,
 } from "./style";
@@ -78,7 +76,6 @@ export const Header = () => {
             onChange={handleChange}
             onKeyDown={handleKeyDown}
           />
-          {/* <Icon onClick={handleSearch} src={icon_search} alt="search-icon" /> */}
         </FormInline>
         <Element>Link 1</Element>
         <Element>Link 2</Element>
@@ -97,7 +94,7 @@ export const Header = () => {
             bgColorHover="#dbdbdb"
             colorHover="#222222"
           >
-            Cadastrar
+            Login
           </Button>
           <Button
             type="button"
@@ -105,7 +102,7 @@ export const Header = () => {
             bgColorHover="#dbdbdb"
             colorHover="#222222"
           >
-            Login
+            Cadastrar
           </Button>
         </ContainerButtons>
       </ContainerElements>

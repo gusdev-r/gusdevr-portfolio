@@ -1,53 +1,82 @@
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
 import logo from "../../assets/images/snug.png";
 import { Footer } from "../../components/Footer/footer";
 import FormInput from "../../components/FormInput/formInput";
 import { Header } from "../../components/Header/header";
-import UniversalButton from "../../components/UniversalButton/button";
 import UniversalTitle from "../../components/UniversalTitle/title";
-import { Container, FormBox, Logo, LogoBox, ModalBox, SubTitle } from "./style";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { useForm } from "react-hook-form";
+import {
+  ButtonSubmit,
+  Container,
+  FormBox,
+  Logo,
+  LogoBox,
+  ModalBox,
+  PageContainer,
+  SubTitle,
+} from "./style";
 import formValidation from "./validation";
 
-export default function Singup() {
-  // eslint-disable-next-line no-unused-vars
-  const { register, handleSubmit, reset } = useForm({
+export default function Signup() {
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm({
     resolver: yupResolver(formValidation),
   });
+
   return (
     <>
-      <Container>
+      <PageContainer>
         <Header />
-        <ModalBox>
-          <LogoBox>
-            <Logo src={logo} alt="logo" />
-          </LogoBox>
-          <FormBox>
-            <UniversalTitle color="hsl(0, 0%, 0%)">
-              {" "}
-              Faça seu cadastro{" "}
-            </UniversalTitle>
-            <SubTitle> Faça deste o melhor lugar para o seu bolso! </SubTitle>
-            <FormInput
-              name={"Usuário"}
-              type={"text"}
-              placeholder={"Insira seu usuário"}
-            />
-            <FormInput
-              name={"Email"}
-              type={"email"}
-              placeholder={"Insira seu email"}
-            />
-            <FormInput
-              name={"Senha"}
-              type={"password"}
-              placeholder={"Insira seu senha"}
-            />
-            <UniversalButton type="submit"> Cadastrar </UniversalButton>
-          </FormBox>
-        </ModalBox>
+        <Container>
+          <ModalBox>
+            <LogoBox>
+              <Logo src={logo} alt="logo" />
+            </LogoBox>
+            <FormBox>
+              <UniversalTitle color="hsl(0, 0%, 0%)">
+                Faça seu cadastro
+              </UniversalTitle>
+              <SubTitle>Faça deste o melhor lugar para o seu bolso!</SubTitle>
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <FormInput
+                  type="text"
+                  label="Usuário"
+                  placeholder="Insira seu usuário"
+                  errors={errors}
+                  register={register}
+                  registerName="username"
+                />
+                <FormInput
+                  type="email"
+                  label="Email"
+                  placeholder="Insira seu email"
+                  errors={errors}
+                  register={register}
+                  registerName="email"
+                />
+                <FormInput
+                  type="password"
+                  label="Senha"
+                  placeholder="Insira sua senha"
+                  errors={errors}
+                  register={register}
+                  registerName="password"
+                />
+                <ButtonSubmit type="submit">Cadastrar</ButtonSubmit>
+              </form>
+            </FormBox>
+          </ModalBox>
+        </Container>
         <Footer />
-      </Container>
+      </PageContainer>
     </>
   );
 }

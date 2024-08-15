@@ -15,6 +15,14 @@ const formValidation = yup.object().shape({
       "Formato de e-mail inválido, verifique os dados."
     )
     .required("O campo E-mail é obrigatório"),
+  password: yup
+    .string()
+    .max(100, "Ultrapassou o limite de caracteres")
+    .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/,
+      "A senha deve ter pelo menos 6 caracteres, incluindo uma letra maiúscula, uma letra minúscula e um número."
+    )
+    .required("O campo Senha é obrigatório"),
 });
 
 export default formValidation;

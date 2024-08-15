@@ -1,17 +1,15 @@
 import styled from "styled-components";
+import breakpoint from "../../styles/breakpoints";
 
 export const HeaderComp = styled.header`
   height: 7.5rem;
   width: 100%;
-  position: relative;
   background-color: hsl(0, 0%, 9%);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  top: 0;
-  right: 0;
-  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
-  transition: all 0.4s;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 `;
 
 export const ContainerElements = styled.li`
@@ -26,18 +24,29 @@ export const ContainerElements = styled.li`
     color: #6c757d;
     pointer-events: none;
   }
+  @media ${breakpoint.bg1} {
+    gap: 2rem;
+    padding: 20px 30px 20px 20px;
+  }
 `;
 
 export const Element = styled.a`
+  text-align: center;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   color: ${(props) => props.color || "#6e6d6d"};
   cursor: pointer;
   transition: all ease 0.5s;
   font-size: 15px;
   &:hover {
     color: ${(props) => props.bgColorHover || "white"};
-    font-size: 15.5px;
+  }
+  @media ${breakpoint.bg1} {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+  @media ${breakpoint.sm2} {
+    display: none;
   }
 `;
 
@@ -71,10 +80,10 @@ export const DropdownMenu = styled.div`
   position: absolute;
   top: 80%;
   left: 0;
-  z-index: 1000;
+  /* z-index: 1000; */
   flex-direction: column;
-  padding: 0.5rem 0;
-  margin: 0.5rem 0 0;
+  padding: 8px 0;
+  margin: 8px 0 0;
   border: none;
   border-radius: 13px;
   background-color: #636363;
@@ -82,6 +91,11 @@ export const DropdownMenu = styled.div`
 
   ${Dropdown}:hover & {
     display: flex;
+  }
+  @media ${breakpoint.bg1} {
+    padding: 0.5rem 0;
+    margin: 0.5rem 0 0;
+    font-size: 10px;
   }
 `;
 
@@ -96,6 +110,10 @@ export const DropdownItem = styled.a`
   &:hover {
     background-color: #303030;
     color: #fff;
+  }
+  @media ${breakpoint.bg1} {
+    font-size: 10px;
+    width: 6rem;
   }
 `;
 
@@ -114,6 +132,13 @@ export const Button = styled.button`
     color: ${(props) => props.colorHover || "#8e8e8e"};
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
   }
+  @media ${breakpoint.bg1} {
+    padding: 6px 16px;
+    font-size: 10px;
+  }
+  @media ${breakpoint.sm2} {
+    display: none;
+  }
 `;
 
 export const FormInline = styled.form`
@@ -121,9 +146,14 @@ export const FormInline = styled.form`
   display: block;
   width: 29rem;
   align-items: center;
-  margin: 0.5rem 0.5rem;
-  padding: 0.5rem 0.5rem;
-  /* background-color: red; */
+  margin: 8px 8px;
+  padding: 8px 8px;
+  @media ${breakpoint.bg1} {
+    width: 26rem;
+  }
+  @media ${breakpoint.md1} {
+    display: none;
+  }
 `;
 
 export const FormControl = styled.input`
@@ -136,6 +166,9 @@ export const FormControl = styled.input`
   border: none;
   outline: none;
   border-radius: 13px;
+  @media ${breakpoint.bg1} {
+    font-size: 12px;
+  }
   /* background-color: blue; */
 `;
 

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import breakpoint from "../../styles/breakpoints";
 
 export const FormInputContainer = styled.div`
   display: flex;
@@ -6,12 +7,20 @@ export const FormInputContainer = styled.div`
   margin: 0.6rem 0rem 0.6rem 0rem;
   align-items: start;
   transition: 0.3s;
+  max-width: 22rem;
 `;
 
 export const Label = styled.label`
   font-weight: 500;
   margin: 0px 0px 2px 0px;
   font-size: 16px;
+  @media ${breakpoint.sm1} {
+    font-size: 12px;
+  }
+  @media ${breakpoint.sm2} {
+    font-size: 9px;
+    width: 8px;
+  }
 `;
 
 export const Input = styled.input`
@@ -29,11 +38,26 @@ export const Input = styled.input`
     color: hsl(0, 0%, 50%);
     transition: color 0.5s, border-color 0.5s;
   }
+  @media ${breakpoint.sm1} {
+    height: 2.4rem;
+    width: 20rem;
+  }
+  @media ${breakpoint.sm2} {
+    font-size: 9px;
+    height: 2rem;
+    width: 13rem;
+  }
 `;
 
 export const ErrorText = styled.div`
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 12px;
   color: #c90707;
   padding: 0.5rem 0 0 0;
+  @media ${breakpoint.sm1} {
+    font-size: 9px;
+  }
+  @media ${breakpoint.sm2} {
+    font-size: 5px;
+  }
 `;

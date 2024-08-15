@@ -1,25 +1,27 @@
+import React from "react";
 import { FormInputContainer, Label, Input, ErrorText } from "./style";
 
-export default function FormInput(props) {
+export default function FormInput({
+  type,
+  label,
+  placeholder,
+  errors,
+  register,
+  registerName,
+  ref,
+}) {
   return (
-    <>
-      <FormInputContainer>
-        <Label>{props.name ?? "input"}</Label>
-        <Input
-          name={props.name ?? "input"}
-          type={props.type ?? "type"}
-          placeholder={props.placeholder ?? "placeholder"}
-          onChange={props.onChange}
-          style={
-            props.error
-              ? {
-                  borderColor: "#C90707",
-                }
-              : {}
-          }
-        />
-        <ErrorText>{props.error ?? ""}</ErrorText>
-      </FormInputContainer>
-    </>
+    <FormInputContainer>
+      <Label>{label}</Label>
+      <Input
+        type={type}
+        placeholder={placeholder}
+        {...register(registerName)}
+        red={ref}
+      />
+      {errors[registerName] && (
+        <ErrorText>{errors[registerName].message}</ErrorText>
+      )}{" "}
+    </FormInputContainer>
   );
 }

@@ -29,6 +29,9 @@ export const Logo = styled.img`
   @media ${breakpoint.bg1} {
     max-width: 12rem;
   }
+  @media ${breakpoint.sm1} {
+    max-width: 9rem;
+  }
 `;
 
 export const LinksContainer = styled.div`
@@ -65,6 +68,10 @@ export const MainLink = styled.a`
   }
   @media ${breakpoint.bg1} {
     font-size: 11px;
+    padding: 2px;
+  }
+  @media ${breakpoint.sm1} {
+    font-size: 10px;
     padding: 2px;
   }
 `;

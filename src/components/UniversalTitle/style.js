@@ -16,4 +16,8 @@ export const Title = styled.h1`
     font-size: 1.5rem;
     margin: 2px 0;
   }
+  @media ${breakpoint.sm1} {
+    font-size: 1.3rem;
+    margin: 1px;
+  }
 `;

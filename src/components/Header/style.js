@@ -10,6 +10,9 @@ export const HeaderComp = styled.header`
   justify-content: space-between;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   z-index: 1000;
+  @media ${breakpoint.sm1} {
+    height: 6.5rem;
+  }
 `;
 
 export const ContainerElements = styled.li`

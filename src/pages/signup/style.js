@@ -24,7 +24,6 @@ export const ModalBox = styled.div`
   height: 40rem;
   width: 70rem;
   border-radius: 13px;
-  background-color: rgb(18, 96, 23);
   background: linear-gradient(
     to right,
     rgb(34, 34, 34),
@@ -42,6 +41,13 @@ export const ModalBox = styled.div`
   @media ${breakpoint.sm2} {
     width: 35rem;
   }
+  @media ${breakpoint.sm1} {
+    background: none;
+    height: 31rem;
+    width: 17rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 export const FormBox = styled.div`
@@ -55,6 +61,11 @@ export const FormBox = styled.div`
   border-bottom-right-radius: 13px;
   box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
   background-color: hsl(0, 0%, 100%);
+  @media ${breakpoint.sm1} {
+    box-shadow: none;
+    padding: 2rem;
+    border-radius: 13px;
+  }
 `;
 
 export const LogoBox = styled.div`
@@ -75,6 +86,9 @@ export const Logo = styled.img`
   @media ${breakpoint.sm2} {
     max-width: 11rem;
   }
+  @media ${breakpoint.sm1} {
+    display: none;
+  }
 `;
 
 export const SubTitle = styled.text`
@@ -86,6 +100,9 @@ export const SubTitle = styled.text`
   }
   @media ${breakpoint.sm2} {
     font-size: 10px;
+  }
+  @media ${breakpoint.sm1} {
+    font-size: 9px;
   }
 `;
 

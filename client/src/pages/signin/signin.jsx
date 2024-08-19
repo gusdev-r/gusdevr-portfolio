@@ -1,56 +1,75 @@
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
+import logo from "../../assets/images/snug.png";
+import { Footer } from "../../components/Footer/footer";
+import FormInput from "../../components/FormInput/formInput";
+import { Header } from "../../components/Header/header";
+import UniversalTitle from "../../components/UniversalTitle/title";
 import {
-  GlobalStyle,
+  ButtonSubmit,
   Container,
   FormBox,
   Logo,
   LogoBox,
   ModalBox,
+  PageContainer,
   SubTitle,
-  ForgotPasswordContainer,
-  ForgotPasswordLink,
 } from "./style";
-import UniversalTitle from "../../components/UniversalTitle/title";
-import UniversalButton from "../../components/UniversalButton/button";
-import FormInput from "../../components/FormInput/formInput";
-import logo from "../../assets/images/snug.png";
+import formValidation from "./validation";
 
-export default function Singin(props) {
+export default function SignIn() {
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm({
+    resolver: yupResolver(formValidation),
+  });
+
   return (
     <>
-      <GlobalStyle />
-      <Container>
-        <ModalBox>
-          <LogoBox>
-            <Logo src={logo} alt="logo" />
-          </LogoBox>
-          <FormBox>
-            <UniversalTitle color="hsl(0, 0%, 0%)">
-              {" "}
-              Faça seu login{" "}
-            </UniversalTitle>
-            <SubTitle>
-              {" "}
-              Bem-vindo de volta! Faça login para continuar.{" "}
-            </SubTitle>
-            <FormInput
-              name={"Usuário ou Email"}
-              type={"text"}
-              placeholder={"Insira seu usuário ou email"}
-            />
-            <FormInput
-              name={"Senha"}
-              type={"password"}
-              placeholder={"Insira seu password"}
-            />
-            <ForgotPasswordContainer>
-              <ForgotPasswordLink href="/forgot-password">
-                Esqueci minha senha
-              </ForgotPasswordLink>
-            </ForgotPasswordContainer>
-            <UniversalButton> Entrar </UniversalButton>
-          </FormBox>
-        </ModalBox>
-      </Container>
+      <PageContainer>
+        <Header />
+        <Container>
+          <ModalBox>
+            <LogoBox>
+              <Logo src={logo} alt="logo" />
+            </LogoBox>
+            <FormBox>
+              <UniversalTitle color="hsl(0, 0%, 0%)">
+                Faça seu login
+              </UniversalTitle>
+              <SubTitle>Entre na sua conta e aproveite o melhor para o seu bolso!</SubTitle>
+              
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <FormInput
+                  type="text"
+                  label="Email/Usuário"
+                  placeholder="Insira seu email ou usuário"
+                  errors={errors}
+                  register={register}
+                  registerName="emailOrUsername"
+                />
+                <FormInput
+                  type="password"
+                  label="Senha"
+                  placeholder="Insira sua senha"
+                  errors={errors}
+                  register={register}
+                  registerName="password"
+                />
+                <ButtonSubmit type="submit">Entrar</ButtonSubmit>
+              </form>
+            </FormBox>
+          </ModalBox>
+        </Container>
+        <Footer />
+      </PageContainer>
     </>
   );
 }

@@ -1,5 +1,5 @@
-import React from "react";
-import { FormInputContainer, Label, Input, ErrorText } from "./style";
+import React from 'react'
+import { FormInputContainer, Label, Input, ErrorText } from './style'
 
 export default function FormInput({
   type,
@@ -21,7 +21,7 @@ export default function FormInput({
       />
       {errors[registerName] && (
         <ErrorText>{errors[registerName].message}</ErrorText>
-      )}{" "}
+      )}{' '}
     </FormInputContainer>
-  );
+  )
 }

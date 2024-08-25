@@ -1,10 +1,10 @@
-import { yupResolver } from "@hookform/resolvers/yup";
-import { useForm } from "react-hook-form";
-import logo from "../../assets/images/snug.png";
-import { Footer } from "../../components/Footer/footer";
-import FormInput from "../../components/FormInput/formInput";
-import { Header } from "../../components/Header/header";
-import UniversalTitle from "../../components/UniversalTitle/title";
+import { yupResolver } from '@hookform/resolvers/yup'
+import { useForm } from 'react-hook-form'
+import logo from '../../assets/images/snug.png'
+import { Footer } from '../../components/Footer/footer'
+import FormInput from '../../components/FormInput/formInput'
+import { Header } from '../../components/Header/header'
+import UniversalTitle from '../../components/UniversalTitle/title'
 import {
   ButtonSubmit,
   Container,
@@ -14,13 +14,15 @@ import {
   ModalBox,
   PageContainer,
   SubTitle,
-} from "./style";
-import formValidation from "./validation";
+  AlternativeJoin,
+  JoinLink,
+  GoogleLogin,
+} from './style'
+import formValidation from './validation'
+import { useState } from 'react'
 
 export default function Signup() {
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+  const [isLoading, setIsLoading] = useState(false)
 
   const {
     register,
@@ -29,7 +31,11 @@ export default function Signup() {
     reset,
   } = useForm({
     resolver: yupResolver(formValidation),
-  });
+  })
+
+  const onSubmit = (data) => {
+    console.log(data)
+  }
 
   return (
     <>
@@ -41,9 +47,7 @@ export default function Signup() {
               <Logo src={logo} alt="logo" />
             </LogoBox>
             <FormBox>
-              <UniversalTitle color="hsl(0, 0%, 0%)">
-                Faça seu cadastro
-              </UniversalTitle>
+              <UniversalTitle color="#FFFFFF">Faça seu cadastro</UniversalTitle>
               <SubTitle>Faça deste o melhor lugar para o seu bolso!</SubTitle>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <FormInput
@@ -71,6 +75,11 @@ export default function Signup() {
                   registerName="password"
                 />
                 <ButtonSubmit type="submit">Cadastrar</ButtonSubmit>
+                <GoogleLogin> Entrar com Google </GoogleLogin>
+                <AlternativeJoin>
+                  {' '}
+                  Já possui um cadastro? <JoinLink href=""> Entrar</JoinLink>
+                </AlternativeJoin>
               </form>
             </FormBox>
           </ModalBox>
@@ -78,5 +87,5 @@ export default function Signup() {
         <Footer />
       </PageContainer>
     </>
-  );
+  )
 }

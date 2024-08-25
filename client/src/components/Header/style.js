@@ -150,3 +150,82 @@ export const Button = styled.a`
     display: none;
   }
 `
+export const BtnMenu = styled.button`
+  display: none;
+
+  @media ${breakpoint.sm2} {
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    svg {
+      transition: color 0.3s ease;
+      color: var(--gray2);
+      font-size: 22px;
+    }
+
+    &:hover svg {
+      color: var(--whiteDefault);
+    }
+  }
+`
+
+export const HeaderMenu = styled.div`
+  display: none;
+  @media ${breakpoint.sm2} {
+    transition: all ease-in-out 0.5s;
+    background: linear-gradient(to right, rgb(16, 16, 16), rgb(0, 0, 0) 160%);
+    height: 100vh;
+    width: 20rem;
+    padding: 1rem;
+    gap: 3rem;
+    z-index: 10000;
+    right: 0;
+    border-left: 2px solid var(--gray3);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+  }
+`
+export const MenuContainer = styled.section`
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: column;
+  /* background-color: red; */
+`
+
+export const ElementMenu = styled.a`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px 16px;
+  color: var(--gray0);
+  cursor: pointer;
+  transition: all ease 0.5s;
+  font-size: 14px;
+  margin-right: 20px;
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--whiteDefault);
+  }
+
+  svg {
+    transition: color 0.3s ease;
+    color: var(--gray2);
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  &:hover svg {
+    color: var(--whiteDefault);
+  }
+`

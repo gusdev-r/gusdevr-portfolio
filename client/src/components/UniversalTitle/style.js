@@ -1,11 +1,11 @@
-import styled from "styled-components";
-import breakpoint from "../../styles/breakpoints";
+import styled from 'styled-components'
+import breakpoint from '../../styles/breakpoints'
 
 export const Title = styled.h1`
   font-size: 2.2rem;
-  color: ${(props) => props.color || "black"};
-  margin: 10px 0;
-  font-weight: 700;
+  color: ${(props) => props.color || '#FFFFFF'};
+  margin: 1.5px 0;
+  font-weight: 600;
   text-align: center;
   transition: color 0.5s ease;
   @media ${breakpoint.md1} {
@@ -18,6 +18,6 @@ export const Title = styled.h1`
   }
   @media ${breakpoint.sm1} {
     font-size: 1.3rem;
-    margin: 1px;
+    margin: 0.5px;
   }
-`;
+`

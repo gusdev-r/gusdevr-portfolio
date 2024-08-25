@@ -25,7 +25,7 @@ export const ModalBox = styled.div`
   box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.196);
   margin-top: 5.5rem;
   margin-bottom: 5.5rem;
-  border: 2px solid var(--gray3);
+  border: 1px solid var(--gray3);
 
   @media ${breakpoint.md1} {
     height: 38rem;
@@ -163,7 +163,7 @@ export const ButtonSubmit = styled.button`
 `
 export const GoogleLogin = styled.button`
   width: 100%;
-  border: 2px solid var(--gray3);
+  border: 1.5px solid var(--gray3);
   color: var(--whiteDefault);
   font-weight: 700;
   border-radius: 8px;

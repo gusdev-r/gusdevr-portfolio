@@ -36,6 +36,7 @@ export const ModalBox = styled.div`
     width: 40rem;
     margin-top: 6rem;
     margin-bottom: 6rem;
+    border-radius: 28px;
   }
   @media ${breakpoint.sm1} {
     background: none;
@@ -43,7 +44,6 @@ export const ModalBox = styled.div`
     width: 17rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    border-radius: 22px;
   }
 `
 

@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import logo from "../../assets/images/snug.png";
+import { useEffect, useState } from 'react'
+import logo from '../../assets/images/snug.png'
 import {
   Button,
   ContainerButtons,
@@ -13,70 +13,62 @@ import {
   HeaderComp,
   Logo,
   LogoBox,
-} from "./style";
+} from './style'
+import { FiLogIn } from 'react-icons/fi'
 
 export const Header = () => {
-  const [searchContent, setSearchContent] = useState("");
+  const [searchContent, setSearchContent] = useState('')
 
   const handleSearch = () => {
     // logic to work with the search state if this is used by you
     // eslint-disable-next-line no-unused-expressions
-    searchContent;
-  };
+    searchContent
+  }
 
   const handleChange = (event) => {
-    setSearchContent(event.target.value);
-  };
+    setSearchContent(event.target.value)
+  }
 
   const handleKeyDown = (event) => {
-    if (event.key === "Enter") {
-      handleSearch();
+    if (event.key === 'Enter') {
+      handleSearch()
     }
-  };
+  }
 
-  const [showHeader, setShowHeader] = useState(true);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [showHeader, setShowHeader] = useState(true)
+  const [prevScrollPos, setPrevScrollPos] = useState(0)
 
   useEffect(() => {
     const handleControllHeader = () => {
       const scrollPosition =
-        window.scrollY || document.documentElement.scrollTop;
-      const scrollDifference = scrollPosition - prevScrollPos;
+        window.scrollY || document.documentElement.scrollTop
+      const scrollDifference = scrollPosition - prevScrollPos
       if (scrollDifference > 0 && scrollPosition > 5.5 * 16) {
-        setShowHeader(false);
+        setShowHeader(false)
       } else {
-        setShowHeader(true);
+        setShowHeader(true)
       }
 
-      setPrevScrollPos(scrollPosition);
-    };
+      setPrevScrollPos(scrollPosition)
+    }
 
-    window.addEventListener("scroll", handleControllHeader);
+    window.addEventListener('scroll', handleControllHeader)
 
     return () => {
-      window.removeEventListener("scroll", handleControllHeader);
-    };
-  }, [prevScrollPos]);
+      window.removeEventListener('scroll', handleControllHeader)
+    }
+  }, [prevScrollPos])
 
   return (
     <HeaderComp
       style={{
-        transform: showHeader ? "translateY(0)" : "translateY(-60%)",
+        transform: showHeader ? 'translateY(0)' : 'translateY(-60%)',
       }}
     >
       <LogoBox>
         <Logo src={logo} alt="logo" />
       </LogoBox>
       <ContainerElements>
-        <FormInline>
-          <FormControl
-            type="search"
-            placeholder="Buscar"
-            aria-label="Search"
-            onChange={handleChange}
-            onKeyDown={handleKeyDown}
-          />
-        </FormInline>
         <Element>Link 1</Element>
         <Element>Link 2</Element>
         <Dropdown>
@@ -88,24 +80,12 @@ export const Header = () => {
           </DropdownMenu>
         </Dropdown>
         <ContainerButtons>
-          <Button
-            type="button"
-            onClick={() => {}}
-            bgColorHover="#dbdbdb"
-            colorHover="#222222"
-          >
+          <Button onClick={() => {}} bgColorHover="#dbdbdb">
+            <FiLogIn style={{ marginLeft: '8px' }} />
             Login
-          </Button>
-          <Button
-            type="button"
-            onClick={() => {}}
-            bgColorHover="#dbdbdb"
-            colorHover="#222222"
-          >
-            Cadastrar
           </Button>
         </ContainerButtons>
       </ContainerElements>
     </HeaderComp>
-  );
-};
+  )
+}

@@ -3,11 +3,11 @@ import breakpoint from '../../styles/breakpoints'
 
 export const Title = styled.h1`
   font-size: 2.2rem;
-  color: ${(props) => props.color || '#FFFFFF'};
+  color: ${(props) => props.color || 'var(--whiteDefault)'};
   margin: 1.5px 0;
   font-weight: 600;
   text-align: center;
-  transition: color 0.5s ease;
+  transition: var(--transition-color-slow);
   @media ${breakpoint.md1} {
     font-size: 1.8rem;
     margin: 4px 0;

@@ -11,7 +11,7 @@ export const FormInputContainer = styled.div`
 
 export const Label = styled.label`
   font-size: 14px;
-  color: var(--gray0);
+  color: var(--greyDefault);
   font-weight: 400;
   margin: 5px 0px 5px 0px;
   @media ${breakpoint.md1} {
@@ -27,19 +27,19 @@ export const Input = styled.input`
   width: 22rem;
   height: 2.6rem;
   border-radius: 8px;
-  border: 1.5px solid var(--gray3);
+  border: 1.5px solid var(--grey3);
   background: none;
   background-color: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.015);
   font-size: 13px;
-  color: var(--gray2);
+  color: var(--grey8);
   padding-left: 1rem;
 
   &:focus {
     outline: none;
-    border-color: var(--gray2);
-    color: var(--gray0);
-    transition: color 0.5s, border-color 0.5s;
+    border-color: var(--grey6);
+    color: var(--greyDefault);
+    transition: var(--transition-color-slow), var(--transition-border-slow);
   }
 
   @media ${breakpoint.md1} {
@@ -59,7 +59,7 @@ export const ErrorText = styled.div`
   max-width: 22rem;
   font-weight: 400;
   font-size: 11px;
-  color: #c90707;
+  color: var(--erro);
   padding: 0.5rem 0 0 0;
   @media ${breakpoint.md1} {
     max-width: 20rem;

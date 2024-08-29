@@ -1,148 +1,112 @@
 import styled from 'styled-components'
 import breakpoint from '../../styles/breakpoints'
+import { FaInstagram, FaLinkedin, FaGithub, FaDiscord } from 'react-icons/fa'
 
 export const FooterContainer = styled.footer`
   width: 100%;
-  background-color: #050505;
+  background-color: var(--black1);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px 0;
+  padding: 20px;
   box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5);
   z-index: 1000;
   @media ${breakpoint.sm2} {
-    flex-direction: column;
+    padding: 10px;
   }
 `
 
 export const LogoBox = styled.div`
-  height: 100%;
-  max-width: 14rem;
-  margin-left: 2rem;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-
-  @media ${breakpoint.bg1} {
-    margin-left: 0;
-    margin-right: 1rem;
-  }
+  justify-content: center;
 `
 
 export const Logo = styled.img`
-  height: 100%;
-  max-width: 8rem;
-  @media ${breakpoint.sm1} {
-    max-width: 7rem;
-  }
+  max-width: 150px;
+  height: auto;
 `
 
 export const LinksContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 60%;
   align-items: center;
-  @media ${breakpoint.sm2} {
-    flex-direction: column;
-    margin-top: 40px;
-  }
+  width: 100%;
 `
 
-export const MainLinks = styled.div`
+export const MainContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 4rem;
-  padding: 4px;
-  @media ${breakpoint.bg1} {
-    gap: 2rem;
+  gap: 20px;
+  margin-bottom: 20px;
+  @media ${breakpoint.sm2} {
+    gap: 10px;
   }
 `
 
 export const MainLink = styled.a`
-  color: gray;
+  color: var(--greyDefault);
   text-decoration: none;
-  font-size: 13px;
+  font-size: 14px;
   padding: 4px;
-  transition: color 0.3s ease;
+  transition: var(--transition-color-slow);
+
   &:hover {
-    color: white;
+    color: var(--whiteDefault);
     text-decoration: underline;
-  }
-  @media ${breakpoint.bg1} {
-    font-size: 11px;
-    padding: 2px;
   }
   @media ${breakpoint.sm1} {
-    font-size: 10px;
-    padding: 2px;
+    font-size: 12px;
   }
 `
 
-export const Divider = styled.div`
-  width: 70%;
-  height: 2px;
-  margin: 10px;
-  background-color: #fff;
-`
-
-export const PolicyLinks = styled.div`
+export const SocialIcons = styled.div`
   display: flex;
-  justify-content: center;
-  gap: 70px;
-  margin-bottom: 20px;
-  padding: 2px;
-`
-
-export const PolicyLink = styled.a`
-  color: white;
-  text-decoration: none;
-  font-size: 11px;
-  padding: 2px;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: gray;
-    text-decoration: underline;
-  }
-  @media ${breakpoint.bg1} {
-    font-size: 9px;
-    padding: 1px;
-  }
-`
-
-export const DevelopedByContainer = styled.div`
-  display: flex;
-  justify-content: flex-start;
   gap: 20px;
-  margin-top: 10px;
-  @media ${breakpoint.bg1} {
-    text-align: center;
-    gap: 10px;
-  }
-  @media ${breakpoint.sm2} {
-    flex-direction: column;
-  }
+  margin-bottom: 20px;
 `
 
-export const DeveloperLink = styled.a`
-  color: white;
-  text-decoration: none;
-  font-size: 12px;
-  transition: color 0.3s ease;
+export const SocialIcon = styled.a`
+  color: var(--whiteDefault);
+  font-size: 24px;
+  transition: var(--transition-color-fast);
 
   &:hover {
-    color: gray;
-    text-decoration: underline;
-  }
-  @media ${breakpoint.bg1} {
-    font-size: 10px;
+    color: var(--grey2);
   }
 `
+
+// export const PolicyContainer = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   gap: 30px;
+//   margin-bottom: 20px;
+//   @media ${breakpoint.sm2} {
+//     flex-direction: column;
+//     gap: 15px;
+//   }
+// `
+
+// export const PolicyLink = styled.a`
+//   color: var(--whiteDefault);
+//   text-decoration: none;
+//   font-size: 12px;
+//   transition: var(--transition-color-fast);
+
+//   &:hover {
+//     color: var(--grayDefault);
+//     text-decoration: underline;
+//   }
+//   @media ${breakpoint.sm2} {
+//     font-size: 10px;
+//   }
+// `
 
 export const Copyright = styled.div`
-  font-size: 7px;
-  color: white;
+  font-size: 10px;
+  color: var(--whiteDefault);
   text-align: center;
-  margin-top: 20px;
   width: 100%;
+  margin-top: 20px;
 `
+
+export { FaInstagram, FaLinkedin, FaGithub, FaDiscord }

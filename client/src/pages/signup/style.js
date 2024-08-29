@@ -25,14 +25,14 @@ export const ModalBox = styled.div`
   box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.196);
   margin-top: 5.5rem;
   margin-bottom: 5.5rem;
-  border: 1px solid var(--gray3);
+  border: 1px solid var(--grey2);
 
   @media ${breakpoint.md1} {
     height: 38rem;
     width: 50rem;
   }
   @media ${breakpoint.sm2} {
-    height: 30rem;
+    height: 32rem;
     width: 40rem;
     margin-top: 6rem;
     margin-bottom: 6rem;
@@ -90,7 +90,7 @@ export const SubTitle = styled.text`
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 2rem;
-  color: var(--gray0);
+  color: var(--greyDefault);
   @media ${breakpoint.md1} {
     font-size: 12px;
     margin-bottom: 1rem;
@@ -108,7 +108,7 @@ export const AlternativeJoin = styled.p`
   font-weight: 400;
   margin-bottom: 2rem;
   margin-top: 1rem;
-  color: var(--gray0);
+  color: var(--greyDefault);
 
   @media ${breakpoint.md1} {
     font-size: 10px;
@@ -124,10 +124,10 @@ export const AlternativeJoin = styled.p`
 `
 
 export const JoinLink = styled.a`
-  color: var(--gray0);
+  color: var(--greyDefault);
   text-decoration: none;
   padding: 2px;
-  transition: color 0.3s ease;
+  transition: var(--transition-color-fast);
   text-decoration: underline;
 
   &:hover {
@@ -136,20 +136,41 @@ export const JoinLink = styled.a`
 `
 
 export const ButtonSubmit = styled.button`
-  width: 100%;
-  border-radius: 8px;
-  cursor: pointer;
-  background-color: var(--blackDefault);
-  transition: background-color 0.5s ease, box-shadow 0.3s ease;
-  color: white;
-  border: none;
-  margin-top: 10px;
   padding: 14px 26px;
+  width: 100%;
+  border: unset;
+  border-radius: 8px;
+  color: var(--whiteDefault);
+  margin-top: 10px;
+  border: none;
+  z-index: 1;
+  background-color: var(--blackDefault);
+  position: relative;
   font-weight: 700;
+  transition: var(--transition-width-fast);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 8px;
+    background-color: var(--grey1);
+    z-index: -1;
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: var(--transition-width-fast);
+  }
 
   &:hover {
-    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
+    color: var(--white1);
   }
+
+  &:hover::before {
+    width: 100%;
+  }
+
   @media ${breakpoint.md1} {
     font-size: 12px;
     margin-top: 6px;
@@ -161,9 +182,10 @@ export const ButtonSubmit = styled.button`
     padding: 10px 18px;
   }
 `
+
 export const GoogleLogin = styled.button`
   width: 100%;
-  border: 1.5px solid var(--gray3);
+  border: 1.5px solid var(--grey1);
   color: var(--whiteDefault);
   font-weight: 700;
   border-radius: 8px;
@@ -174,7 +196,7 @@ export const GoogleLogin = styled.button`
 
   &:hover {
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
-    background-color: var(--gray3);
+    background-color: var(--grey2);
   }
 
   @media ${breakpoint.md1} {

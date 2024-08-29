@@ -1,59 +1,78 @@
-import logo from "../../assets/images/snug.png";
+import React from 'react'
+import logo from '../../assets/images/snug.png'
 import {
-  Copyright,
-  DevelopedByContainer,
-  DeveloperLink,
-  Divider,
   FooterContainer,
-  LinksContainer,
-  Logo,
   LogoBox,
+  Logo,
+  LinksContainer,
+  MainContainer,
   MainLink,
-  MainLinks,
-  PolicyLink,
-  PolicyLinks,
-} from "./style";
+  SocialIcons,
+  SocialIcon,
+  // PolicyContainer,
+  // PolicyLink,
+  Copyright,
+  FaInstagram,
+  FaLinkedin,
+  FaGithub,
+  FaDiscord,
+} from './style'
 
 export const Footer = () => {
   return (
-    <>
-      <FooterContainer>
-        <LogoBox>
-          <Logo src={logo} alt="Logo" />
-        </LogoBox>
+    <FooterContainer>
+      <LogoBox>
+        <Logo src={logo} alt="Logo" />
+      </LogoBox>
 
-        <DevelopedByContainer>
-          <DeveloperLink
-            href="https://www.instagram.com/vincenzicode/"
-            target="_blank"
-          >
-            Developed by @vincenzicode
-          </DeveloperLink>
-          <DeveloperLink
-            href="https://www.instagram.com/gusdev_r/2"
-            target="_blank"
-          >
-            Developed by @gusdev_r
-          </DeveloperLink>
-        </DevelopedByContainer>
+      <LinksContainer>
+        <MainContainer>
+          <MainLink href="#">Home</MainLink>
+          <MainLink href="#">About</MainLink>
+          <MainLink href="#">Services</MainLink>
+          <MainLink href="#">Blog</MainLink>
+          <MainLink href="#">Contact</MainLink>
+        </MainContainer>
 
-        <LinksContainer>
-          <MainLinks>
-            <MainLink href="#">Link One</MainLink>
-            <MainLink href="#">Link Two</MainLink>
-            <MainLink href="#">Link Three</MainLink>
-            <MainLink href="#">Link Four</MainLink>
-            <MainLink href="#">Link Five</MainLink>
-          </MainLinks>
-          <Divider />
-          <PolicyLinks>
-            <PolicyLink href="#">Privacy Policy</PolicyLink>
-            <PolicyLink href="#">Terms of Service</PolicyLink>
-            <PolicyLink href="#">Cookie Settings</PolicyLink>
-          </PolicyLinks>
-          <Copyright>&copy; 2024 Snug. All rights reserved.</Copyright>
-        </LinksContainer>
-      </FooterContainer>
-    </>
-  );
-};
+        <SocialIcons>
+          <SocialIcon
+            href="https://www.instagram.com/gusdev_r/"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <FaInstagram />
+          </SocialIcon>
+          <SocialIcon
+            href="https://www.linkedin.com/in/gusdev-r/"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin />
+          </SocialIcon>
+          <SocialIcon
+            href="https://github.com/gusdev-r"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <FaGithub />
+          </SocialIcon>
+          <SocialIcon
+            href="https://discord.gg/NHAYF9EryF"
+            target="_blank"
+            aria-label="Discord"
+          >
+            <FaDiscord />
+          </SocialIcon>
+        </SocialIcons>
+
+        {/* <PolicyContainer>
+          <PolicyLink href="#">Privacy Policy</PolicyLink>
+          <PolicyLink href="#">Terms of Service</PolicyLink>
+          <PolicyLink href="#">Cookie Settings</PolicyLink>
+        </PolicyContainer> */}
+
+        <Copyright>&copy; 2024 Snug. All rights reserved.</Copyright>
+      </LinksContainer>
+    </FooterContainer>
+  )
+}

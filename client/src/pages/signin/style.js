@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import breakpoint from "../../styles/breakpoints";
+import styled from 'styled-components'
+import breakpoint from '../../styles/breakpoints'
 
 export const PageContainer = styled.div`
   display: flex;
@@ -11,14 +11,14 @@ export const PageContainer = styled.div`
     rgb(34, 34, 34),
     rgba(249, 249, 249, 0.476) 160%
   );
-`;
+`
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
+`
 
 export const ModalBox = styled.div`
   height: 40rem;
@@ -48,7 +48,7 @@ export const ModalBox = styled.div`
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-`;
+`
 
 export const FormBox = styled.div`
   width: 100%;
@@ -66,7 +66,7 @@ export const FormBox = styled.div`
     padding: 2rem;
     border-radius: 13px;
   }
-`;
+`
 
 export const LogoBox = styled.div`
   border-top-left-radius: 2rem;
@@ -76,7 +76,7 @@ export const LogoBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 
 export const Logo = styled.img`
   max-width: 19rem;
@@ -89,7 +89,7 @@ export const Logo = styled.img`
   @media ${breakpoint.sm1} {
     display: none;
   }
-`;
+`
 
 export const SubTitle = styled.text`
   font-size: 16px;
@@ -104,13 +104,13 @@ export const SubTitle = styled.text`
   @media ${breakpoint.sm1} {
     font-size: 9px;
   }
-`;
+`
 
 export const ButtonSubmit = styled.button`
   border-radius: 13px;
   cursor: pointer;
   border: none;
-  background-color: ${(props) => props.color || "black"};
+  background-color: ${(props) => props.color || 'black'};
   color: white;
   transition: background-color 0.5s ease, box-shadow 0.3s ease;
   margin-top: 10px;
@@ -129,4 +129,4 @@ export const ButtonSubmit = styled.button`
     margin-top: 6px;
     padding: 12px 22px;
   }
-`;
+`

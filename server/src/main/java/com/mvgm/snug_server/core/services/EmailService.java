@@ -27,4 +27,5 @@ public class EmailService implements EmailSenderRepository {
         } catch (MessagingException e) {
             throw new RuntimeException(e);
         }
+    }
 }

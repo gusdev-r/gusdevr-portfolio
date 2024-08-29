@@ -51,10 +51,15 @@ public class RegisterService {
         userValidation.validateEmail(userDto.getEmail());
         userValidation.validatePassword(userDto.getPassword());
 
-        User user = User.builder().build();
+        User userToRegister = User.builder().build();
 
         String token = generateTokenFromUser(userToRegister);
-        String link = Constants.TOKEN_URL + token;
-        emailService.send(user.getEmail(), link);
+        String link = Constants.TOKEN_URL + token;t
+        emailService.send(userDto.getEmail(), "Snug" ,link);
+        return token;
+    }
+
+    public String confirmToken(String token) {
+        return "";
     }
 }

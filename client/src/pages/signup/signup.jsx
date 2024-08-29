@@ -20,6 +20,7 @@ import {
 } from './style'
 import formValidation from './validation'
 import { useState } from 'react'
+import { Button } from '../../components/Header/style'
 
 export default function Signup() {
   const [isLoading, setIsLoading] = useState(false)
@@ -74,7 +75,9 @@ export default function Signup() {
                   register={register}
                   registerName="password"
                 />
-                <ButtonSubmit type="submit">Cadastrar</ButtonSubmit>
+                <ButtonSubmit className="custom-button" type="submit">
+                  Cadastrar
+                </ButtonSubmit>
                 <GoogleLogin> Entrar com Google </GoogleLogin>
                 <AlternativeJoin>
                   {' '}

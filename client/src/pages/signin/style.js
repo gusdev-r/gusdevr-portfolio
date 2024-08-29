@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
   height: 100vh;
@@ -10,7 +10,7 @@ export const Container = styled.div`
     rgb(34, 34, 34),
     rgba(249, 249, 249, 0.476) 160%
   );
-`;
+`
 
 export const ModalBox = styled.div`
   height: 80vh;
@@ -24,7 +24,7 @@ export const ModalBox = styled.div`
   );
   display: flex;
   box-shadow: 0px 0px 15px 8px rgba(44, 44, 44, 0.086);
-`;
+`
 
 export const LogoBox = styled.div`
   border-top-left-radius: 2rem;
@@ -34,11 +34,11 @@ export const LogoBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 
 export const Logo = styled.img`
   max-width: 19rem;
-`;
+`
 
 export const FormBox = styled.div`
   height: 100%;
@@ -52,28 +52,28 @@ export const FormBox = styled.div`
   border-bottom-right-radius: 14px;
   box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
   background-color: hsl(0, 0%, 100%);
-`;
+`
 
 export const SubTitle = styled.text`
   font-size: 16px;
   font-weight: 500;
   margin-top: 8px;
   margin-bottom: 1.8rem;
-`;
+`
 
 export const ForgotPasswordContainer = styled.div`
   width: 100%;
   display: flex;
   margin-bottom: 1.8rem;
   padding-left: calc(143% - 10rem);
-`;
+`
 
 export const ForgotPasswordLink = styled.a`
   font-size: 10px;
-  color: gray;
+  color: var(grey1);
   text-decoration: underline;
   cursor: pointer;
   &:hover {
     color: black;
   }
-`;
+`

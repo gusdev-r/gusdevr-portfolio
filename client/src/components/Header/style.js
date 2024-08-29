@@ -4,7 +4,7 @@ import breakpoint from '../../styles/breakpoints'
 export const HeaderComp = styled.header`
   height: 4.2rem;
   width: 100%;
-  background-color: #050505;
+  background-color: var(--black1);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,9 +37,9 @@ export const Element = styled.a`
   text-align: center;
   text-decoration: none;
   padding: 8px 16px;
-  color: var(--gray0);
+  color: var(--greyDefault);
   cursor: pointer;
-  transition: all ease 0.5s;
+  transition: var(--transition-all-slow);
   font-size: 14px;
   &:hover {
     color: var(--whiteDefault);
@@ -88,8 +88,8 @@ export const DropdownMenu = styled.div`
   flex-direction: column;
   border: none;
   border-radius: 8px;
-  background-color: var(--gray1);
-  border: 1px solid var(--gray3);
+  background-color: var(--grey1);
+  border: 1px solid var(--grey2);
 
   ${Dropdown}:hover & {
     display: flex;
@@ -113,8 +113,8 @@ export const DropdownItem = styled.a`
   font-size: 14px;
 
   &:hover {
-    background-color: #303030;
-    color: #fff;
+    background-color: var(--grey2);
+    color: var(--whiteDefault);
   }
   @media ${breakpoint.bg1} {
     font-size: 11px;
@@ -125,8 +125,8 @@ export const DropdownItem = styled.a`
 export const Button = styled.a`
   display: flex;
   align-items: center;
-  transition: all ease 0.5s;
-  color: var(--gray2);
+  transition: var(--transition-all-slow);
+  color: var(--greyDefault);
   cursor: pointer;
   font-size: 14px;
 
@@ -162,8 +162,8 @@ export const BtnMenu = styled.button`
     cursor: pointer;
 
     svg {
-      transition: color 0.3s ease;
-      color: var(--gray2);
+      transition: var(--transition-color-fast);
+      color: var(--grey4);
       font-size: 22px;
     }
 
@@ -184,7 +184,7 @@ export const HeaderMenu = styled.div`
     gap: 3rem;
     z-index: 10000;
     right: 0;
-    border-left: 2px solid var(--gray3);
+    border-left: 1px solid var(--grey2);
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -193,10 +193,7 @@ export const HeaderMenu = styled.div`
 export const MenuContainer = styled.section`
   width: 100%;
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
   flex-direction: column;
-  /* background-color: red; */
 `
 
 export const ElementMenu = styled.a`
@@ -207,9 +204,9 @@ export const ElementMenu = styled.a`
   text-align: center;
   text-decoration: none;
   padding: 8px 16px;
-  color: var(--gray0);
+  color: var(--greyDefault);
   cursor: pointer;
-  transition: all ease 0.5s;
+  transition: var(--transition-color-slow);
   font-size: 14px;
   margin-right: 20px;
   text-decoration: underline;
@@ -219,8 +216,8 @@ export const ElementMenu = styled.a`
   }
 
   svg {
-    transition: color 0.3s ease;
-    color: var(--gray2);
+    transition: var(--transition-color-fast);
+    color: var(--greyDefault);
     font-size: 14px;
     margin-right: 10px;
   }

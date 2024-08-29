@@ -1,6 +1,6 @@
 package com.mvgm.snug_server.core.repositories;
 
-import com.mvgm.snug_server.core.entity.User;
+import com.mvgm.snug_server.core.domain.entity.User;
 
 import java.util.Optional;
 

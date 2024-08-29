@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyled = createGlobalStyle`
     *{
@@ -19,11 +19,12 @@ const GlobalStyled = createGlobalStyle`
         --gray0: #808080; 
         --gray1: #171717; /* header&footer background */
         --gray2: #6E6D6D;
+        --gray3: #323232;
 
         --whiteDefault: #FFFFFF;
         --blackDefault: #000000;
 
     }
-`;
+`
 
-export default GlobalStyled;
+export default GlobalStyled

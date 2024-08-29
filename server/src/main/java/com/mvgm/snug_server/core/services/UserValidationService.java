@@ -1,12 +1,13 @@
-package com.mvgm.snug_server.core.service;
+package com.mvgm.snug_server.core.services;
 
 import com.mvgm.snug_server.infra.persistence.UserRepositoryImp;
 import com.mvgm.snug_server.utils.Regex;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@Component
 @RequiredArgsConstructor
 public class UserValidationService {
     private final UserRepositoryImp userRepositoryImp;
@@ -28,15 +29,14 @@ public class UserValidationService {
         }
     }
 
-    public void validateEmailExists(String email) {
+    public void emailIsRegistered(String email) {
         if (userRepositoryImp.findByEmail(email).isPresent()) {
             throw new IllegalArgumentException("Email was already taken.");
         }
     }
-    public void validateUsernameExists(String username) {
+    public void usernameIsRegistered(String username) {
         if (userRepositoryImp.findByUsername(username).isPresent()) {
             throw new IllegalArgumentException("Username was already taken.");
         }
     }
-
 }

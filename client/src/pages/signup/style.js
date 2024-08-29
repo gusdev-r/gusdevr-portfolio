@@ -1,54 +1,51 @@
-import styled from "styled-components";
-import breakpoint from "../../styles/breakpoints";
+import styled from 'styled-components'
+import breakpoint from '../../styles/breakpoints'
 
 export const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   justify-content: space-between;
-  background: linear-gradient(
-    to right,
-    rgb(34, 34, 34),
-    rgba(249, 249, 249, 0.476) 160%
-  );
-`;
+  background: linear-gradient(to right, rgb(24, 24, 24), rgb(0, 0, 0) 190%);
+`
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
+`
 
 export const ModalBox = styled.div`
-  height: 40rem;
+  height: 42rem;
   width: 70rem;
-  border-radius: 13px;
-  background: linear-gradient(
-    to right,
-    rgb(34, 34, 34),
-    rgba(249, 249, 249, 0.476) 160%
-  );
+  border-radius: 42px;
+  background: linear-gradient(to left, rgb(16, 16, 16), rgb(0, 0, 0) 160%);
   display: flex;
-  box-shadow: 0px 0px 15px 8px rgba(44, 44, 44, 0.086);
-  margin-top: 3.5rem;
-  margin-bottom: 3.5rem;
+  box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.196);
+  margin-top: 5.5rem;
+  margin-bottom: 5.5rem;
+  border: 1px solid var(--gray3);
 
   @media ${breakpoint.md1} {
-    height: 35rem;
-    width: 59rem;
+    height: 38rem;
+    width: 50rem;
   }
   @media ${breakpoint.sm2} {
-    width: 35rem;
+    height: 30rem;
+    width: 40rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    border-radius: 28px;
   }
   @media ${breakpoint.sm1} {
     background: none;
     height: 31rem;
     width: 17rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
-`;
+`
 
 export const FormBox = styled.div`
   width: 100%;
@@ -57,16 +54,14 @@ export const FormBox = styled.div`
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  border-top-right-radius: 13px;
-  border-bottom-right-radius: 13px;
-  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
-  background-color: hsl(0, 0%, 100%);
+  border-top-right-radius: 42px;
+  border-bottom-right-radius: 42px;
   @media ${breakpoint.sm1} {
     box-shadow: none;
     padding: 2rem;
     border-radius: 13px;
   }
-`;
+`
 
 export const LogoBox = styled.div`
   border-top-left-radius: 2rem;
@@ -76,7 +71,7 @@ export const LogoBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 
 export const Logo = styled.img`
   max-width: 19rem;
@@ -84,19 +79,21 @@ export const Logo = styled.img`
     max-width: 15rem;
   }
   @media ${breakpoint.sm2} {
-    max-width: 11rem;
+    max-width: 10rem;
   }
   @media ${breakpoint.sm1} {
     display: none;
   }
-`;
+`
 
 export const SubTitle = styled.text`
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 400;
   margin-bottom: 2rem;
+  color: var(--gray0);
   @media ${breakpoint.md1} {
     font-size: 12px;
+    margin-bottom: 1rem;
   }
   @media ${breakpoint.sm2} {
     font-size: 10px;
@@ -104,17 +101,51 @@ export const SubTitle = styled.text`
   @media ${breakpoint.sm1} {
     font-size: 9px;
   }
-`;
+`
+
+export const AlternativeJoin = styled.p`
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  color: var(--gray0);
+
+  @media ${breakpoint.md1} {
+    font-size: 10px;
+  }
+  @media ${breakpoint.sm1} {
+    font-size: 7px;
+    margin-top: 0.5rem;
+  }
+  @media ${breakpoint.sm2} {
+    margin-top: 0.5rem;
+    font-size: 8px;
+  }
+`
+
+export const JoinLink = styled.a`
+  color: var(--gray0);
+  text-decoration: none;
+  padding: 2px;
+  transition: color 0.3s ease;
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--whiteDefault);
+  }
+`
 
 export const ButtonSubmit = styled.button`
-  border-radius: 13px;
+  width: 100%;
+  border-radius: 8px;
   cursor: pointer;
-  border: none;
-  background-color: ${(props) => props.color || "black"};
-  color: white;
+  background-color: var(--blackDefault);
   transition: background-color 0.5s ease, box-shadow 0.3s ease;
+  color: white;
+  border: none;
   margin-top: 10px;
-  padding: 16px 28px;
+  padding: 14px 26px;
+  font-weight: 700;
 
   &:hover {
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
@@ -122,11 +153,38 @@ export const ButtonSubmit = styled.button`
   @media ${breakpoint.md1} {
     font-size: 12px;
     margin-top: 6px;
-    padding: 12px 22px;
+    padding: 11px 21px;
   }
   @media ${breakpoint.sm2} {
     font-size: 9px;
     margin-top: 6px;
-    padding: 12px 22px;
+    padding: 10px 18px;
   }
-`;
+`
+export const GoogleLogin = styled.button`
+  width: 100%;
+  border: 1.5px solid var(--gray3);
+  color: var(--whiteDefault);
+  font-weight: 700;
+  border-radius: 8px;
+  margin-top: 6px;
+  background: none;
+  padding: 14px 26px;
+  transition: background-color 0.5s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
+    background-color: var(--gray3);
+  }
+
+  @media ${breakpoint.md1} {
+    font-size: 12px;
+    margin-top: 6px;
+    padding: 10px 20px;
+  }
+  @media ${breakpoint.sm2} {
+    font-size: 9px;
+    margin-top: 6px;
+    padding: 9px 19px;
+  }
+`

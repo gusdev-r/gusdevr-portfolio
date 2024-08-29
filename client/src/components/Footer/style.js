@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import breakpoint from "../../styles/breakpoints";
+import styled from 'styled-components'
+import breakpoint from '../../styles/breakpoints'
 
 export const FooterContainer = styled.footer`
   width: 100%;
-  background-color: hsl(0, 0%, 9%);
+  background-color: #050505;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,26 +13,29 @@ export const FooterContainer = styled.footer`
   @media ${breakpoint.sm2} {
     flex-direction: column;
   }
-`;
+`
 
 export const LogoBox = styled.div`
   height: 100%;
-  max-width: 18rem;
+  max-width: 14rem;
+  margin-left: 2rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-`;
+
+  @media ${breakpoint.bg1} {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+`
 
 export const Logo = styled.img`
   height: 100%;
-  max-width: 14rem;
-  @media ${breakpoint.bg1} {
-    max-width: 12rem;
-  }
+  max-width: 8rem;
   @media ${breakpoint.sm1} {
-    max-width: 9rem;
+    max-width: 7rem;
   }
-`;
+`
 
 export const LinksContainer = styled.div`
   display: flex;
@@ -43,18 +46,17 @@ export const LinksContainer = styled.div`
     flex-direction: column;
     margin-top: 40px;
   }
-`;
+`
 
 export const MainLinks = styled.div`
   display: flex;
   justify-content: center;
   gap: 4rem;
   padding: 4px;
-  /* background-color: red; */
   @media ${breakpoint.bg1} {
     gap: 2rem;
   }
-`;
+`
 
 export const MainLink = styled.a`
   color: gray;
@@ -74,14 +76,14 @@ export const MainLink = styled.a`
     font-size: 10px;
     padding: 2px;
   }
-`;
+`
 
 export const Divider = styled.div`
   width: 70%;
   height: 2px;
   margin: 10px;
   background-color: #fff;
-`;
+`
 
 export const PolicyLinks = styled.div`
   display: flex;
@@ -89,7 +91,7 @@ export const PolicyLinks = styled.div`
   gap: 70px;
   margin-bottom: 20px;
   padding: 2px;
-`;
+`
 
 export const PolicyLink = styled.a`
   color: white;
@@ -106,7 +108,7 @@ export const PolicyLink = styled.a`
     font-size: 9px;
     padding: 1px;
   }
-`;
+`
 
 export const DevelopedByContainer = styled.div`
   display: flex;
@@ -120,7 +122,7 @@ export const DevelopedByContainer = styled.div`
   @media ${breakpoint.sm2} {
     flex-direction: column;
   }
-`;
+`
 
 export const DeveloperLink = styled.a`
   color: white;
@@ -135,7 +137,7 @@ export const DeveloperLink = styled.a`
   @media ${breakpoint.bg1} {
     font-size: 10px;
   }
-`;
+`
 
 export const Copyright = styled.div`
   font-size: 7px;
@@ -143,4 +145,4 @@ export const Copyright = styled.div`
   text-align: center;
   margin-top: 20px;
   width: 100%;
-`;
+`

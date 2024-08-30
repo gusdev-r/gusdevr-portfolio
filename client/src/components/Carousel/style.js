@@ -3,16 +3,16 @@ import styled from 'styled-components'
 export const CarouselContainer = styled.section`
   display: flex;
   align-items: center;
-  gap: 50px;
-  padding: 0 8vw;
+  /* gap: 50px; */
+  /* padding: 0 8rem; */
+  width: 100%;
   /* color: var(--whiteDefault); // mudar!!! */
   /* background-color: blue; */
 
   .swiper {
     width: 100%;
-    /* max-width: 800px; */
-    height: 370px;
-    /* background-color: red; */
+    max-width: 1800px;
+    background-color: red;
   }
 
   .swiper-slide {
@@ -25,7 +25,9 @@ export const CarouselContainer = styled.section`
     background-size: cover;
     background-position: center;
     position: relative; // nao
-    border-radius: 54px;
+    border-radius: 40px;
+    height: 320px;
+    width: 0px;
     /* overflow: visible; */
 
     h2 {
@@ -107,11 +109,13 @@ export const SlideContent = styled.div`
   /* background-color: var(--black1); // retirar */
   align-self: stretch;
   padding-bottom: 70px;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: flex-end;
+  /* height: 400px;
+  width: 800px; */
 
   h2 {
     color: var(--whiteDefault);

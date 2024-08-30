@@ -27,13 +27,13 @@ export const Carousel = () => {
         grabCursor
         centeredSlides
         slidesPerView={3} // Ajustado para 1.5 para aproximar as imagens
-        spaceBetween={0}
+        spaceBetween={1}
         effect="coverflow"
         loop
         pagination={{ clickable: true }}
         coverflowEffect={{
           rotate: 0,
-          stretch: 0,
+          stretch: 300,
           depth: 100,
           modifier: 1, // Reduzido para diminuir o espaçamento entre os slides
           slideShadows: true,

@@ -95,8 +95,9 @@ export const CarouselContainer = styled.section`
   }
 
   .swiper-pagination {
-    bottom: 10px !important;
-    transform: scale(1.3);
+    bottom: -10px !important;
+    /* background-color: red; */
+    transform: scale(1);
   }
 `
 

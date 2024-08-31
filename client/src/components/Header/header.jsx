@@ -1,6 +1,10 @@
-import { useEffect, useState, useRef } from 'react'
+import { useRef, useState } from 'react'
+import { FiLogIn } from 'react-icons/fi'
+import { IoClose, IoMenu } from 'react-icons/io5'
 import logo from '../../assets/images/snug.png'
+import { useHeaderVisibility } from '../../hooks/useHeader'
 import {
+  BtnMenu,
   Button,
   ContainerButtons,
   ContainerElements,
@@ -8,64 +12,19 @@ import {
   DropdownItem,
   DropdownMenu,
   Element,
-  FormControl,
-  FormInline,
+  ElementMenu,
   HeaderComp,
+  HeaderMenu,
   Logo,
   LogoBox,
-  BtnMenu,
-  HeaderMenu,
-  ElementMenu,
   MenuContainer,
 } from './style'
-import { FiLogIn } from 'react-icons/fi'
-import { IoMenu, IoClose } from 'react-icons/io5'
 
 export const Header = () => {
-  const [searchContent, setSearchContent] = useState('')
   const [isOpen, setIsOpen] = useState(false)
   const ref = useRef(null)
 
-  const handleSearch = () => {
-    // logic to work with the search state if this is used by you
-    // eslint-disable-next-line no-unused-expressions
-    searchContent
-  }
-
-  const handleChange = (event) => {
-    setSearchContent(event.target.value)
-  }
-
-  const handleKeyDown = (event) => {
-    if (event.key === 'Enter') {
-      handleSearch()
-    }
-  }
-
-  const [showHeader, setShowHeader] = useState(true)
-  const [prevScrollPos, setPrevScrollPos] = useState(0)
-
-  useEffect(() => {
-    const handleControllHeader = () => {
-      const scrollPosition =
-        window.scrollY || document.documentElement.scrollTop
-      const scrollDifference = scrollPosition - prevScrollPos
-      if (scrollDifference > 0 && scrollPosition > 5.5 * 16) {
-        setShowHeader(false)
-      } else {
-        setShowHeader(true)
-      }
-
-      setPrevScrollPos(scrollPosition)
-    }
-
-    window.addEventListener('scroll', handleControllHeader)
-
-    return () => {
-      window.removeEventListener('scroll', handleControllHeader)
-    }
-  }, [prevScrollPos])
-
+  const showHeader = useHeaderVisibility()
   return (
     <>
       <HeaderComp

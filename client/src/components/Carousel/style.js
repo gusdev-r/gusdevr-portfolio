@@ -12,7 +12,7 @@ export const CarouselContainer = styled.section`
   .swiper {
     width: 100%;
     max-width: 1800px;
-    background-color: red;
+    /* background-color: red; */
   }
 
   .swiper-slide {

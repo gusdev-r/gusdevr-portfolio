@@ -33,9 +33,9 @@ export const Carousel = () => {
         pagination={{ clickable: true }}
         coverflowEffect={{
           rotate: 0,
-          stretch: 300,
-          depth: 100,
-          modifier: 1, // Reduzido para diminuir o espaçamento entre os slides
+          stretch: 370,
+          depth: 110,
+          modifier: 0.9, // Reduzido para diminuir o espaçamento entre os slides
           slideShadows: true,
         }}
         modules={[Pagination, EffectCoverflow]}

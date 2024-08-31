@@ -75,9 +75,7 @@ export default function Signup() {
                   register={register}
                   registerName="password"
                 />
-                <ButtonSubmit className="custom-button" type="submit">
-                  Cadastrar
-                </ButtonSubmit>
+                <ButtonSubmit>Cadastrar</ButtonSubmit>
                 <GoogleLogin> Entrar com Google </GoogleLogin>
                 <AlternativeJoin>
                   {' '}

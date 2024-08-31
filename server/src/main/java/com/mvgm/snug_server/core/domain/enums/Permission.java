@@ -1,4 +1,4 @@
-package com.mvgm.snug_server.core.domain.enums;
+package com.mvgm.snug_server.core.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

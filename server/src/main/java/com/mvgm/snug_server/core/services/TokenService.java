@@ -1,6 +1,6 @@
 package com.mvgm.snug_server.core.usecases;
 
-import com.mvgm.snug_server.core.domain.entity.Token;
+import com.mvgm.snug_server.infra.entity.Token;
 import com.mvgm.snug_server.infra.persistence.TokenRepositoryImp;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.mvgm.snug_server.core.domain.enums;
+package com.mvgm.snug_server.core.domain;
 
 import lombok.Getter;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -8,15 +8,13 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static com.mvgm.snug_server.core.domain.enums.Permission.*;
-
 @Getter
 public enum UserRole {
     ADMIN(Set.of(
-            ADMIN_READ,
-            ADMIN_CREATE,
-            ADMIN_UPDATE,
-            ADMIN_DELETE
+            Permission.ADMIN_READ,
+            Permission.ADMIN_CREATE,
+            Permission.ADMIN_UPDATE,
+            Permission.ADMIN_DELETE
     )),
     USER(Collections.emptySet())
     ;

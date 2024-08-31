@@ -1,7 +1,7 @@
 package com.mvgm.snug_server.core.services;
 
-import com.mvgm.snug_server.core.domain.entity.Token;
-import com.mvgm.snug_server.core.domain.entity.User;
+import com.mvgm.snug_server.infra.entity.Token;
+import com.mvgm.snug_server.infra.entity.User;
 import com.mvgm.snug_server.core.usecases.TokenUseCase;
 import com.mvgm.snug_server.infra.persistence.UserRepositoryImp;
 import com.mvgm.snug_server.utils.Constants;
@@ -45,21 +45,17 @@ public class RegisterService {
         return tokenToConfirm;
     }
 
-    public String registerUser (User userDto) {
-        userValidation.emailIsRegistered(userDto.getEmail());
-        userValidation.usernameIsRegistered(userDto.getUsername());
-        userValidation.validateEmail(userDto.getEmail());
-        userValidation.validatePassword(userDto.getPassword());
+    public String registerUser (User user) {
+        userValidation.emailIsRegistered(user.getEmail());
+        userValidation.usernameIsRegistered(user.getUsername());
+        userValidation.validateEmail(user.getEmail());
+        userValidation.validatePassword(user.getPassword());
 
         User userToRegister = User.builder().build();
 
         String token = generateTokenFromUser(userToRegister);
-        String link = Constants.TOKEN_URL + token;t
-        emailService.send(userDto.getEmail(), "Snug" ,link);
+        String link = Constants.TOKEN_URL + token;
+        emailService.send(user.getEmail(), "Snug" ,link);
         return token;
-    }
-
-    public String confirmToken(String token) {
-        return "";
     }
 }

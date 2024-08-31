@@ -1,4 +1,4 @@
-package com.mvgm.snug_server.core.domain.entity;
+package com.mvgm.snug_server.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

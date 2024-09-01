@@ -4,13 +4,20 @@ import breakpoint from '../../styles/breakpoints'
 export const HeaderComp = styled.header`
   height: 4.5rem;
   width: 100%;
-  background-color: var(--black1);
+  top: 0;
   display: flex;
   align-items: center;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+  position: sticky;
+  background-color: rgba(8, 8, 8, 0.4);
+  backdrop-filter: blur(5px);
+  transition: var(--transition-color-slow);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   z-index: 1000;
+  @media ${breakpoint.md1} {
+    height: 4rem;
+  }
   @media ${breakpoint.sm1} {
-    height: 3.8rem;
+    height: 3rem;
   }
 `
 
@@ -19,9 +26,16 @@ export const LogoBox = styled.div`
   max-width: 18rem;
   display: flex;
   align-items: center;
-  margin-left: 1rem;
-  margin-right: 4rem;
+  margin-left: 6px;
+  margin-right: 48px;
   justify-content: flex-end;
+  @media ${breakpoint.md1} {
+    margin-right: 24px;
+  }
+  @media ${breakpoint.sm0} {
+    margin-left: 4px;
+    margin-right: 8px;
+  }
 `
 
 export const Logo = styled.img`
@@ -34,17 +48,29 @@ export const ContainerElements = styled.ul`
   align-items: center;
   justify-content: flex-start;
   flex-grow: 1;
-  gap: 1rem;
+  gap: 10px;
   margin: 0;
   padding: 0;
   list-style: none;
+  margin-left: 64px;
+  gap: 20px;
+  @media ${breakpoint.md1} {
+    margin-left: 14px;
+  }
+  @media ${breakpoint.sm1} {
+    justify-content: center;
+    gap: 4px;
+  }
+  @media ${breakpoint.sm0} {
+    margin-left: 0px;
+  }
 `
 
 export const Element = styled.a`
   text-align: center;
   text-decoration: none;
-  padding: 8px 8px;
-  color: var(--greyDefault);
+  padding: 4px 4px;
+  color: var(--grey6);
   cursor: pointer;
   transition: var(--transition-all-slow);
   font-size: 14px;
@@ -53,10 +79,9 @@ export const Element = styled.a`
   }
   @media ${breakpoint.bg1} {
     font-size: 13px;
-    padding: 4px 8px;
   }
-  @media ${breakpoint.sm2} {
-    display: none;
+  @media ${breakpoint.sm0} {
+    font-size: 9px;
   }
 `
 
@@ -64,27 +89,38 @@ export const ContainerButtons = styled.div`
   display: flex;
   align-items: center;
   margin-left: auto;
-  margin-right: 2.5rem;
-  gap: 0.5rem;
+  margin-right: 64px;
+  border: solid 1px var(--grey1);
+  border-radius: 8px;
+  padding: 1px;
+  gap: 8px;
+  @media ${breakpoint.bg1} {
+    gap: 4px;
+  }
+  @media ${breakpoint.sm2} {
+    margin-right: 28px;
+  }
 `
 
-export const Button = styled.button`
+export const Button = styled.a`
   text-align: center;
-  text-decoration: none;
-  padding: 8px 16px;
-  color: var(--greyDefault);
+  padding: 2px 18px;
+  color: var(--grey6);
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid var(--greyDefault);
-  transition: var(--transition-all-slow);
+  border: none;
+  transition: var(--transition-color-fast);
   font-size: 14px;
-  margin-left: 8px;
+  border-radius: 8px;
   &:hover {
     color: var(--whiteDefault);
+    background: var(--grey1);
     border-color: var(--whiteDefault);
   }
   @media ${breakpoint.bg1} {
     font-size: 13px;
-    padding: 4px 12px;
+    padding: 2px 18px;
+  }
+  @media ${breakpoint.sm2} {
+    display: none;
   }
 `

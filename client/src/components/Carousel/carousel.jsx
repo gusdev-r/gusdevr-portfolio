@@ -6,18 +6,18 @@ import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 
-import image1 from '../../assets/images/ani.png'
-import image2 from '../../assets/images/luke.png'
-import image3 from '../../assets/images/obiwan.png'
-import image4 from '../../assets/images/quigon.png'
-import image5 from '../../assets/images/yoda.png'
+import image1 from '../../assets/images/grey.png'
+import image2 from '../../assets/images/grey.png'
+import image3 from '../../assets/images/grey.png'
+import image4 from '../../assets/images/grey.png'
+import image5 from '../../assets/images/grey.png'
 
 const slides = [
-  { title: 'Anakin', image: image1 },
-  { title: 'Luke', image: image2 },
-  { title: 'Obi-Wan', image: image3 },
-  { title: 'Qui-Gon', image: image4 },
-  { title: 'Yoda', image: image5 },
+  { title: 'Grey1', image: image1 },
+  { title: 'Grey2', image: image2 },
+  { title: 'Grey3', image: image3 },
+  { title: 'Grey4', image: image4 },
+  { title: 'Grey5', image: image5 },
 ]
 
 export const Carousel = () => {
@@ -49,7 +49,7 @@ export const Carousel = () => {
           >
             <SlideContent>
               <h2>{slide.title}</h2>
-              <a href="#">Star Wars</a>
+              <a href="#">Grey</a>
             </SlideContent>
           </SwiperSlide>
         ))}

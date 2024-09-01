@@ -11,6 +11,7 @@ import {
   InfoContainer,
   ButtonNow,
   ContainerButtons,
+  ContainerCarousel,
 } from './style'
 
 const Home = () => {
@@ -19,7 +20,9 @@ const Home = () => {
       <PageContainer>
         <HeaderHome />
         <MainContent>
-          <Carousel />
+          <ContainerCarousel>
+            <Carousel />
+          </ContainerCarousel>
           <WelcomeSection>
             <WelcomeContainer>
               <Title>

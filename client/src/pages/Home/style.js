@@ -27,13 +27,7 @@ export const MainContent = styled.main`
 export const WelcomeSection = styled.section`
   display: flex;
   justify-content: center;
-  /* text-align: center; */
-  /* align-items: center; */
-  /* margin: 2rem 0; */
-  /* padding: 1rem; */
   height: 16rem;
-  /* padding-top: 10rem; */
-  /* background-color: white; */
 `
 
 export const Title = styled.div`
@@ -61,14 +55,12 @@ export const WelcomeContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: var(--grey3); */
   width: 100%;
 `
 
 export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* background-color: var(--grey2); */
 `
 
 export const ButtonNow = styled.button`
@@ -79,7 +71,6 @@ export const ButtonNow = styled.button`
   font-weight: 300;
   border-radius: 8px;
   transition: background-color 0.5s ease, box-shadow 0.3s ease;
-  /* background-color: var(--blackDefault); */
 
   &:hover {
     background-color: var(--grey2);
@@ -91,4 +82,8 @@ export const ContainerButtons = styled.div`
   gap: 1rem;
   text-align: left;
   margin-top: 24px;
+`
+
+export const ContainerCarousel = styled.div`
+  display: flex;
 `

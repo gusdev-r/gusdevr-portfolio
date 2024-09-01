@@ -16,39 +16,35 @@ export const MainContent = styled.main`
     margin: 0 auto;
     padding: 1rem;
   }
-
-  p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-    color: var(--greyDefault);
-  }
 `
 
 export const WelcomeSection = styled.section`
   display: flex;
   justify-content: center;
-  height: 16rem;
+  /* padding: 6rem 0; */
+  height: 15rem;
+  /* background-color: var(--grey7); // */
 `
 
-export const Title = styled.div`
+export const TitleContainer = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   margin-left: 7rem;
-
-  h1 {
-    margin: 0;
-    font-size: 56px;
-    color: var(--greyDefault);
-  }
 `
 
-export const InfoText = styled.div`
+export const Title = styled.h1`
+  margin: 0;
+  font-size: 56px;
+  color: var(--greyDefault);
+`
+
+export const TitleDesc = styled.p`
   max-width: 600px;
   color: var(--greyDefault);
-  margin-right: 7rem;
+  margin-bottom: 1rem;
   text-align: left;
-  line-height: 18px;
+  line-height: 1.6;
 `
 
 export const WelcomeContainer = styled.div`
@@ -61,6 +57,8 @@ export const WelcomeContainer = styled.div`
 export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
+  /* background-color: yellow; // */
+  margin-right: 7rem;
 `
 
 export const ButtonNow = styled.button`
@@ -86,4 +84,112 @@ export const ContainerButtons = styled.div`
 
 export const ContainerCarousel = styled.div`
   display: flex;
+`
+
+export const DescribeSection = styled.div`
+  height: 45rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* justify-content: space-between; */
+  /* background-color: wheat; // */
+`
+
+export const DescribeContainer = styled.div`
+  /* background-color: greenyellow; // */
+  padding: 70px;
+`
+
+export const DescribeImg = styled.img`
+  height: 620px;
+  width: 640px;
+  padding: 12px 24px;
+`
+
+export const TechSection = styled.div`
+  padding: 2em 0;
+  display: flex;
+  /* background-color: var(--grey1); // */
+  justify-content: center;
+`
+
+export const TechContainer = styled.div`
+  /* background-color: var(--grey2); // dentro */
+  max-width: 1200px;
+  width: 100%;
+  padding: 50px;
+  text-align: center;
+  height: 18rem;
+`
+
+export const IconContainer = styled.div`
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* background-color: grey; // */
+  height: 7rem;
+
+  svg {
+    color: var(--whiteDefault);
+    font-size: 40px;
+    transition: font-size 0.3s ease-in-out;
+    animation: none;
+  }
+
+  svg:hover {
+    font-size: 50px;
+  }
+`
+export const SubTitleTech = styled.p`
+  max-width: 600px;
+  color: var(--greyDefault);
+  display: unset;
+  text-align: left;
+  line-height: 1.6;
+`
+
+export const ContactSection = styled.div`
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25rem;
+`
+
+export const ContactContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  /* background-color: var(--grey1); // */
+  width: 85%;
+`
+
+export const BoxContact = styled.div`
+  /* background-color: var(--grey3); // */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 400px;
+`
+
+export const ContactLink = styled.a`
+  font-size: 1rem;
+  color: var(--greyDefault);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`
+
+export const IconContact = styled.div`
+  margin-bottom: 1rem;
+  /* background-color: white; */
+`
+
+export const ContactTitle = styled.h3`
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 `

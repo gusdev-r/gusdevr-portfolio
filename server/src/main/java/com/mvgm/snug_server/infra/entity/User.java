@@ -1,5 +1,6 @@
-package com.mvgm.snug_server.entity;
+package com.mvgm.snug_server.infra.entity;
 
+import com.mvgm.snug_server.core.domain.enums.UserRole;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -16,30 +17,40 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-@Table(name = "tb_user")
 @Entity
+@Table(name = "tb_user")
 public class User implements UserDetails {
 
+    @SequenceGenerator(
+            name = "user_sequence",
+            sequenceName = "user_sequence",
+            allocationSize = 1
+    )
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "user_sequence"
+    )
+    private Long id;
 
-    @Column(unique = true, nullable = false, length = 30)
+    @Column(name = "username", unique = true, nullable = false, length = 30)
     private String username;
-    @Column(unique = true, nullable = false, length = 100)
+    @Column(name = "email", unique = true, nullable = false, length = 100)
     private String email;
-    @Column(unique = true, nullable = false, length = 100)
+    @Column(name = "password", unique = true, nullable = false, length = 100)
     private String password;
-//    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     @Column(name = "user_role", unique = true, nullable = false, length = 100)
-    private String userRole;
+    private UserRole userRole;
     @Column(name = "created_at", nullable = false, length = 70)
     private LocalDateTime createdAt;
-    @Column(name = "updated_at", nullable = false, length = 70)
+    @Column(name = "updated_at", length = 70)
     private LocalDateTime updatedAt;
 
+    @Column(name = "locked")
     private Boolean locked;
 
+    @Column(name = "enabled")
     private Boolean enabled;
 
     public User(String username, String email, String password, String userRole) {

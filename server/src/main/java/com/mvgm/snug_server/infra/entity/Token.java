@@ -1,4 +1,4 @@
-package com.mvgm.snug_server.entity;
+package com.mvgm.snug_server.infra.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 @Entity
+@Table(name = "tb_token")
 public class Token {
 
     @SequenceGenerator(
@@ -30,7 +31,7 @@ public class Token {
     private LocalDateTime createdAt;
     @Column(nullable = false)
     private LocalDateTime expiresAt;
-    @Column(nullable = false)
+    @Column(name = "confirmed_at")
     private LocalDateTime confirmedAt;
 
     @ManyToOne

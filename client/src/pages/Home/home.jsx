@@ -1,7 +1,17 @@
 import { HeaderHome } from '../../components/HeaderHome/headerHome'
 import { Carousel } from '../../components/Carousel/carousel'
 import { Footer } from '../../components/Footer/footer'
-import { PageContainer, MainContent } from './style'
+import {
+  PageContainer,
+  MainContent,
+  WelcomeSection,
+  Title,
+  InfoText,
+  WelcomeContainer,
+  InfoContainer,
+  ButtonNow,
+  ContainerButtons,
+} from './style'
 
 const Home = () => {
   return (
@@ -10,44 +20,26 @@ const Home = () => {
         <HeaderHome />
         <MainContent>
           <Carousel />
-          <div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
+          <WelcomeSection>
+            <WelcomeContainer>
+              <Title>
+                <h1>Welcome To</h1>
+                <h1>Snug</h1>
+              </Title>
+              <InfoContainer>
+                <InfoText>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt ut labore et dolore magna
+                  aliquaLorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Sed do eiusmo.
+                </InfoText>
+                <ContainerButtons>
+                  <ButtonNow>Book Now</ButtonNow>
+                  <ButtonNow>View Menu</ButtonNow>
+                </ContainerButtons>
+              </InfoContainer>
+            </WelcomeContainer>
+          </WelcomeSection>
         </MainContent>
         <Footer />
       </PageContainer>

@@ -7,11 +7,11 @@ import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 import 'swiper/css/autoplay'
 
-import image1 from '../../assets/images/grey.png'
-import image2 from '../../assets/images/grey.png'
-import image3 from '../../assets/images/grey.png'
-import image4 from '../../assets/images/grey.png'
-import image5 from '../../assets/images/grey.png'
+import image1 from '../../../../assets/images/grey.png'
+import image2 from '../../../../assets/images/grey.png'
+import image3 from '../../../../assets/images/grey.png'
+import image4 from '../../../../assets/images/grey.png'
+import image5 from '../../../../assets/images/grey.png'
 
 const slides = [
   { title: 'Grey1', image: image1 },

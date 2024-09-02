@@ -1,5 +1,5 @@
-import { HeaderHome } from '../../components/HeaderHome/headerHome'
-import { Carousel } from '../../components/Carousel/carousel'
+import { HeaderHome } from './components/HeaderHome/headerHome'
+import { Carousel } from './components/Carousel/carousel'
 import { Footer } from '../../components/Footer/footer'
 import defaultImg from '../../assets/images/grey.png'
 import {
@@ -29,7 +29,6 @@ import {
   InfoContainer,
   ButtonNow,
   ContainerButtons,
-  ContainerCarousel,
   DescribeSection,
   DescribeContainer,
   DescribeImg,
@@ -50,14 +49,11 @@ const Home = () => {
       <PageContainer>
         <HeaderHome />
         <MainContent>
-          <ContainerCarousel>
-            <Carousel />
-          </ContainerCarousel>
+          <Carousel />
           <WelcomeSection>
             <WelcomeContainer>
               <TitleContainer>
-                <Title>Welcome To</Title>
-                <Title>Snug</Title>
+                <Title>Welcome To Snug</Title>
               </TitleContainer>
               <InfoContainer>
                 <TitleDesc>

@@ -11,6 +11,8 @@ export const MainContent = styled.main`
   flex: 1;
   text-align: center;
   color: var(--greyDefault);
+  margin-right: 15rem;
+  margin-left: 15rem;
 
   section {
     margin: 0 auto;
@@ -21,21 +23,18 @@ export const MainContent = styled.main`
 export const WelcomeSection = styled.section`
   display: flex;
   justify-content: center;
-  /* padding: 6rem 0; */
-  height: 15rem;
-  /* background-color: var(--grey7); // */
+  height: 20rem;
 `
 
 export const TitleContainer = styled.div`
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  margin-left: 7rem;
+  justify-content: flex-start;
+  line-height: 3.5rem;
 `
 
 export const Title = styled.h1`
-  margin: 0;
   font-size: 56px;
+  padding-bottom: 20px;
+  text-align: left;
   color: var(--greyDefault);
 `
 
@@ -57,8 +56,7 @@ export const WelcomeContainer = styled.div`
 export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* background-color: yellow; // */
-  margin-right: 7rem;
+  padding: 20px;
 `
 
 export const ButtonNow = styled.button`
@@ -82,17 +80,11 @@ export const ContainerButtons = styled.div`
   margin-top: 24px;
 `
 
-export const ContainerCarousel = styled.div`
-  display: flex;
-`
-
 export const DescribeSection = styled.div`
-  height: 45rem;
+  height: 50rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* justify-content: space-between; */
-  /* background-color: wheat; // */
 `
 
 export const DescribeContainer = styled.div`
@@ -107,28 +99,26 @@ export const DescribeImg = styled.img`
 `
 
 export const TechSection = styled.div`
-  padding: 2em 0;
   display: flex;
-  /* background-color: var(--grey1); // */
+  align-items: center;
   justify-content: center;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  height: 25rem;
 `
 
 export const TechContainer = styled.div`
-  /* background-color: var(--grey2); // dentro */
-  max-width: 1200px;
   width: 100%;
   padding: 50px;
   text-align: center;
-  height: 18rem;
 `
 
 export const IconContainer = styled.div`
-  margin-top: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  /* background-color: grey; // */
-  height: 7rem;
+  height: 8rem;
 
   svg {
     color: var(--whiteDefault);
@@ -150,27 +140,25 @@ export const SubTitleTech = styled.p`
 `
 
 export const ContactSection = styled.div`
-  /* background-color: red; */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   height: 25rem;
 `
 
 export const ContactContainer = styled.div`
   display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  /* background-color: var(--grey1); // */
+  align-items: baseline;
   width: 85%;
 `
 
 export const BoxContact = styled.div`
-  /* background-color: var(--grey3); // */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: left;
   max-width: 400px;
+  padding: 30px;
 `
 
 export const ContactLink = styled.a`
@@ -184,12 +172,11 @@ export const ContactLink = styled.a`
 `
 
 export const IconContact = styled.div`
-  margin-bottom: 1rem;
-  /* background-color: white; */
+  margin-bottom: 16px;
 `
 
 export const ContactTitle = styled.h3`
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
 `

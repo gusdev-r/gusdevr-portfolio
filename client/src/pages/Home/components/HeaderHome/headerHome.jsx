@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../assets/images/snug.png'
+import logo from '../../../../assets/images/snug.png'
 import {
   Button,
   ContainerButtons,

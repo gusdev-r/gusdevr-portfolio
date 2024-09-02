@@ -4,7 +4,7 @@ export const CarouselContainer = styled.section`
   display: flex;
   align-items: center;
   width: 100%;
-  height: 26rem;
+  height: 30rem;
 
   .swiper {
     width: 100%;

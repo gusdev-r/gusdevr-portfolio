@@ -1,16 +1,17 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectCoverflow, Pagination } from 'swiper/modules'
+import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules'
 import { CarouselContainer, SlideContent } from './style'
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
+import 'swiper/css/autoplay'
 
-import image1 from '../../assets/images/grey.png'
-import image2 from '../../assets/images/grey.png'
-import image3 from '../../assets/images/grey.png'
-import image4 from '../../assets/images/grey.png'
-import image5 from '../../assets/images/grey.png'
+import image1 from '../../../../assets/images/grey.png'
+import image2 from '../../../../assets/images/grey.png'
+import image3 from '../../../../assets/images/grey.png'
+import image4 from '../../../../assets/images/grey.png'
+import image5 from '../../../../assets/images/grey.png'
 
 const slides = [
   { title: 'Grey1', image: image1 },
@@ -31,6 +32,10 @@ export const Carousel = () => {
         effect="coverflow"
         loop
         pagination={{ clickable: true }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         coverflowEffect={{
           rotate: 0,
           stretch: 370,
@@ -38,7 +43,7 @@ export const Carousel = () => {
           modifier: 0.9,
           slideShadows: true,
         }}
-        modules={[Pagination, EffectCoverflow]}
+        modules={[Pagination, EffectCoverflow, Autoplay]}
       >
         {slides.map((slide) => (
           <SwiperSlide

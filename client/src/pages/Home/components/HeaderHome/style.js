@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import breakpoint from '../../styles/breakpoints'
+import breakpoint from '../../../../styles/breakpoints'
 
 export const HeaderComp = styled.header`
   height: 4.5rem;
@@ -8,10 +8,9 @@ export const HeaderComp = styled.header`
   display: flex;
   align-items: center;
   position: sticky;
-  background-color: rgba(8, 8, 8, 0.4);
+  background-color: rgba(8, 8, 8, 0.711);
   backdrop-filter: blur(5px);
   transition: var(--transition-color-slow);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   z-index: 1000;
   @media ${breakpoint.md1} {
     height: 4rem;

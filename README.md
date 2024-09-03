@@ -1,4 +1,4 @@
-# **_LBMR - Levantamento Básico de Maturidade e Riscos_**
+# **Snug**
 
 <div style="display: inline_block">
     <img align="center" alt="java" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>

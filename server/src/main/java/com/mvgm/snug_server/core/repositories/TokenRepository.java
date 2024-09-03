@@ -1,7 +1,7 @@
 package com.mvgm.snug_server.core.repositories;
 
 
-import com.mvgm.snug_server.core.domain.entity.Token;
+import com.mvgm.snug_server.infra.entity.Token;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 

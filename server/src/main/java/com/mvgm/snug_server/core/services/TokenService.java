@@ -1,6 +1,6 @@
-package com.mvgm.snug_server.core.usecases;
+package com.mvgm.snug_server.core.services;
 
-import com.mvgm.snug_server.core.domain.entity.Token;
+import com.mvgm.snug_server.infra.entity.Token;
 import com.mvgm.snug_server.infra.persistence.TokenRepositoryImp;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
-public class TokenUseCase {
+public class TokenService {
 
     private final TokenRepositoryImp tokenRepo;
 

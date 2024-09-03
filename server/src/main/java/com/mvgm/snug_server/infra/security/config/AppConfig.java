@@ -12,6 +12,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Component;
+
+import static com.mvgm.snug_server.utils.Logging.LOGGER;
 
 @RequiredArgsConstructor
 @Configuration
@@ -21,8 +24,7 @@ public class AppConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
-        return email -> (UserDetails) userRepo.findByEmail(email)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+        return new CustomUserDetailsService(userRepo);
     }
 
     @Bean
@@ -42,5 +44,4 @@ public class AppConfig {
     public AuthenticationManager authenticationManager(AuthenticationConfiguration conf) throws Exception {
         return conf.getAuthenticationManager();
     }
-
 }

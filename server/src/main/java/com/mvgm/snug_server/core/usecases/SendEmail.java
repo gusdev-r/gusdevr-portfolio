@@ -1,4 +1,4 @@
-package com.mvgm.snug_server.core.services;
+package com.mvgm.snug_server.core.usecases;
 
 import com.mvgm.snug_server.core.repositories.EmailSenderRepository;
 import jakarta.mail.MessagingException;
@@ -10,12 +10,12 @@ import org.springframework.mail.javamail.JavaMailSender;
 
 @RequiredArgsConstructor
 @Service
-public class EmailService implements EmailSenderRepository {
+public class SendEmail implements EmailSenderRepository {
 
     private final JavaMailSender mailSender;
 
     @Override
-    public void send(String to, String subject, String body) {
+    public void execute(String to, String subject, String body) {
         MimeMessage mimeMsg = mailSender.createMimeMessage();
         MimeMessageHelper msg = new MimeMessageHelper(mimeMsg, "utf-8");
         try {

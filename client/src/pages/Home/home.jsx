@@ -23,7 +23,7 @@ import {
   WelcomeSection,
   TitleContainer,
   Title,
-  TitleDesc,
+  // TitleDesc,
   SubTitleTech,
   WelcomeContainer,
   InfoContainer,
@@ -43,6 +43,8 @@ import {
   ContactTitle,
 } from './style'
 
+import TitleDescription from './components/TitleDesc/titleDesc'
+
 const Home = () => {
   return (
     <>
@@ -56,12 +58,12 @@ const Home = () => {
                 <Title>Welcome To Snug</Title>
               </TitleContainer>
               <InfoContainer>
-                <TitleDesc>
+                <TitleDescription>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   do eiusmod tempor incididunt ut labore et dolore magna
                   aliquaLorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Sed do eiusmo.
-                </TitleDesc>
+                </TitleDescription>
                 <ContainerButtons>
                   <ButtonNow>Book Now</ButtonNow>
                   <ButtonNow>View Menu</ButtonNow>
@@ -96,12 +98,12 @@ const Home = () => {
           <DescribeSection>
             <DescribeImg src={defaultImg} alt="img" />
             <DescribeContainer>
-              <TitleDesc>Feature one</TitleDesc>
+              <TitleDescription>Feature one</TitleDescription>
               <Title>Describe benefit of feature one</Title>
-              <TitleDesc>
+              <TitleDescription>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </TitleDesc>
+              </TitleDescription>
               <ContainerButtons>
                 <ButtonNow>Learn more</ButtonNow>
               </ContainerButtons>

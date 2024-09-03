@@ -38,14 +38,6 @@ export const Title = styled.h1`
   color: var(--greyDefault);
 `
 
-export const TitleDesc = styled.p`
-  max-width: 600px;
-  color: var(--greyDefault);
-  margin-bottom: 1rem;
-  text-align: left;
-  line-height: 1.6;
-`
-
 export const WelcomeContainer = styled.div`
   display: flex;
   justify-content: space-between;

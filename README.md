@@ -1,4 +1,4 @@
-# **Snug**
+# **SNUG**
 
 <div style="display: inline_block">
     <img align="center" alt="java" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
@@ -25,11 +25,11 @@
 
 <br/>
 
-<h1>Project Snug Description:</h1>
+<h1>Descrição do projeto:</h1>
 
 O projeto Snug é uma iniciativa pessoal que desenvolvi para criar uma aplicação robusta e completa, com um foco especial na criação e gestão de cadastros sofisticados. O objetivo principal é construir um sistema que não apenas permita o gerenciamento detalhado de dados de usuários, mas que também integre de forma harmoniosa as tecnologias Java e React, promovendo um desenvolvimento full-stack sólido.
 
-<h2>Project Objective:</h2>
+<h2>Objetivo do projeto:</h2>
 No Snug, busquei criar uma plataforma de cadastro bem elaborada, que se destaca pela configuração detalhada e funcionalidades avançadas. Este projeto representa uma oportunidade valiosa para explorar e aplicar conceitos avançados de desenvolvimento, e para aprimorar minhas habilidades na integração entre o backend em Java e o frontend em React.
 
 <br/>

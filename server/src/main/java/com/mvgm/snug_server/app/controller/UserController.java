@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.UUID;
 
 import static com.mvgm.snug_server.utils.Constants.BASE_URL;
 
@@ -25,19 +24,22 @@ public class UserController {
     }
 
     @GetMapping("/{userId}")
-    public ResponseEntity<UserDto> findUser(@PathVariable UUID userId) {
+    public ResponseEntity<UserDto> findUser(@PathVariable Long userId) {
         return ResponseEntity.status(200).body(userMapper.toDto(userService.findById(userId)));
     }
 
     @DeleteMapping("{userId}")
-    public ResponseEntity<Void> deleteUser(@PathVariable UUID userId) {
+    public ResponseEntity<Void> deleteUser(@PathVariable Long userId) {
         return ResponseEntity.status(204).body(null);
     }
 
     @PutMapping("update/{userId}")
-    public ResponseEntity<String> updateUser(@PathVariable UUID userId, @RequestBody UserDto userDto) {
+    public ResponseEntity<String> updateUser(@PathVariable Long userId, @RequestBody UserDto userDto) {
         userService.updateUser(UserMapper.convert.toEntity(userDto), userId);
         return ResponseEntity.status(200).body("User updated successfully!");
     }
-
+    @GetMapping("/test")
+    public ResponseEntity<String> testHello () {
+        return ResponseEntity.ok("Hello World!");
+    }
 }

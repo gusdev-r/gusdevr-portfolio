@@ -23,7 +23,7 @@ public class UserController {
         return ResponseEntity.status(200).body(userMapper.toDtoList(userService.findAll()));
     }
 
-    @GetMapping("/{userId}")
+    @GetMapping("{userId}")
     public ResponseEntity<UserDto> findUser(@PathVariable Long userId) {
         return ResponseEntity.status(200).body(userMapper.toDto(userService.findById(userId)));
     }
@@ -33,13 +33,9 @@ public class UserController {
         return ResponseEntity.status(204).body(null);
     }
 
-    @PutMapping("update/{userId}")
+    @PutMapping("{userId}")
     public ResponseEntity<String> updateUser(@PathVariable Long userId, @RequestBody UserDto userDto) {
         userService.updateUser(UserMapper.convert.toEntity(userDto), userId);
         return ResponseEntity.status(200).body("User updated successfully!");
-    }
-    @GetMapping("/test")
-    public ResponseEntity<String> testHello () {
-        return ResponseEntity.ok("Hello World!");
     }
 }

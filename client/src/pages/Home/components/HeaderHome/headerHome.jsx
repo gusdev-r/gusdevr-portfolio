@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../../../../assets/images/snug.png'
+import { Link } from 'react-router-dom'
 import {
   Button,
   ContainerButtons,
@@ -24,8 +25,14 @@ export const HeaderHome = () => {
         <Element href="#">Link Five</Element>
       </ContainerElements>
       <ContainerButtons>
-        <Button>Login</Button>
-        <Button>Register</Button>
+        <Button>
+          Entrar
+          <Link to="/login"></Link>
+        </Button>
+        <Button>
+          Cadastrar
+          <Link to="/register" />
+        </Button>
       </ContainerButtons>
     </HeaderComp>
   )

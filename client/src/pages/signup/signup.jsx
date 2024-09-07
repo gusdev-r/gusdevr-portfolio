@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from 'react-hook-form'
 import logo from '../../assets/images/snug.png'
@@ -20,16 +21,15 @@ import {
 } from './style'
 import formValidation from './validation'
 import { useState } from 'react'
-import { Button } from '../../components/Header/style'
+import { toast, ToastContainer } from 'react-toastify'
 
-export default function Signup() {
+const Signup = () => {
   const [isLoading, setIsLoading] = useState(false)
 
   const {
     register,
     formState: { errors },
     handleSubmit,
-    reset,
   } = useForm({
     resolver: yupResolver(formValidation),
   })
@@ -75,11 +75,10 @@ export default function Signup() {
                   register={register}
                   registerName="password"
                 />
-                <ButtonSubmit>Cadastrar</ButtonSubmit>
+                <ButtonSubmit type="submit">Cadastrar</ButtonSubmit>
                 <GoogleLogin> Entrar com Google </GoogleLogin>
                 <AlternativeJoin>
-                  {' '}
-                  Já possui um cadastro? <JoinLink href=""> Entrar</JoinLink>
+                  Já possui um cadastro? <Link to="/login"> Entrar</Link>
                 </AlternativeJoin>
               </form>
             </FormBox>
@@ -90,3 +89,5 @@ export default function Signup() {
     </>
   )
 }
+
+export default Signup

@@ -108,7 +108,9 @@ export const Button = styled.a`
   cursor: pointer;
   border: none;
   transition: var(--transition-color-fast);
-  font-size: 14px;
+  background: none;
+  text-decoration: none;
+
   border-radius: 8px;
   &:hover {
     color: var(--whiteDefault);

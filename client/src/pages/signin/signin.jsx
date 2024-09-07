@@ -1,10 +1,11 @@
-import { yupResolver } from "@hookform/resolvers/yup";
-import { useForm } from "react-hook-form";
-import logo from "../../assets/images/snug.png";
-import { Footer } from "../../components/Footer/footer";
-import FormInput from "../../components/FormInput/formInput";
-import { Header } from "../../components/Header/header";
-import UniversalTitle from "../../components/UniversalTitle/title";
+import { yupResolver } from '@hookform/resolvers/yup'
+import { useForm } from 'react-hook-form'
+import logo from '../../assets/images/snug.png'
+import { Footer } from '../../components/Footer/footer'
+import FormInput from '../../components/FormInput/formInput'
+import { Link } from 'react-router-dom'
+import { Header } from '../../components/Header/header'
+import UniversalTitle from '../../components/UniversalTitle/title'
 import {
   ButtonSubmit,
   Container,
@@ -14,13 +15,13 @@ import {
   ModalBox,
   PageContainer,
   SubTitle,
-} from "./style";
-import formValidation from "./validation";
+} from './style'
+import formValidation from './validation'
 
-export default function SignIn() {
+const SignIn = () => {
   const onSubmit = (data) => {
-    console.log(data);
-  };
+    console.log(data)
+  }
 
   const {
     register,
@@ -29,7 +30,7 @@ export default function SignIn() {
     reset,
   } = useForm({
     resolver: yupResolver(formValidation),
-  });
+  })
 
   return (
     <>
@@ -44,8 +45,10 @@ export default function SignIn() {
               <UniversalTitle color="hsl(0, 0%, 0%)">
                 Faça seu login
               </UniversalTitle>
-              <SubTitle>Entre na sua conta e aproveite o melhor para o seu bolso!</SubTitle>
-              
+              <SubTitle>
+                Entre na sua conta e aproveite o melhor para o seu bolso!
+              </SubTitle>
+
               <form onSubmit={handleSubmit(onSubmit)}>
                 <FormInput
                   type="text"
@@ -63,7 +66,9 @@ export default function SignIn() {
                   register={register}
                   registerName="password"
                 />
-                <ButtonSubmit type="submit">Entrar</ButtonSubmit>
+                <ButtonSubmit type="submit">
+                  <Link to="/login"> Entrar</Link>
+                </ButtonSubmit>
               </form>
             </FormBox>
           </ModalBox>
@@ -71,5 +76,7 @@ export default function SignIn() {
         <Footer />
       </PageContainer>
     </>
-  );
+  )
 }
+
+export default SignIn

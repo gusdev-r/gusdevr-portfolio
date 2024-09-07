@@ -42,8 +42,24 @@ import {
   IconContact,
   ContactTitle,
 } from './style'
+import { useEffect } from 'react'
+import { testUseCase } from '../../usecases/testUseCase'
+import { toast } from 'react-toastify'
 
 const Home = () => {
+  useEffect(() => {
+    const fetchHelloTest = async () => {
+      try {
+        const response = await testUseCase()
+        console.log(response)
+      } catch (error) {
+        toast.error('Algo deu errado!')
+        console.log('error', error)
+      }
+    }
+    fetchHelloTest()
+  }, [])
+
   return (
     <>
       <PageContainer>

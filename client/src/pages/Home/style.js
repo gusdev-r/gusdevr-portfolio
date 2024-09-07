@@ -100,36 +100,85 @@ export const DescribeImg = styled.img`
 
 export const TechSection = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  height: 25rem;
+  padding: 4rem 0; //
 `
 
 export const TechContainer = styled.div`
-  width: 100%;
-  padding: 50px;
   text-align: center;
+  width: 100%;
 `
 
-export const IconContainer = styled.div`
+export const IconsGrid = styled.div`
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
   justify-content: space-evenly;
-  height: 8rem;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+`
+export const IconItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--greyDefault);
+  transition: color 0.3s ease-in-out;
 
   svg {
-    color: var(--whiteDefault);
-    font-size: 40px;
-    transition: font-size 0.3s ease-in-out;
-    animation: none;
+    font-size: 48px;
+    margin-bottom: 0.5rem;
+    transition: transform 0.5s ease-in-out;
   }
 
-  svg:hover {
-    font-size: 50px;
+  &:nth-child(1) {
+    animation: icon-sequence 12s infinite;
   }
+  &:nth-child(2) {
+    animation: icon-sequence 12s infinite 1.33s;
+  }
+  &:nth-child(3) {
+    animation: icon-sequence 12s infinite 2.67s;
+  }
+  &:nth-child(4) {
+    animation: icon-sequence 12s infinite 4s;
+  }
+  &:nth-child(5) {
+    animation: icon-sequence 12s infinite 5.33s;
+  }
+  &:nth-child(6) {
+    animation: icon-sequence 12s infinite 6.67s;
+  }
+  &:nth-child(7) {
+    animation: icon-sequence 12s infinite 8s;
+  }
+  &:nth-child(8) {
+    animation: icon-sequence 12s infinite 9.33s;
+  }
+  &:nth-child(9) {
+    animation: icon-sequence 12s infinite 10.67s;
+  }
+
+  @keyframes icon-sequence {
+    0%,
+    20%,
+    100% {
+      color: var(--greyDefault);
+      transform: scale(1);
+    }
+    10% {
+      color: var(--whiteDefault);
+      transform: scale(1.2);
+    }
+    30% {
+      color: var(--greyDefault);
+      transform: scale(1);
+    }
+  }
+`
+
+export const IconLabel = styled.span`
+  font-size: 16px;
 `
 export const SubTitleTech = styled.p`
   max-width: 600px;

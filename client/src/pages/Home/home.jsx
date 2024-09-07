@@ -34,7 +34,9 @@ import {
   DescribeImg,
   TechSection,
   TechContainer,
-  IconContainer,
+  IconsGrid,
+  IconItem,
+  IconLabel,
   ContactSection,
   ContactContainer,
   BoxContact,
@@ -92,20 +94,44 @@ const Home = () => {
                 Lorem ipsum dolor sit amet, consectetur incididunt ut labore
                 adipiscing elit.
               </SubTitleTech>
-              <IconContainer>
-                <FaJs />
-                <FaReact />
-                <FaNodeJs />
-                <FaCss3Alt />
-                <FaHtml5 />
-                <FaJava />
-                <SiSpring />
-                <FaDocker />
-                <FaAws />
-                <FaGitAlt />
-                <FaGithub />
-                <SiMysql />
-              </IconContainer>
+              <IconsGrid>
+                <IconItem>
+                  <FaReact />
+                  <IconLabel>React</IconLabel>
+                </IconItem>
+                <IconItem>
+                  <FaJs />
+                  <IconLabel>JavaScript</IconLabel>
+                </IconItem>
+                <IconItem>
+                  <FaHtml5 />
+                  <IconLabel>HTML5</IconLabel>
+                </IconItem>
+                <IconItem>
+                  <FaCss3Alt />
+                  <IconLabel>CSS3</IconLabel>
+                </IconItem>
+                <IconItem>
+                  <FaJava />
+                  <IconLabel>Java</IconLabel>
+                </IconItem>
+                <IconItem>
+                  <SiSpring />
+                  <IconLabel>Spring</IconLabel>
+                </IconItem>
+                <IconItem>
+                  <FaNodeJs />
+                  <IconLabel>Node.js</IconLabel>
+                </IconItem>
+                <IconItem>
+                  <FaGitAlt />
+                  <IconLabel>Git</IconLabel>
+                </IconItem>
+                <IconItem>
+                  <FaGithub />
+                  <IconLabel>GitHub</IconLabel>
+                </IconItem>
+              </IconsGrid>
             </TechContainer>
           </TechSection>
 

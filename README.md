@@ -23,16 +23,12 @@
     <img align="center" alt="intellij-idea" src="https://img.shields.io/badge/Intellij%20Idea-000?logo=intellij-idea&style=for-the-badge"/>
 </div>
 
-<br/>
-
-<h1>Descrição do projeto:</h1>
+## Descrição do projeto:
 
 O projeto Snug é uma iniciativa pessoal que desenvolvi para criar uma aplicação robusta e completa, com um foco especial na criação e gestão de cadastros sofisticados. O objetivo principal é construir um sistema que não apenas permita o gerenciamento detalhado de dados de usuários, mas que também integre de forma harmoniosa as tecnologias Java e React, promovendo um desenvolvimento full-stack sólido.
 
 <h2>Objetivo do projeto:</h2>
 No Snug, busquei criar uma plataforma de cadastro bem elaborada, que se destaca pela configuração detalhada e funcionalidades avançadas. Este projeto representa uma oportunidade valiosa para explorar e aplicar conceitos avançados de desenvolvimento, e para aprimorar minhas habilidades na integração entre o backend em Java e o frontend em React.
-
-<br/>
 
 ---
 
@@ -50,19 +46,15 @@ docker-compose build
 docker-compose up
 ```
 
-<br/>
+## Para iniciar as aplicações separadamente
 
-### Para iniciar as aplicações separadamente
-
-#### **Front-End**
+### **Front-End**
 
 Entre na pasta client, lá você encontrará um tutorial simples de como iniciar a aplicação front-end
 
-#### **Back-End**
+### **Back-End**
 
 Entre na pasta server, lá você encontrará um tutorial simples de como iniciar a aplicação back-end
-
-<br/>
 
 ### Tecnologias usadas:
 

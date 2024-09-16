@@ -22,7 +22,7 @@ export const LogoBox = styled.div`
 `
 
 export const Logo = styled.img`
-  max-width: 150px;
+  max-width: 9.5rem;
   height: auto;
 `
 
@@ -49,7 +49,6 @@ export const MainLink = styled.a`
   font-size: 14px;
   padding: 4px;
   transition: var(--transition-color-slow);
-
   &:hover {
     color: var(--whiteDefault);
     text-decoration: underline;
@@ -74,32 +73,6 @@ export const SocialIcon = styled.a`
     color: var(--grey2);
   }
 `
-
-// export const PolicyContainer = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   gap: 30px;
-//   margin-bottom: 20px;
-//   @media ${breakpoint.sm2} {
-//     flex-direction: column;
-//     gap: 15px;
-//   }
-// `
-
-// export const PolicyLink = styled.a`
-//   color: var(--whiteDefault);
-//   text-decoration: none;
-//   font-size: 12px;
-//   transition: var(--transition-color-fast);
-
-//   &:hover {
-//     color: var(--grayDefault);
-//     text-decoration: underline;
-//   }
-//   @media ${breakpoint.sm2} {
-//     font-size: 10px;
-//   }
-// `
 
 export const Copyright = styled.div`
   font-size: 10px;

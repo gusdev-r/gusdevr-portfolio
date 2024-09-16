@@ -19,12 +19,11 @@ export const Container = styled.div`
 export const ModalBox = styled.div`
   height: 42rem;
   width: 70rem;
-  border-radius: 42px;
-  background: linear-gradient(to left, rgb(16, 16, 16), rgb(0, 0, 0) 160%);
   display: flex;
+  background: linear-gradient(to left, rgb(16, 16, 16), rgb(0, 0, 0) 160%);
   box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.196);
-  margin-top: 5.5rem;
-  margin-bottom: 5.5rem;
+  border-radius: 42px;
+  margin: 88px 0;
   border: 1px solid var(--grey2);
 
   @media ${breakpoint.md1} {
@@ -34,16 +33,15 @@ export const ModalBox = styled.div`
   @media ${breakpoint.sm2} {
     height: 32rem;
     width: 40rem;
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin: 96px 0;
     border-radius: 28px;
   }
   @media ${breakpoint.sm1} {
-    background: none;
     height: 31rem;
     width: 17rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin: 48px 0;
+    border-radius: 28px;
+    background: none;
   }
 `
 
@@ -56,25 +54,27 @@ export const FormBox = styled.div`
   flex-direction: column;
   border-top-right-radius: 42px;
   border-bottom-right-radius: 42px;
+
   @media ${breakpoint.sm1} {
     box-shadow: none;
-    padding: 2rem;
+    padding: 32px;
     border-radius: 13px;
   }
 `
 
 export const LogoBox = styled.div`
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
-  width: 100%;
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
 `
 
 export const Logo = styled.img`
   max-width: 19rem;
+
   @media ${breakpoint.md1} {
     max-width: 15rem;
   }
@@ -86,81 +86,31 @@ export const Logo = styled.img`
   }
 `
 
-export const SubTitle = styled.text`
-  font-size: 14px;
-  font-weight: 400;
-  margin-bottom: 2rem;
-  color: var(--greyDefault);
-  @media ${breakpoint.md1} {
-    font-size: 12px;
-    margin-bottom: 1rem;
-  }
-  @media ${breakpoint.sm2} {
-    font-size: 10px;
-  }
-  @media ${breakpoint.sm1} {
-    font-size: 9px;
-  }
-`
-
-export const AlternativeJoin = styled.p`
-  font-size: 12px;
-  font-weight: 400;
-  margin-bottom: 2rem;
-  margin-top: 1rem;
-  color: var(--greyDefault);
-
-  @media ${breakpoint.md1} {
-    font-size: 10px;
-  }
-  @media ${breakpoint.sm1} {
-    font-size: 7px;
-    margin-top: 0.5rem;
-  }
-  @media ${breakpoint.sm2} {
-    margin-top: 0.5rem;
-    font-size: 8px;
-  }
-`
-
-export const JoinLink = styled.a`
-  color: var(--greyDefault);
-  text-decoration: none;
-  padding: 2px;
-  transition: var(--transition-color-fast);
-  text-decoration: underline;
-
-  &:hover {
-    color: var(--whiteDefault);
-  }
-`
-
 export const ButtonSubmit = styled.button`
-  padding: 14px 26px;
   width: 100%;
-  border: unset;
-  border-radius: 8px;
+  padding: 14px 26px;
   color: var(--whiteDefault);
-  margin-top: 10px;
-  border: none;
-  z-index: 1;
-  background-color: var(--blackDefault);
-  position: relative;
-  font-weight: 700;
   transition: var(--transition-width-fast);
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+  background-color: var(--blackDefault);
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
 
   &::before {
     content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 100%;
     width: 0;
-    border-radius: 8px;
-    background-color: var(--grey1);
-    z-index: -1;
-    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    top: 0;
+    left: 0;
     transition: var(--transition-width-fast);
+    border-radius: 8px;
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    background-color: var(--grey1);
+    position: absolute;
+    z-index: -1;
   }
 
   &:hover {
@@ -178,21 +128,21 @@ export const ButtonSubmit = styled.button`
   }
   @media ${breakpoint.sm2} {
     font-size: 9px;
+    padding: 9px 19px;
     margin-top: 6px;
-    padding: 10px 18px;
   }
 `
 
 export const GoogleLogin = styled.button`
   width: 100%;
-  border: 1.5px solid var(--grey1);
+  padding: 14px 26px;
   color: var(--whiteDefault);
-  font-weight: 700;
+  transition: background-color 0.5s ease, box-shadow 0.3s ease;
   border-radius: 8px;
+  border: 1.5px solid var(--grey1);
   margin-top: 6px;
   background: none;
-  padding: 14px 26px;
-  transition: background-color 0.5s ease, box-shadow 0.3s ease;
+  font-weight: 700;
 
   &:hover {
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
@@ -201,12 +151,60 @@ export const GoogleLogin = styled.button`
 
   @media ${breakpoint.md1} {
     font-size: 12px;
-    margin-top: 6px;
     padding: 10px 20px;
+    margin-top: 6px;
   }
   @media ${breakpoint.sm2} {
     font-size: 9px;
-    margin-top: 6px;
     padding: 9px 19px;
+    margin-top: 6px;
+  }
+`
+
+export const AlternativeJoin = styled.p`
+  font-size: 12px;
+  color: var(--greyDefault);
+  font-weight: 400;
+  margin: 16px 0 32px;
+
+  @media ${breakpoint.md1} {
+    font-size: 10px;
+  }
+  @media ${breakpoint.sm2} {
+    font-size: 8px;
+    margin: 8px 0;
+  }
+  @media ${breakpoint.sm1} {
+    font-size: 7px;
+    margin: 8px 0;
+  }
+`
+
+export const JoinLink = styled.a`
+  color: var(--greyDefault);
+  text-decoration: none;
+  padding: 2px;
+  transition: var(--transition-color-fast);
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--whiteDefault);
+  }
+`
+
+export const SubTitle = styled.text`
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: var(--greyDefault);
+  @media ${breakpoint.md1} {
+    font-size: 12px;
+    margin-bottom: 1rem;
+  }
+  @media ${breakpoint.sm2} {
+    font-size: 10px;
+  }
+  @media ${breakpoint.sm1} {
+    font-size: 9px;
   }
 `

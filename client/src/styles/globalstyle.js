@@ -5,18 +5,17 @@ const GlobalStyled = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Poppins', 'Arial', sans-serif;
     }
 
     body {
-        font-family: 'Poppins', 'Arial', sans-serif;
     }
 
     button {
         cursor: pointer;
     }
 
-    
-       ::-webkit-scrollbar {
+    ::-webkit-scrollbar {
         width: 12px;
     }
 
@@ -34,6 +33,7 @@ const GlobalStyled = createGlobalStyle`
         background-color: var(--grey3);
     }
     
+    
     :root {
 
         --greyDefault: #808080;
@@ -50,18 +50,21 @@ const GlobalStyled = createGlobalStyle`
 
         --whiteDefault: #FFFFFF;
         --white1: #E8E8E8;
+        --white2: #F9F9F9;
 
         --blackDefault: #000000;
         --black1: #080808;
 
         --erro: #CD2B31;
 
+        --transition-default-fast: 0,3;
         --transition-color-fast: color 0.3s ease;
         --transition-color-slow: color 0.5s ease;
-        --transition-border-slow: border-color 0.5 ease;
-        --transition-all-slow: all ease 0.5s;
+        --transition-all-ease-fast: all ease 0.3s;
+        --transition-all-ease-slow: all ease 0.5s;
+        --transition-all-medium: all 0.4;
+        --transition-bg-shadow: background-color 0.5s ease, box-shadow 0.3s ease;
         --transition-width-fast: 250ms;
-        --transition-bg-boxshadow: background-color 0.5s ease, box-shadow 0.3s ease;
     }
 `
 

@@ -1,49 +1,50 @@
 import { HeaderHome } from './components/headerHome/headerHome'
 import { Carousel } from './components/Carousel/carousel'
+import { ButtonGroup } from './components/Buttons/buttons'
 import { Footer } from '../../components/Footer/footer'
 import defaultImg from '../../assets/images/grey.png'
+
 import {
-  FaJs,
   FaReact,
-  FaNodeJs,
-  FaCss3Alt,
+  FaJs,
   FaHtml5,
-  FaJava,
-  FaDocker,
-  FaAws,
+  FaCss3Alt,
   FaGitAlt,
-  FaPhoneAlt,
   FaGithub,
+  FaJava,
+  FaNodeJs,
 } from 'react-icons/fa'
-import { SiSpring, SiMysql } from 'react-icons/si'
-import { MdOutlineMail, MdChat } from 'react-icons/md'
+
+import { SiSpring } from 'react-icons/si'
+
+import { MdEmail, MdChat, MdPhone } from 'react-icons/md'
+
 import {
   PageContainer,
   MainContent,
   WelcomeSection,
-  TitleContainer,
-  Title,
-  TitleDesc,
-  SubTitleTech,
   WelcomeContainer,
   InfoContainer,
-  ButtonNow,
-  ContainerButtons,
-  DescribeSection,
-  DescribeContainer,
-  DescribeImg,
   TechSection,
   TechContainer,
   IconsGrid,
   IconItem,
   IconLabel,
+  DescribeSection,
+  DescribeContainer,
+  DescribeImg,
   ContactSection,
   ContactContainer,
-  BoxContact,
-  ContactLink,
+  ContactBox,
   IconContact,
-  ContactTitle,
+  ContactLink,
+  StyledBigTitle,
+  StyledMediumSubTitle,
+  StyledSmallSubTitle,
+  StyledMediumTitle,
+  StyledSmallTitle,
 } from './style'
+
 import { useEffect } from 'react'
 import { testUseCase } from '../../usecases/testUseCase'
 import { toast } from 'react-toastify'
@@ -66,34 +67,30 @@ const Home = () => {
     <>
       <PageContainer>
         <HeaderHome />
+
         <MainContent>
           <Carousel />
           <WelcomeSection>
             <WelcomeContainer>
-              <TitleContainer>
-                <Title>Welcome To Snug</Title>
-              </TitleContainer>
+              <StyledBigTitle>Welcome To Snug</StyledBigTitle>
               <InfoContainer>
-                <TitleDesc>
+                <StyledSmallSubTitle maxWidth="600px">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   do eiusmod tempor incididunt ut labore et dolore magna
                   aliquaLorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Sed do eiusmo.
-                </TitleDesc>
-                <ContainerButtons>
-                  <ButtonNow>Book Now</ButtonNow>
-                  <ButtonNow>View Menu</ButtonNow>
-                </ContainerButtons>
+                </StyledSmallSubTitle>
+                <ButtonGroup></ButtonGroup>
               </InfoContainer>
             </WelcomeContainer>
           </WelcomeSection>
 
           <TechSection>
             <TechContainer>
-              <SubTitleTech>
+              <StyledMediumSubTitle>
                 Lorem ipsum dolor sit amet, consectetur incididunt ut labore
                 adipiscing elit.
-              </SubTitleTech>
+              </StyledMediumSubTitle>
               <IconsGrid>
                 <IconItem>
                   <FaReact />
@@ -138,60 +135,56 @@ const Home = () => {
           <DescribeSection>
             <DescribeImg src={defaultImg} alt="img" />
             <DescribeContainer>
-              <TitleDesc>Feature one</TitleDesc>
-              <Title>Describe benefit of feature one</Title>
-              <TitleDesc>
+              <StyledMediumTitle>
+                Describe benefit of feature one
+              </StyledMediumTitle>
+              <StyledSmallSubTitle>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </TitleDesc>
-              <ContainerButtons>
-                <ButtonNow>Learn more</ButtonNow>
-              </ContainerButtons>
+              </StyledSmallSubTitle>
+              <ButtonGroup></ButtonGroup>
             </DescribeContainer>
           </DescribeSection>
 
           <ContactSection>
             <ContactContainer>
-              <BoxContact>
+              <ContactBox>
                 <IconContact>
-                  <MdOutlineMail size={48} />
+                  <MdEmail />
                 </IconContact>
-                <ContactTitle>Email</ContactTitle>
-                <SubTitleTech>
+                <StyledSmallTitle>Email</StyledSmallTitle>
+                <StyledSmallSubTitle>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in ero.
-                </SubTitleTech>
-                <ContactLink href="g.hen.moreira@gmail.com"></ContactLink>
-              </BoxContact>
-              <BoxContact>
+                </StyledSmallSubTitle>
+                <ContactLink href="">loremipsum@gmail.com</ContactLink>
+              </ContactBox>
+              <ContactBox>
                 <IconContact>
-                  <MdChat size={48} />
+                  <MdChat />
                 </IconContact>
-                <ContactTitle>Live Chat</ContactTitle>
-                <SubTitleTech>
+                <StyledSmallTitle>Live Chat</StyledSmallTitle>
+                <StyledSmallSubTitle>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in ero.
-                </SubTitleTech>
-                <ContactLink href="tel:+155500000000">
-                  +1 (555) 000-0000
-                </ContactLink>
-              </BoxContact>
-              <BoxContact>
+                </StyledSmallSubTitle>
+                <ContactLink href="">Lorem ipsum dolor sit</ContactLink>
+              </ContactBox>
+              <ContactBox>
                 <IconContact>
-                  <FaPhoneAlt size={48} />
+                  <MdPhone />
                 </IconContact>
-                <ContactTitle>Phone</ContactTitle>
-                <SubTitleTech>
+                <StyledSmallTitle>Phone</StyledSmallTitle>
+                <StyledSmallSubTitle>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in ero.
-                </SubTitleTech>
-                <ContactLink href="https://maps.google.com/?q=123+Sample+St,+Sydney+NSW+2000+AU">
-                  123 Sample St, Sydney NSW 2000 AU
-                </ContactLink>
-              </BoxContact>
+                </StyledSmallSubTitle>
+                <ContactLink href="">+1 (555) 000-0000</ContactLink>
+              </ContactBox>
             </ContactContainer>
           </ContactSection>
         </MainContent>
+
         <Footer />
       </PageContainer>
     </>

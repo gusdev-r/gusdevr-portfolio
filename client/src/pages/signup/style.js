@@ -19,12 +19,11 @@ export const ModalBox = styled.div`
   justify-content: center;
   height: 42rem;
   width: 70rem;
-  border-radius: 42px;
-  background: linear-gradient(to left, rgb(16, 16, 16), rgb(0, 0, 0) 160%);
   display: flex;
+  background: linear-gradient(to left, rgb(16, 16, 16), rgb(0, 0, 0) 160%);
   box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.196);
-  margin-top: 5.5rem;
-  margin-bottom: 5.5rem;
+  border-radius: 42px;
+  margin: 88px 0;
   border: 1px solid var(--grey2);
 
   @media ${breakpoint.md1} {
@@ -34,16 +33,15 @@ export const ModalBox = styled.div`
   @media ${breakpoint.sm2} {
     height: 32rem;
     width: 40rem;
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin: 96px 0;
     border-radius: 28px;
   }
   @media ${breakpoint.sm1} {
-    background: none;
     height: 31rem;
     width: 17rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin: 48px 0;
+    border-radius: 28px;
+    background: none;
   }
 `
 
@@ -56,25 +54,27 @@ export const FormBox = styled.div`
   flex-direction: column;
   border-top-right-radius: 42px;
   border-bottom-right-radius: 42px;
+
   @media ${breakpoint.sm1} {
     box-shadow: none;
-    padding: 2rem;
+    padding: 32px;
     border-radius: 13px;
   }
 `
 
 export const LogoBox = styled.div`
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
-  width: 100%;
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
 `
 
 export const Logo = styled.img`
   max-width: 19rem;
+
   @media ${breakpoint.md1} {
     max-width: 15rem;
   }

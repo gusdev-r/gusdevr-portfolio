@@ -34,7 +34,7 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable());
-        http.cors(cors -> cors.configurationSource(corsConfigurationSource())); // Habilitando CORS
+        http.cors(cors -> cors.configurationSource(corsConfigurationSource()));
 
         http.authorizeHttpRequests(auth -> {
             auth.requestMatchers(BASE_URL + "/public/**").permitAll();
@@ -49,22 +49,20 @@ public class WebSecurityConfig {
         return http.build();
     }
 
-    // Método para configuração de CORS
     @Bean
     public UrlBasedCorsConfigurationSource corsConfigurationSource() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
 
-        // Verifica se é ambiente de desenvolvimento
         boolean isDevelopment = Boolean.parseBoolean(System.getenv("DEV"));
         if (isDevelopment) {
-            config.setAllowCredentials(true); // Permite envio de cookies e credenciais
-            config.setAllowedOrigins(List.of("http://localhost:3000")); // Permite o frontend React
+            config.setAllowCredentials(true);
+            config.setAllowedOrigins(List.of("http://localhost:3000"));
             config.setAllowedHeaders(List.of("Authorization", "Cache-Control", "Content-Type"));
             config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         } else {
-            config.setAllowedOrigins(List.of()); // Bloqueia todas as origens fora do dev
-            config.setAllowedMethods(List.of()); // Não permite métodos fora do dev
+            config.setAllowedOrigins(List.of());
+            config.setAllowedMethods(List.of());
         }
 
         source.registerCorsConfiguration("/**", config);

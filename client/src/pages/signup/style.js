@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import breakpoint from '../../styles/breakpoints'
 
 export const PageContainer = styled.div`
-  display: flex;
   flex-direction: column;
   min-height: 100vh;
   justify-content: space-between;
@@ -12,11 +11,12 @@ export const PageContainer = styled.div`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 `
 
 export const ModalBox = styled.div`
+  align-items: center;
+  justify-content: center;
   height: 42rem;
   width: 70rem;
   border-radius: 42px;
@@ -87,6 +87,7 @@ export const Logo = styled.img`
 `
 
 export const SubTitle = styled.text`
+  max-width: 60%;
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 2rem;
@@ -136,8 +137,10 @@ export const JoinLink = styled.a`
 `
 
 export const ButtonSubmit = styled.button`
-  padding: 14px 26px;
+  justify-content: center;
+  max-width: 100%;
   width: 100%;
+  height: 3rem;
   border: unset;
   border-radius: 8px;
   color: var(--whiteDefault);
@@ -209,4 +212,33 @@ export const GoogleLogin = styled.button`
     margin-top: 6px;
     padding: 9px 19px;
   }
+`
+
+export const ConfirmationTitle = styled.h1`
+  font-size: 3.5rem;
+  color: ${(props) => props.color || 'var(--whiteDefault)'};
+  margin: 1.5px 0;
+  font-weight: 600;
+  text-align: center;
+  transition: var(--transition-color-slow);
+  @media ${breakpoint.md1} {
+    font-size: 1.8rem;
+    margin: 4px 0;
+  }
+  @media ${breakpoint.sm2} {
+    font-size: 1.5rem;
+    margin: 2px 0;
+  }
+  @media ${breakpoint.sm1} {
+    font-size: 1.3rem;
+    margin: 0.5px;
+  }
+`
+
+export const ConfirmContainer = styled.div`
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60%;
 `

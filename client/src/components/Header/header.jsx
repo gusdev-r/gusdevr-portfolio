@@ -1,18 +1,14 @@
 import { useRef, useState } from 'react'
 import { FiLogIn } from 'react-icons/fi'
 import { IoClose, IoMenu } from 'react-icons/io5'
+import { useNavigate } from 'react-router-dom'
 import logo from '../../assets/images/snug.png'
 import { useHeaderVisibility } from '../../hooks/useHeader'
 import {
   BtnMenu,
   Button,
-  ContainerButtons,
   ContainerElements,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
   Element,
-  ElementMenu,
   HeaderComp,
   HeaderMenu,
   Logo,
@@ -21,6 +17,7 @@ import {
 } from './style'
 
 export const Header = () => {
+  const navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false)
   const ref = useRef(null)
 
@@ -36,26 +33,25 @@ export const Header = () => {
           <Logo src={logo} alt="logo" />
         </LogoBox>
         <ContainerElements>
-          <Element>Link 1</Element>
-          <Element>Link 2</Element>
-          <Dropdown>
-            <Element role="button">Options</Element>
-            <DropdownMenu>
-              <DropdownItem href="#">Ação 1</DropdownItem>
-              <DropdownItem href="#">Ação 2</DropdownItem>
-              <DropdownItem href="#">Ação 3</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-          <ContainerButtons>
-            <Button onClick={() => {}} bgColorHover="#dbdbdb">
-              <FiLogIn style={{ marginLeft: '8px' }} />
-              Login
-            </Button>
-          </ContainerButtons>
-          <BtnMenu onClick={() => setIsOpen(true)}>
-            <IoMenu />
-          </BtnMenu>
+          <Element href="#">Link One</Element>
+          <Element href="#">Link Two</Element>
+          <Element href="#">Link Three</Element>
+          <Element href="#">Link Four</Element>
+          <Element href="#">Link Five</Element>
         </ContainerElements>
+        <BtnMenu onClick={() => setIsOpen(true)}>
+          <IoMenu />
+        </BtnMenu>
+        <Button
+          onClick={() => {
+            navigate('/login')
+          }}
+          bgColorHover="#dbdbdb"
+        >
+          {' '}
+          Entrar
+          <FiLogIn style={{ marginLeft: '5px' }} />
+        </Button>
       </HeaderComp>
       <HeaderMenu
         ref={ref}
@@ -68,20 +64,19 @@ export const Header = () => {
           <IoClose />
         </BtnMenu>
         <MenuContainer>
-          <ElementMenu>Link 1</ElementMenu>
-          <ElementMenu>Link 2</ElementMenu>
-          <ElementMenu>
-            Login <FiLogIn style={{ marginLeft: '8px' }} />
-          </ElementMenu>
-          <Dropdown>
-            <Element role="button">Options</Element>
-            <DropdownMenu>
-              <DropdownItem href="#">Ação 1</DropdownItem>
-              <DropdownItem href="#">Ação 2</DropdownItem>
-              <DropdownItem href="#">Ação 3</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
+          <Element href="#">Link One</Element>
+          <Element href="#">Link Two</Element>
+          <Element href="#">Link Three</Element>
+          <Element href="#">Link Four</Element>
+          <Element href="#">Link Five</Element>
         </MenuContainer>
+        <Element
+          onClick={() => {
+            navigate('/login')
+          }}
+        >
+          Entrar <FiLogIn style={{ marginLeft: '8px' }} />
+        </Element>
       </HeaderMenu>
     </>
   )

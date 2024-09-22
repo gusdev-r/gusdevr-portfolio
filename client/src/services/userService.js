@@ -20,4 +20,8 @@ export const userService = {
     const response = api.put(`users/${userId}`)
     return response
   },
+
+  async registerUser(userData) {
+    api.post('public/register', userData)
+  },
 }

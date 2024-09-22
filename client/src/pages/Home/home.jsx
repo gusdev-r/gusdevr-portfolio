@@ -1,4 +1,4 @@
-import { HeaderHome } from './components/HeaderHome/headerHome'
+import { HeaderHome } from './components/headerHome/headerHome'
 import { Carousel } from './components/Carousel/carousel'
 import { Footer } from '../../components/Footer/footer'
 import defaultImg from '../../assets/images/grey.png'

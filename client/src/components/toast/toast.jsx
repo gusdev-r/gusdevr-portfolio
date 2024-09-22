@@ -19,10 +19,10 @@ const StyledToastContainer = styled(ToastContainer).attrs({
     font-size: 16px;
     background-color: rgba(8, 8, 8, 0.6);
     backdrop-filter: blur(15px);
-    font-weight: 700;
+    font-weight: 300;
     color: #fff;
     border: solid 2px #272727;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   }
 `

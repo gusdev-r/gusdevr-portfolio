@@ -47,7 +47,6 @@ export const ContainerElements = styled.ul`
   align-items: center;
   justify-content: flex-start;
   flex-grow: 1;
-  gap: 10px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -65,7 +64,7 @@ export const ContainerElements = styled.ul`
   }
 `
 
-export const Element = styled.a`
+export const Element = styled.p`
   text-align: center;
   text-decoration: none;
   padding: 4px 4px;
@@ -101,9 +100,9 @@ export const ContainerButtons = styled.div`
   }
 `
 
-export const Button = styled.a`
+export const ButtonChoice = styled.button`
   text-align: center;
-  padding: 2px 18px;
+  padding: 4px 18px;
   color: var(--grey6);
   cursor: pointer;
   border: none;
@@ -119,7 +118,7 @@ export const Button = styled.a`
   }
   @media ${breakpoint.bg1} {
     font-size: 13px;
-    padding: 2px 18px;
+    padding: 3px 18px;
   }
   @media ${breakpoint.sm2} {
     display: none;

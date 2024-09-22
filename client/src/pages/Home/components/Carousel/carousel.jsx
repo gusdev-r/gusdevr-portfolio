@@ -32,14 +32,10 @@ export const Carousel = () => {
         effect="coverflow"
         loop
         pagination={{ clickable: true }}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
         coverflowEffect={{
           rotate: 0,
-          stretch: 370,
-          depth: 110,
+          stretch: 270,
+          depth: 410,
           modifier: 0.9,
           slideShadows: true,
         }}

@@ -1,8 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import logo from '../../../../assets/images/snug.png'
-import { Link } from 'react-router-dom'
 import {
-  Button,
+  ButtonChoice,
   ContainerButtons,
   ContainerElements,
   Element,
@@ -12,6 +12,8 @@ import {
 } from './style'
 
 export const HeaderHome = () => {
+  const navigate = useNavigate()
+
   return (
     <HeaderComp>
       <LogoBox>
@@ -25,14 +27,20 @@ export const HeaderHome = () => {
         <Element href="#">Link Five</Element>
       </ContainerElements>
       <ContainerButtons>
-        <Button>
+        <ButtonChoice
+          onClick={() => {
+            navigate('/login')
+          }}
+        >
           Entrar
-          <Link to="/login"></Link>
-        </Button>
-        <Button>
+        </ButtonChoice>
+        <ButtonChoice
+          onClick={() => {
+            navigate('/register')
+          }}
+        >
           Cadastrar
-          <Link to="/register" />
-        </Button>
+        </ButtonChoice>
       </ContainerButtons>
     </HeaderComp>
   )

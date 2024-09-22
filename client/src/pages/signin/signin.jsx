@@ -17,6 +17,7 @@ import {
   SubTitle,
 } from './style'
 import formValidation from './validation'
+import { StyledLink } from '../../components/styledLink/style'
 
 const SignIn = () => {
   const onSubmit = (data) => {
@@ -67,7 +68,7 @@ const SignIn = () => {
                   registerName="password"
                 />
                 <ButtonSubmit type="submit">
-                  <Link to="/login"> Entrar</Link>
+                  <StyledLink to="/login"> Entrar</StyledLink>
                 </ButtonSubmit>
               </form>
             </FormBox>

@@ -4,12 +4,12 @@ import { FaInstagram, FaLinkedin, FaGithub, FaDiscord } from 'react-icons/fa'
 
 export const FooterContainer = styled.footer`
   width: 100%;
-  background-color: var(--black1);
+  background: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5); */
   z-index: 1000;
   @media ${breakpoint.sm2} {
     padding: 10px;

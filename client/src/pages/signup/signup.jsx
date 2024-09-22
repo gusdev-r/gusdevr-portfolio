@@ -18,13 +18,20 @@ import {
   AlternativeJoin,
   JoinLink,
   GoogleLogin,
+  ConfirmationTitle,
+  ConfirmContainer,
 } from './style'
 import formValidation from './validation'
 import { useState } from 'react'
-import { toast, ToastContainer } from 'react-toastify'
+import { toast } from 'react-toastify'
+import registerUseCase from '../../usecases/registerUseCase'
+import { CgSpinnerTwo } from 'react-icons/cg'
+import { StyledLink, StyledLinkButton } from '../../components/styledLink/style'
+import UniversalButton from '../../components/UniversalButton/button'
 
 const Signup = () => {
   const [isLoading, setIsLoading] = useState(false)
+  const [success, setSuccess] = useState(true)
 
   const {
     register,
@@ -35,7 +42,12 @@ const Signup = () => {
   })
 
   const onSubmit = (data) => {
-    console.log(data)
+    registerUseCase
+      .execute(data)
+      .then(toast.success('Email de confirmação enviado!'))
+      .catch((error) => {
+        toast.error('Algo deu errado no seu cadastro!')
+      })
   }
 
   return (
@@ -44,44 +56,58 @@ const Signup = () => {
         <Header />
         <Container>
           <ModalBox>
-            <LogoBox>
-              <Logo src={logo} alt="logo" />
-            </LogoBox>
-            <FormBox>
-              <UniversalTitle color="#FFFFFF">Faça seu cadastro</UniversalTitle>
-              <SubTitle>Faça deste o melhor lugar para o seu bolso!</SubTitle>
-              <form onSubmit={handleSubmit(onSubmit)}>
-                <FormInput
-                  type="text"
-                  label="Usuário"
-                  placeholder="Insira seu usuário"
-                  errors={errors}
-                  register={register}
-                  registerName="username"
-                />
-                <FormInput
-                  type="email"
-                  label="Email"
-                  placeholder="Insira seu email"
-                  errors={errors}
-                  register={register}
-                  registerName="email"
-                />
-                <FormInput
-                  type="password"
-                  label="Senha"
-                  placeholder="Insira sua senha"
-                  errors={errors}
-                  register={register}
-                  registerName="password"
-                />
-                <ButtonSubmit type="submit">Cadastrar</ButtonSubmit>
-                <GoogleLogin> Entrar com Google </GoogleLogin>
-                <AlternativeJoin>
-                  Já possui um cadastro? <Link to="/login"> Entrar</Link>
-                </AlternativeJoin>
-              </form>
-            </FormBox>
+            {!success ? (
+              <FormBox>
+                <UniversalTitle color="#FFFFFF">
+                  Faça seu cadastro
+                </UniversalTitle>
+                <SubTitle>Faça deste o melhor lugar para o seu bolso!</SubTitle>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                  <FormInput
+                    type="text"
+                    label="Usuário"
+                    placeholder="Insira seu usuário"
+                    errors={errors}
+                    register={register}
+                    registerName="username"
+                  />
+                  <FormInput
+                    type="email"
+                    label="Email"
+                    placeholder="Insira seu email"
+                    errors={errors}
+                    register={register}
+                    registerName="email"
+                  />
+                  <FormInput
+                    type="password"
+                    label="Senha"
+                    placeholder="Insira sua senha"
+                    errors={errors}
+                    register={register}
+                    registerName="password"
+                  />
+                  <ButtonSubmit type="submit">
+                    {isLoading ? (
+                      <CgSpinnerTwo className="icon" size={24} />
+                    ) : (
+                      'Cadastrar'
+                    )}
+                  </ButtonSubmit>
+                  <GoogleLogin> Entrar com Google</GoogleLogin>
+                  <AlternativeJoin>Já possui um cadastro? </AlternativeJoin>
+                </form>
+              </FormBox>
+            ) : (
+              <ConfirmContainer>
+                <ConfirmationTitle>Confirme sua conta!</ConfirmationTitle>
+                <SubTitle>
+                  Muito obrigado por cadastrar-se na Snug. Confirme a criação da
+                  sua conta clicando no botão enviando no seu e-mail.
+                </SubTitle>
+                <StyledLinkButton to="/">Voltar</StyledLinkButton>
+              </ConfirmContainer>
+            )}
           </ModalBox>
         </Container>
         <Footer />

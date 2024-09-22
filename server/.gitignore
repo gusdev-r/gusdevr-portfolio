@@ -4,6 +4,9 @@
 *.war
 *.ear
 
+# Env files
+*.env
+
 # Log files
 *.log
 

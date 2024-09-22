@@ -10,6 +10,8 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @RequiredArgsConstructor
 @Service
 public class AuthUser {
@@ -19,18 +21,20 @@ public class AuthUser {
     private final UserRepositoryImp userRepo;
 
     public TokenDto execute(AuthDto authDto) {
+        User user = userRepo.findByEmail(authDto.username())
+                .or(() -> userRepo.findByUsername(authDto.username()))
+                .orElseThrow(() -> new NullPointerException("User not found"));
+
         authManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
-                        authDto.email(),
+                        user.getEmail(),
                         authDto.password()
                 )
         );
-        User user = userRepo.findByEmail(authDto.email()).orElseThrow(() -> new NullPointerException("User not found"));
-        String jwtToken = generator.generateToken(user);
 
+        String jwtToken = generator.generateToken(user);
         return TokenDto.builder()
                 .token(jwtToken)
                 .build();
     }
-
 }

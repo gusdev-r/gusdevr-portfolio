@@ -21,26 +21,27 @@ export const HeaderComp = styled.header`
 export const ContainerElements = styled.ul`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-end;
   flex-grow: 1;
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-left: 64px;
-  gap: 20px;
-  &.active > a {
+  margin-right: 4rem;
+  gap: 1.2rem;
+
+  .active {
     color: var(--whiteDefault);
   }
-  &.disabled > a {
-    color: var(--whiteDefault);
-    pointer-events: none;
+
+  @media ${breakpoint.md1} {
+    margin-left: 14px;
   }
-  @media ${breakpoint.bg1} {
-    gap: 2rem;
-    padding: 20px 30px 20px 20px;
+  @media ${breakpoint.sm1} {
+    justify-content: center;
+    gap: 4px;
   }
-  @media ${breakpoint.sm2} {
-    display: none;
+  @media ${breakpoint.sm0} {
+    margin-left: 0px;
   }
 `
 
@@ -73,6 +74,10 @@ export const LogoBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-left: 2rem;
+  @media ${breakpoint.sm2} {
+    display: none;
+  }
 `
 
 export const Logo = styled.img`
@@ -90,7 +95,7 @@ export const Button = styled.button`
   transition: var(--transition-color-slow);
   background: none;
   text-decoration: none;
-
+  margin-right: 2rem;
   border-radius: 8px;
   &:hover {
     color: var(--whiteDefault);

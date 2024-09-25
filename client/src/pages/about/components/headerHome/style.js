@@ -8,7 +8,7 @@ export const HeaderComp = styled.header`
   display: flex;
   align-items: center;
   position: sticky;
-  background-color: rgba(8, 8, 8, 0.711);
+  background-color: none;
   backdrop-filter: blur(5px);
   transition: var(--transition-color-slow);
   z-index: 1000;
@@ -25,8 +25,7 @@ export const LogoBox = styled.div`
   max-width: 18rem;
   display: flex;
   align-items: center;
-  margin-left: 6px;
-  margin-right: 48px;
+  margin-left: 2rem;
   justify-content: flex-end;
   @media ${breakpoint.md1} {
     margin-right: 24px;
@@ -52,6 +51,11 @@ export const ContainerElements = styled.ul`
   list-style: none;
   margin-left: 64px;
   gap: 20px;
+
+  .active {
+    color: var(--whiteDefault);
+  }
+
   @media ${breakpoint.md1} {
     margin-left: 14px;
   }
@@ -64,22 +68,27 @@ export const ContainerElements = styled.ul`
   }
 `
 
-export const Element = styled.p`
+export const Element = styled.button`
   text-align: center;
   text-decoration: none;
   padding: 4px 4px;
+  background: none;
+  border: none;
   color: var(--grey6);
   cursor: pointer;
-  transition: var(--transition-all-slow);
   font-size: 14px;
   &:hover {
     color: var(--whiteDefault);
   }
+
   @media ${breakpoint.bg1} {
     font-size: 13px;
   }
   @media ${breakpoint.sm0} {
     font-size: 9px;
+  }
+  @media ${breakpoint.sm2} {
+    justify-items: end;
   }
 `
 

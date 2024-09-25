@@ -9,7 +9,7 @@ export const FooterContainer = styled.footer`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  /* box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5); */
+  margin-top: 10rem;
   z-index: 1000;
   @media ${breakpoint.sm2} {
     padding: 10px;
@@ -19,6 +19,7 @@ export const FooterContainer = styled.footer`
 export const LogoBox = styled.div`
   display: flex;
   justify-content: center;
+  margin: 1rem 0 2rem 0;
 `
 
 export const Logo = styled.img`

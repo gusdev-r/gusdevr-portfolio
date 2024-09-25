@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react'
 import { FiLogIn } from 'react-icons/fi'
 import { IoClose, IoMenu } from 'react-icons/io5'
-import { useNavigate } from 'react-router-dom'
-import logo from '../../assets/images/snug.png'
+import { useNavigate, useLocation } from 'react-router-dom'
+import logo from '../../assets/images/g-black-logo-removebg.png'
 import { useHeaderVisibility } from '../../hooks/useHeader'
 import {
   BtnMenu,
@@ -20,38 +20,62 @@ export const Header = () => {
   const navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false)
   const ref = useRef(null)
-
   const showHeader = useHeaderVisibility()
+  const location = useLocation()
+
   return (
     <>
       <HeaderComp
         style={{
-          transform: showHeader ? 'translateY(0)' : 'translateY(-60%)',
+          transform: showHeader ? 'translateY(0)' : 'translateY(-50%)',
         }}
       >
         <LogoBox>
           <Logo src={logo} alt="logo" />
         </LogoBox>
         <ContainerElements>
-          <Element href="#">Link One</Element>
-          <Element href="#">Link Two</Element>
-          <Element href="#">Link Three</Element>
-          <Element href="#">Link Four</Element>
-          <Element href="#">Link Five</Element>
+          <Element
+            className={location.pathname === '/' ? 'active' : ''}
+            onClick={() => {
+              navigate('/')
+            }}
+          >
+            Home
+          </Element>
+          <Element
+            className={location.pathname === '/projects' ? 'active' : ''}
+            onClick={() => {
+              navigate('/projects')
+            }}
+          >
+            Projetos
+          </Element>
+          <Element
+            className={location.pathname === '/knowledges' ? 'active' : ''}
+            onClick={() => navigate('/knowledges')}
+          >
+            Conhecimentos
+          </Element>
+          <Element
+            className={location.pathname === '/social' ? 'active' : ''}
+            onClick={() => {
+              navigate('/social')
+            }}
+          >
+            Redes sociais
+          </Element>
+          <Element
+            className={location.pathname === '/auth' ? 'active' : ''}
+            onClick={() => {
+              navigate('/auth')
+            }}
+          >
+            Cadastrar
+          </Element>
         </ContainerElements>
         <BtnMenu onClick={() => setIsOpen(true)}>
           <IoMenu />
         </BtnMenu>
-        <Button
-          onClick={() => {
-            navigate('/login')
-          }}
-          bgColorHover="#dbdbdb"
-        >
-          {' '}
-          Entrar
-          <FiLogIn style={{ marginLeft: '5px' }} />
-        </Button>
       </HeaderComp>
       <HeaderMenu
         ref={ref}
@@ -64,11 +88,13 @@ export const Header = () => {
           <IoClose />
         </BtnMenu>
         <MenuContainer>
-          <Element href="#">Link One</Element>
-          <Element href="#">Link Two</Element>
-          <Element href="#">Link Three</Element>
-          <Element href="#">Link Four</Element>
-          <Element href="#">Link Five</Element>
+          <Element
+            onClick={() => {
+              navigate('/')
+            }}
+          >
+            Home
+          </Element>
         </MenuContainer>
         <Element
           onClick={() => {

@@ -5,8 +5,9 @@ import breakpoint from '../../styles/breakpoints'
 export const StyledLink = styled(Link)`
   color: var(--grey6);
   text-decoration: none;
+  cursor: pointer;
   transition: var(--transition-color-slow);
-  font-size: 1rem;
+  font-size: 0.75rem;
   &:hover {
     color: var(--whiteDefault);
   }

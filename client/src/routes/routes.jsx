@@ -1,16 +1,21 @@
 import { Route, Routes } from 'react-router-dom'
-import Layout from '../components/baseLayout/baseLayout'
 import Signup from '../pages/signup/signup'
-import Signin from '../pages/signin/signin'
-import Home from '../pages/Home/home'
+import Home from '../pages/about/about'
+import Social from '../pages/social/social'
+import Projects from '../pages/projects/projects'
+import ErrorPage from '../pages/about/about'
+import KnowPage from '../pages/knowledges/knowledges'
 
 export default function RoutesMainApp() {
   return (
     <Routes>
       <Route>
         <Route path="/" element={<Home />}></Route>
-        <Route path="register" element={<Signup />} />
-        <Route path="login" element={<Signin />} />
+        <Route path="/auth" element={<Signup />} />
+        <Route path="/social" element={<Social />} />
+        <Route path="/knowledges" element={<KnowPage />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>
   )

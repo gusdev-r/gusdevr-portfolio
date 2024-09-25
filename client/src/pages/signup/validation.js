@@ -23,11 +23,6 @@ const formValidation = yup.object().shape({
       'A senha deve ter pelo menos 6 caracteres, incluindo uma letra maiúscula, uma letra minúscula e um número.',
     )
     .required('O campo Senha é obrigatório'),
-  emailOrUsername: yup
-    .string()
-    .min(3, 'É necessário pelo menos 3 caracteres.')
-    .max(100, 'Ultrapassou o limite de caracteres')
-    .required('Este campo é obrigatório.'),
 })
 
 export default formValidation

@@ -5,26 +5,34 @@ export const PageContainer = styled.div`
   flex-direction: column;
   min-height: 100vh;
   justify-content: space-between;
-  background: linear-gradient(to right, rgb(24, 24, 24), rgb(0, 0, 0) 190%);
+  background: radial-gradient(
+    circle at 50% 200%,
+    var(--grey1) 20%,
+    var(--blackDefault)
+  );
 `
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 3rem;
 `
 
-export const ModalBox = styled.div`
+export const HandleForm = styled.div`
   align-items: center;
   justify-content: center;
   height: 42rem;
   width: 70rem;
   display: flex;
-  background: linear-gradient(to left, rgb(16, 16, 16), rgb(0, 0, 0) 160%);
+  background: radial-gradient(
+    circle at 50% 0%,
+    var(--grey1) -20%,
+    rgb(0, 0, 0)
+  );
   box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.196);
   border-radius: 42px;
-  margin: 88px 0;
-  border: 1px solid var(--grey2);
+  margin: 1rem 0;
 
   @media ${breakpoint.md1} {
     height: 38rem;
@@ -46,19 +54,24 @@ export const ModalBox = styled.div`
 `
 
 export const FormBox = styled.div`
-  width: 100%;
+  max-width: 22rem;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  border-top-right-radius: 42px;
-  border-bottom-right-radius: 42px;
 
   @media ${breakpoint.sm1} {
     box-shadow: none;
     padding: 32px;
     border-radius: 13px;
+  }
+  @media ${breakpoint.md1} {
+    width: 20rem;
+  }
+
+  @media ${breakpoint.sm2} {
+    width: 13rem;
   }
 `
 
@@ -87,7 +100,7 @@ export const Logo = styled.img`
 `
 
 export const SubTitle = styled.text`
-  max-width: 60%;
+  max-width: 80%;
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 2rem;
@@ -138,7 +151,6 @@ export const JoinLink = styled.a`
 
 export const ButtonSubmit = styled.button`
   justify-content: center;
-  max-width: 100%;
   width: 100%;
   height: 3rem;
   border: unset;
@@ -176,25 +188,24 @@ export const ButtonSubmit = styled.button`
 
   @media ${breakpoint.md1} {
     font-size: 12px;
-    margin-top: 6px;
-    padding: 11px 21px;
+    height: 2.5rem;
   }
   @media ${breakpoint.sm2} {
     font-size: 9px;
-    margin-top: 6px;
-    padding: 10px 18px;
+    height: 2rem;
   }
 `
 
 export const GoogleLogin = styled.button`
   width: 100%;
+  height: 3rem;
   border: 1.5px solid var(--grey1);
   color: var(--whiteDefault);
   font-weight: 700;
   border-radius: 8px;
   margin-top: 6px;
+  margin-bottom: 0.2rem;
   background: none;
-  padding: 14px 26px;
   transition: background-color 0.5s ease, box-shadow 0.3s ease;
 
   &:hover {
@@ -204,13 +215,11 @@ export const GoogleLogin = styled.button`
 
   @media ${breakpoint.md1} {
     font-size: 12px;
-    margin-top: 6px;
-    padding: 10px 20px;
+    height: 2.5rem;
   }
   @media ${breakpoint.sm2} {
     font-size: 9px;
-    margin-top: 6px;
-    padding: 9px 19px;
+    height: 2rem;
   }
 `
 
@@ -241,4 +250,10 @@ export const ConfirmContainer = styled.div`
   flex-direction: column;
   align-items: center;
   max-width: 60%;
+`
+export const HandleSelect = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin-bottom: 0.5rem;
 `

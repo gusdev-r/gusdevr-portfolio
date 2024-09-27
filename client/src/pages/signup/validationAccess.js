@@ -1,6 +1,6 @@
 import * as yup from 'yup'
 
-const formValidation = yup.object().shape({
+const formValidationAccess = yup.object().shape({
   usernameOrEmail: yup
     .string()
     .max(30, 'Excedeu a quantidade de caracteres.')
@@ -20,4 +20,4 @@ const formValidation = yup.object().shape({
     .required('O campo Senha é obrigatório'),
 })
 
-export default formValidation
+export default formValidationAccess

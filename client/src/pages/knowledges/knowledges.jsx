@@ -45,6 +45,7 @@ import {
   ExperienceContainer,
 } from './style'
 import { useNavigate } from 'react-router-dom'
+import { Footer } from '../../components/Footer/footer'
 const KnowPage = () => {
   const navigate = useNavigate()
   return (
@@ -54,13 +55,18 @@ const KnowPage = () => {
         <MainContent>
           <TechSection>
             <KnowContainer>
-              <StyledBigTitle>Principais Conhecimentos</StyledBigTitle>
               <InfoContainer>
-                <StyledSmallSubTitle textAling="center" maxWidth="50rem">
+                <StyledBigTitle textAling="center">
+                  Principais Conhecimentos
+                </StyledBigTitle>
+                <StyledSmallSubTitle textAling="center">
                   Neste espaço, você encontrará uma coleção dos meus principais
-                  conhecimentos em tecnologia. Com foco em linguagens como Java,
-                  Python e JavaScript, e experiência em frameworks como React,
-                  Django e Spring busco sempre aprimorar minhas habilidades.
+                  conhecimentos em tecnologia. Com foco em linguagens como{' '}
+                  <span style={{ color: 'var(--grey6)' }}>
+                    Java, Python e JavaScript, e experiência em frameworks como
+                    React, Django e Spring
+                  </span>{' '}
+                  busco sempre aprimorar minhas habilidades.
                 </StyledSmallSubTitle>
                 <a
                   target="_blank"
@@ -77,7 +83,9 @@ const KnowPage = () => {
             </KnowContainer>
             <TechContainer>
               <StyledMediumSubTitle margin="2rem">
-                Conhecimento em Back-end
+                <span style={{ color: 'var(--grey7)' }}>
+                  Conhecimento em Back-end
+                </span>
               </StyledMediumSubTitle>
               <IconsGrid>
                 <IconItem>
@@ -123,7 +131,9 @@ const KnowPage = () => {
           <TechSection>
             <TechContainer>
               <StyledMediumSubTitle margin="2rem">
-                Conhecimento em Front-end
+                <span style={{ color: 'var(--grey7)' }}>
+                  Conhecimento em Front-end
+                </span>
               </StyledMediumSubTitle>
               <IconsGrid>
                 <IconItem>
@@ -157,7 +167,9 @@ const KnowPage = () => {
           <TechSection>
             <TechContainer>
               <StyledMediumSubTitle margin="2rem">
-                Conhecimento em Dev-Ops
+                <span style={{ color: 'var(--grey7)' }}>
+                  Conhecimento em Dev-Ops
+                </span>
               </StyledMediumSubTitle>
               <IconsGrid>
                 <IconItem>
@@ -198,24 +210,29 @@ const KnowPage = () => {
           <ExperienceContainer>
             <div>
               <StyledMediumSubTitle fontSize="2rem">
-                Experiência com metodologias
+                <span style={{ color: 'var(--grey6)' }}>
+                  Experiência com metodologias
+                </span>
               </StyledMediumSubTitle>
-              <StyledSmallSubTitle maxWidth="50rem">
+              <StyledSmallSubTitle>
                 Minhas experiências com metodologias ágeis incluem a aplicação
-                de SCRUM e Kanban no gerenciamento de projetos. Tenho trabalhado
-                na criação de tarefas no backlog, detalhamento de histórias de
-                usuário e categorização de atividades. Participo ativamente de
-                Sprints, reuniões diárias e apresentações em reviews, sempre
-                utilizando GitLab para manter a organização e a eficiência da
-                equipe. Essa abordagem tem sido fundamental para otimizar
-                processos e garantir a entrega contínua de resultados.
+                de <span style={{ color: 'var(--grey6)' }}>SCRUM e Kanban</span>{' '}
+                no gerenciamento de projetos. Tenho trabalhado na criação de
+                tarefas no backlog, detalhamento de histórias de usuário e
+                categorização de atividades.{' '}
+                <span style={{ color: 'var(--grey6)' }}>
+                  Participo ativamente de Sprints, reuniões diárias e
+                  apresentações em reviews,
+                </span>{' '}
+                sempre utilizando GitLab para manter a organização e a
+                eficiência da equipe. Essa abordagem tem sido fundamental para
+                otimizar processos e garantir a entrega contínua de resultados.
               </StyledSmallSubTitle>
             </div>
-            {/* <div class/Name="svgConf"> */}
             <MdViewKanban />
-            {/* </div> */}
           </ExperienceContainer>
         </MainContent>
+        <Footer />
       </PageContainer>
     </>
   )

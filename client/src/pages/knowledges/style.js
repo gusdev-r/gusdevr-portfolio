@@ -3,6 +3,8 @@ import breakpoint from '../../styles/breakpoints'
 
 export const PageContainer = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   min-height: 100vh;
   background: radial-gradient(
@@ -42,13 +44,13 @@ export const MainContent = styled.main`
 `
 
 export const StyledBigTitle = styled.h1`
-  font-size: 4rem;
+  font-size: 5rem;
   max-width: 70rem;
   text-align: center;
   color: ${({ color }) => color || 'var(--greyDefault)'};
   margin: ${({ margin }) => margin || '0'};
   line-height: 1.2;
-  /* background-color: red; */
+  padding-bottom: 1rem;
 
   @media ${breakpoint.md1} {
     font-size: 48px;
@@ -70,6 +72,7 @@ export const StyledSmallSubTitle = styled.p`
   text-align: ${({ textAling }) => textAling || 'left'};
   max-width: ${({ maxWidth }) => maxWidth || 'none'};
   line-height: 1.5;
+  width: 70%;
 
   @media ${breakpoint.md1} {
     font-size: 16px;
@@ -88,9 +91,11 @@ export const StyledSmallSubTitle = styled.p`
 
 export const InfoContainer = styled.div`
   display: flex;
+  align-items: center;
   flex-direction: column;
   padding: 20px;
 `
+
 export const ContainerButtons = styled.div`
   display: flex;
   justify-content: ${({ justifyContent }) => justifyContent || 'none'};
@@ -185,7 +190,10 @@ export const IconItem = styled.div`
   svg {
     font-size: 48px;
     margin-bottom: 8px;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, color 0.5s ease;
+    &:hover {
+      color: var(--grey10);
+    }
   }
 
   @media ${breakpoint.sm2} {
@@ -242,27 +250,27 @@ export const StyledMediumSubTitle = styled.p`
     font-size: 14px;
   }
 `
+
 export const KnowContainer = styled.div`
   height: 15em;
-  margin-bottom: 6rem;
+  margin-bottom: 10rem;
 `
 
 export const ExperienceContainer = styled.div`
   display: flex;
+  justify-content: center;
   height: 30em;
-  margin: 0 10rem;
-  max-width: 70rem;
   align-items: center;
 
   div {
-    display: flex;
-    align-items: start;
-    justify-content: center;
     text-align: left;
-    flex-direction: column;
+    width: 50%;
   }
   svg {
-    font-size: 15rem;
-    margin-left: 2rem;
+    font-size: 20rem;
+    transition: color 0.5s ease;
+    &:hover {
+      color: var(--grey10);
+    }
   }
 `

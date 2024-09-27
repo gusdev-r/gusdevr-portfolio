@@ -25,6 +25,7 @@ import {
   HandleSelect,
 } from './style'
 import formValidation from './validation'
+import formValidationAccess from './validationAccess'
 import { api } from '../../api/api'
 import { useNavigate } from 'react-router-dom'
 
@@ -34,12 +35,14 @@ const Signup = () => {
   const [isLogin, setIsLogin] = useState(false)
   const navigate = useNavigate()
 
+  const actualForm = isLogin ? formValidation : formValidationAccess
+
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm({
-    resolver: yupResolver(formValidation),
+    resolver: yupResolver(actualForm),
   })
 
   useEffect(() => {

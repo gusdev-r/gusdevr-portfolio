@@ -18,15 +18,13 @@ import {
   InfoContainer,
   MainContent,
   PageContainer,
-  StyledBigTitle,
-  StyledMediumSubTitle,
-  StyledMediumTitle,
-  StyledSmallSubTitle,
-  StyledSmallTitle,
   WelcomeContainer,
   WelcomeSection,
 } from './style'
 
+import { StyledSmallSubTitle } from '../../components/mainTexts/descText/desc'
+import { StyledMediumSubTitle } from '../../components/mainTexts/mediumBoldText/medium'
+import { StyledBigTitle } from '../../components/mainTexts/titleBoldText/title'
 import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
@@ -68,9 +66,13 @@ const Home = () => {
           <DescribeSection>
             <DescribeImg src={defaultImg} alt="img" />
             <DescribeContainer>
-              <StyledMediumTitle color="var(--grey6)" maxWidth="40rem">
+              <StyledMediumSubTitle
+                fontSize="2rem"
+                color="var(--grey6)"
+                maxWidth="40rem"
+              >
                 Afinal, quem é Gustavo?
-              </StyledMediumTitle>
+              </StyledMediumSubTitle>
               <StyledSmallSubTitle>
                 No ano de 2022 tive meu primeiro contato com a área de
                 tecnologia e, desde então, juntei as coisas que eu sempre gostei
@@ -106,13 +108,14 @@ const Home = () => {
           </DescribeSection>
           <div id="handleInteress">
             <DescribeContainer>
-              <StyledMediumTitle
+              <StyledMediumSubTitle
                 textAling="center"
                 color="var(--grey6)"
                 maxWidth="40rem"
+                fontSize="2rem"
               >
                 Planos futuros e principais interesses
-              </StyledMediumTitle>
+              </StyledMediumSubTitle>
               <StyledSmallSubTitle textAling="center">
                 Além de buscar novos conhecimentos dentro das tecnologias que
                 englobam o{' '}
@@ -141,7 +144,7 @@ const Home = () => {
                   <IconContact>
                     <MdEmail />
                   </IconContact>
-                  <StyledSmallTitle>Email</StyledSmallTitle>
+                  <StyledMediumSubTitle>Email</StyledMediumSubTitle>
                   <StyledSmallSubTitle maxWidth="80%">
                     Entre em contato com e-mail abaixo, ou se preferir, na seção
                     de redes sociais, você encontrará outras maneiras de falar

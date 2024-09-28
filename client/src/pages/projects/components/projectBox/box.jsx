@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { FaGithub } from 'react-icons/fa6'
 import { MdCorporateFare } from 'react-icons/md'
 import styled from 'styled-components'
+import { StyledSmallSubTitle } from '../../../../components/mainTexts/descText/desc'
+import { StyledMediumSubTitle } from '../../../../components/mainTexts/mediumBoldText/medium'
 
 export const ProjBox = styled.div`
   display: flex;
@@ -38,27 +40,6 @@ export const ProjBox = styled.div`
   }
 `
 
-export const StyledBigTitle = styled.h1`
-  font-size: ${({ fontSize }) => fontSize || '5rem'};
-  max-width: 70rem;
-  text-align: ${({ textAling }) => textAling || 'left'};
-  color: ${({ color }) => color || 'var(--greyDefault)'};
-  margin: ${({ margin }) => margin || '0'};
-  line-height: 1.2;
-  padding-bottom: 1rem;
-  width: ${({ width }) => width || '70%'};
-`
-
-export const StyledSmallSubTitle = styled.p`
-  font-size: ${({ fontSize }) => fontSize || '1rem'};
-  color: ${({ color }) => color || 'var(--greyDefault)'};
-  margin: ${({ margin }) => margin || '0'};
-  text-align: ${({ textAling }) => textAling || 'left'};
-  max-width: ${({ maxWidth }) => maxWidth || 'none'};
-  line-height: 1.5;
-  width: ${({ width }) => width || '70%'};
-`
-
 const GeneralBoxProject = ({
   title,
   subtitle,
@@ -91,14 +72,18 @@ const GeneralBoxProject = ({
           <>{changeSide ? <MdCorporateFare /> : <></>}</>
         )}
       </div>
-      <StyledBigTitle
+      <StyledMediumSubTitle
         fontSize="1.2rem"
         color="var(--grey6)"
+        width="70%"
         textAling={changeSide ? 'center' : 'left'}
       >
         {changeSide ? sideTitle : title}
-      </StyledBigTitle>
-      <StyledSmallSubTitle textAling={changeSide ? 'center' : 'left'}>
+      </StyledMediumSubTitle>
+      <StyledSmallSubTitle
+        width="70%"
+        textAling={changeSide ? 'center' : 'left'}
+      >
         {changeSide ? sideSubtile : subtitle}
       </StyledSmallSubTitle>
       {changeSide ? (

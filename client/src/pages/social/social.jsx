@@ -7,11 +7,11 @@ import {
   InfoContainer,
   MainContent,
   PageContainer,
-  StyledBigTitle,
-  StyledMediumSubTitle,
-  StyledSmallSubTitle,
   TechSection,
 } from './style'
+import { StyledSmallSubTitle } from '../../components/mainTexts/descText/desc'
+import { StyledBigTitle } from '../../components/mainTexts/titleBoldText/title'
+import { StyledMediumSubTitle } from '../../components/mainTexts/mediumBoldText/medium'
 
 const Social = () => {
   return (
@@ -24,7 +24,7 @@ const Social = () => {
               <StyledBigTitle textAling="center">
                 Redes sociais conteúdos
               </StyledBigTitle>
-              <StyledSmallSubTitle textAling="center">
+              <StyledSmallSubTitle maxWidth="70rem" textAling="center">
                 Bem-vindo à sessão de Redes Sociais e Comunidade! Aqui, você vai
                 descobrir como me conecto com outros desenvolvedores e
                 compartilho minha jornada. No Instagram, trago dicas, memes e

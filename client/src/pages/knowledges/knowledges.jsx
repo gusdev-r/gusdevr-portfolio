@@ -1,6 +1,5 @@
 import { AiFillGithub } from 'react-icons/ai'
 import { DiPython } from 'react-icons/di'
-import { HeaderHome } from '../about/components/headerHome/headerHome'
 import {
   FaCss3Alt,
   FaGitAlt,
@@ -10,6 +9,7 @@ import {
   FaNodeJs,
   FaReact,
 } from 'react-icons/fa'
+import { MdViewKanban } from 'react-icons/md'
 import {
   SiDjango,
   SiDocker,
@@ -25,29 +25,27 @@ import {
   SiSpring,
   SiSpringsecurity,
 } from 'react-icons/si'
-import { MdViewKanban } from 'react-icons/md'
 import { TbBrandVite } from 'react-icons/tb'
+import { Footer } from '../../components/Footer/footer'
+import { HeaderHome } from '../about/components/headerHome/headerHome'
 import {
   Buttons,
   ContainerButtons,
+  ExperienceContainer,
   IconItem,
   IconLabel,
   IconsGrid,
   InfoContainer,
+  KnowContainer,
   MainContent,
   PageContainer,
-  StyledBigTitle,
-  StyledMediumSubTitle,
-  StyledSmallSubTitle,
   TechContainer,
   TechSection,
-  KnowContainer,
-  ExperienceContainer,
 } from './style'
-import { useNavigate } from 'react-router-dom'
-import { Footer } from '../../components/Footer/footer'
+import { StyledSmallSubTitle } from '../../components/mainTexts/descText/desc'
+import { StyledBigTitle } from '../../components/mainTexts/titleBoldText/title'
+import { StyledMediumSubTitle } from '../../components/mainTexts/mediumBoldText/medium'
 const KnowPage = () => {
-  const navigate = useNavigate()
   return (
     <>
       <PageContainer>
@@ -59,7 +57,7 @@ const KnowPage = () => {
                 <StyledBigTitle textAling="center">
                   Principais Conhecimentos
                 </StyledBigTitle>
-                <StyledSmallSubTitle textAling="center">
+                <StyledSmallSubTitle textAling="center" maxWidth="70%">
                   Neste espaço, você encontrará uma coleção dos meus principais
                   conhecimentos em tecnologia. Com foco em linguagens como{' '}
                   <span style={{ color: 'var(--grey6)' }}>
@@ -214,7 +212,7 @@ const KnowPage = () => {
                   Experiência com metodologias
                 </span>
               </StyledMediumSubTitle>
-              <StyledSmallSubTitle>
+              <StyledSmallSubTitle maxWidth="40rem">
                 Minhas experiências com metodologias ágeis incluem a aplicação
                 de <span style={{ color: 'var(--grey6)' }}>SCRUM e Kanban</span>{' '}
                 no gerenciamento de projetos. Tenho trabalhado na criação de

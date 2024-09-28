@@ -15,12 +15,12 @@ import {
   PageContainer,
   ProjContainer,
   StyledBigTitle,
-  StyledSmallSubTitle,
   TechSection,
 } from './style'
 
 import { DiJavascript } from 'react-icons/di'
 import GeneralBoxProject from './components/projectBox/box'
+import { StyledSmallSubTitle } from '../../components/mainTexts/descText/desc'
 
 const Projects = () => {
   return (
@@ -33,7 +33,7 @@ const Projects = () => {
               <StyledBigTitle textAling="center">
                 Projetos de atuação
               </StyledBigTitle>
-              <StyledSmallSubTitle textAling="center">
+              <StyledSmallSubTitle textAling="center" maxWidth="70%">
                 Bem-vindo à sessão de Projetos! Aqui, você encontrará uma
                 seleção dos meus trabalhos mais empolgantes. Cada projeto
                 reflete minha paixão pela programação e meu desejo de impactar

@@ -59,6 +59,7 @@ const Projects = () => {
               i2={<SiSpring />}
               i3={<SiSpringsecurity />}
               i4={<SiMysql />}
+              projectLink={'https://github.com/gusdev-r/parking-administration'}
             />
             <GeneralBoxProject
               title={'Desafio PicPay - API de transferência'}
@@ -75,6 +76,7 @@ const Projects = () => {
               i1={<FaJava />}
               i2={<SiSpring />}
               i3={<SiPostgresql />}
+              projectLink={'https://github.com/gusdev-r/transfer-shop'}
             />
 
             <GeneralBoxProject
@@ -126,6 +128,7 @@ const Projects = () => {
               }
               i1={<FaPython />}
               i2={<SiDjango />}
+              projectLink={'https://github.com/gusdev-r/login-api-system'}
             />
 
             <GeneralBoxProject
@@ -146,6 +149,7 @@ const Projects = () => {
               i3={<DiJavascript />}
               i4={<FaReact />}
               i5={<SiPostgresql />}
+              projectLink={'https://github.com/gusdev-r/shortner_url'}
             />
 
             <GeneralBoxProject
@@ -165,6 +169,7 @@ const Projects = () => {
               i2={<SiDjango />}
               i3={<DiJavascript />}
               i4={<FaReact />}
+              projectLink={'https://github.com/gusdev-r/pokedex-aws'}
             />
 
             <GeneralBoxProject
@@ -181,6 +186,9 @@ const Projects = () => {
               }
               i1={<FaHtml5 />}
               i2={<FaCss3 />}
+              projectLink={
+                'https://github.com/gusdev-r/educational-website-ucb'
+              }
             />
           </ProjContainer>
         </MainContent>

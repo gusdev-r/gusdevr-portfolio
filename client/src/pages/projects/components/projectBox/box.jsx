@@ -50,7 +50,7 @@ export const StyledBigTitle = styled.h1`
 `
 
 export const StyledSmallSubTitle = styled.p`
-  font-size: 1rem;
+  font-size: ${({ fontSize }) => fontSize || '1rem'};
   color: ${({ color }) => color || 'var(--greyDefault)'};
   margin: ${({ margin }) => margin || '0'};
   text-align: ${({ textAling }) => textAling || 'left'};
@@ -70,6 +70,7 @@ const GeneralBoxProject = ({
   i4,
   i5,
   i6,
+  projectLink,
 }) => {
   const [changeSide, setChangeSide] = useState(false)
 
@@ -78,7 +79,7 @@ const GeneralBoxProject = ({
 
     setTimeout(() => {
       setChangeSide(false)
-    }, 6000)
+    }, 10000)
   }
 
   return (
@@ -111,6 +112,20 @@ const GeneralBoxProject = ({
           {i5}
           {i6}
         </div>
+      )}
+      {sideTitle === 'Projeto no Github' && changeSide ? (
+        <StyledSmallSubTitle
+          onClick={() => {
+            window.open({ projectLink }, '_blank')
+          }}
+          textAling="center"
+          color="var(--grey7)"
+          fontSize="0.8rem"
+        >
+          Clique para acessar o projeto
+        </StyledSmallSubTitle>
+      ) : (
+        <></>
       )}
     </ProjBox>
   )

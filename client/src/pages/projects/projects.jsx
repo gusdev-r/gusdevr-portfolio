@@ -1,45 +1,26 @@
-import {
-  PageContainer,
-  MainContent,
-  TechSection,
-  InfoContainer,
-  StyledBigTitle,
-  StyledSmallSubTitle,
-  ProjContainer,
-  ProjBox,
-} from './style'
-import { HeaderHome } from '../about/components/headerHome/headerHome'
-import { Footer } from '../../components/Footer/footer'
-import { useState } from 'react'
-import {
-  FaCss3,
-  FaCss3Alt,
-  FaGitAlt,
-  FaHtml5,
-  FaJava,
-  FaJs,
-  FaNodeJs,
-  FaPython,
-  FaReact,
-} from 'react-icons/fa'
+import { FaCss3, FaHtml5, FaJava, FaPython, FaReact } from 'react-icons/fa'
 import {
   SiDjango,
-  SiDocker,
   SiFlask,
-  SiJenkins,
-  SiKubernetes,
-  SiMongodb,
   SiMysql,
-  SiNginx,
   SiPostgresql,
-  SiRabbitmq,
-  SiRedis,
   SiSpring,
   SiSpringsecurity,
 } from 'react-icons/si'
+import { Footer } from '../../components/Footer/footer'
+import { HeaderHome } from '../about/components/headerHome/headerHome'
+import {
+  InfoContainer,
+  MainContent,
+  PageContainer,
+  ProjContainer,
+  StyledBigTitle,
+  StyledSmallSubTitle,
+  TechSection,
+} from './style'
 
-import GeneralBoxProject from './components/projectBox/box'
 import { DiJavascript } from 'react-icons/di'
+import GeneralBoxProject from './components/projectBox/box'
 
 const Projects = () => {
   return (

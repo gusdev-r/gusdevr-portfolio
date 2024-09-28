@@ -1,6 +1,5 @@
 import { FaInstagram } from 'react-icons/fa'
 import { FaDiscord, FaGithub, FaLinkedin } from 'react-icons/fa6'
-import { useNavigate } from 'react-router-dom'
 import { Footer } from '../../components/Footer/footer'
 import { HeaderHome } from '../about/components/headerHome/headerHome'
 import {
@@ -15,7 +14,6 @@ import {
 } from './style'
 
 const Social = () => {
-  const navigate = useNavigate()
   return (
     <>
       <PageContainer>

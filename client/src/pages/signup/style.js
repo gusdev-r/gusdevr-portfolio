@@ -23,7 +23,7 @@ export const HandleForm = styled.div`
   align-items: center;
   justify-content: center;
   height: 42rem;
-  width: 70rem;
+  width: 38rem;
   display: flex;
   background: radial-gradient(
     circle at 50% 0%,

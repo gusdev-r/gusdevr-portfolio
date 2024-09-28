@@ -3,15 +3,16 @@ import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { CgSpinnerTwo } from 'react-icons/cg'
 import { toast } from 'react-toastify'
+import { api } from '../../api/api'
+import {
+  ButtonChoice,
+  ContainerButtons,
+} from '../../components/buttonChoice/style'
 import { Footer } from '../../components/Footer/footer'
 import FormInput from '../../components/FormInput/formInput'
 import { Header } from '../../components/Header/header'
 import { StyledLink, StyledLinkButton } from '../../components/styledLink/style'
 import UniversalTitle from '../../components/UniversalTitle/title'
-import {
-  ButtonChoice,
-  ContainerButtons,
-} from '../../components/buttonChoice/style'
 import {
   ButtonSubmit,
   ConfirmationTitle,
@@ -20,20 +21,17 @@ import {
   FormBox,
   GoogleLogin,
   HandleForm,
+  HandleSelect,
   PageContainer,
   SubTitle,
-  HandleSelect,
 } from './style'
 import formValidation from './validation'
 import formValidationAccess from './validationAccess'
-import { api } from '../../api/api'
-import { useNavigate } from 'react-router-dom'
 
 const Signup = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [isLogin, setIsLogin] = useState(false)
-  const navigate = useNavigate()
 
   const actualForm = isLogin ? formValidation : formValidationAccess
 

@@ -2,54 +2,69 @@ import styled from 'styled-components'
 import breakpoint from '../../styles/breakpoints'
 
 export const HeaderComp = styled.header`
-  height: 4.2rem;
+  height: 4.5rem;
   width: 100%;
-  background-color: var(--black1);
+  top: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
-  z-index: 1000;
+  background: none;
+  transition: var(--transition-color-slow);
   @media ${breakpoint.sm1} {
     height: 3.8rem;
   }
+  @media ${breakpoint.sm2} {
+    position: fixed;
+    justify-content: space-between;
+  }
 `
 
-export const ContainerElements = styled.li`
+export const ContainerElements = styled.ul`
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  padding: 20px 30px 20px 60px;
-  &.active > a {
+  justify-content: flex-end;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-right: 4rem;
+  gap: 1.2rem;
+
+  .active {
     color: var(--whiteDefault);
   }
-  &.disabled > a {
-    color: var(--whiteDefault);
-    pointer-events: none;
+
+  @media ${breakpoint.md1} {
+    margin-left: 14px;
   }
-  @media ${breakpoint.bg1} {
-    gap: 2rem;
-    padding: 20px 30px 20px 20px;
+  @media ${breakpoint.sm1} {
+    justify-content: center;
+    gap: 4px;
+  }
+  @media ${breakpoint.sm0} {
+    margin-left: 0px;
   }
 `
 
-export const Element = styled.a`
+export const Element = styled.button`
   text-align: center;
   text-decoration: none;
-  padding: 8px 16px;
-  color: var(--greyDefault);
+  padding: 4px 4px;
+  background: none;
+  border: none;
+  color: var(--grey6);
   cursor: pointer;
-  transition: var(--transition-all-slow);
   font-size: 14px;
   &:hover {
     color: var(--whiteDefault);
   }
   @media ${breakpoint.bg1} {
     font-size: 13px;
-    padding: 4px 8px;
+  }
+  @media ${breakpoint.sm0} {
+    font-size: 9px;
   }
   @media ${breakpoint.sm2} {
-    display: none;
+    justify-items: end;
   }
 `
 
@@ -59,6 +74,10 @@ export const LogoBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-left: 2rem;
+  @media ${breakpoint.sm2} {
+    display: none;
+  }
 `
 
 export const Logo = styled.img`
@@ -66,13 +85,40 @@ export const Logo = styled.img`
   max-width: 19rem;
 `
 
-export const ContainerButtons = styled.div`
+export const Button = styled.button`
   display: flex;
   align-items: center;
-  gap: 10px;
-  justify-content: center;
-  margin-left: 50px;
-  margin-right: 30px;
+  padding: 4px 9px;
+  color: var(--grey6);
+  cursor: pointer;
+  border: none;
+  transition: var(--transition-color-slow);
+  background: none;
+  text-decoration: none;
+  margin-right: 2rem;
+  border-radius: 8px;
+  &:hover {
+    color: var(--whiteDefault);
+    background: var(--grey1);
+    border-color: var(--whiteDefault);
+  }
+  @media ${breakpoint.bg1} {
+    font-size: 13px;
+    padding: 3px 12px;
+  }
+  @media ${breakpoint.sm2} {
+    display: none;
+  }
+
+  svg {
+    font-size: 14px;
+  }
+  &:hover {
+    color: var(--whiteDefault);
+    svg {
+      color: var(--whiteDefault);
+    }
+  }
 `
 
 export const Dropdown = styled.div`
@@ -122,49 +168,23 @@ export const DropdownItem = styled.a`
   }
 `
 
-export const Button = styled.a`
-  display: flex;
-  align-items: center;
-  transition: var(--transition-all-slow);
-  color: var(--greyDefault);
-  cursor: pointer;
-  font-size: 14px;
-
-  svg {
-    margin-right: 10px;
-    font-size: 14px;
-  }
-  &:hover {
-    color: var(--whiteDefault);
-    svg {
-      color: var(--whiteDefault);
-    }
-  }
-
-  @media ${breakpoint.bg1} {
-    font-size: 13px;
-    padding: 4px 8px;
-  }
-
-  @media ${breakpoint.sm2} {
-    display: none;
-  }
-`
 export const BtnMenu = styled.button`
   display: none;
 
   @media ${breakpoint.sm2} {
     display: flex;
+    width: 100%;
     justify-content: flex-end;
     text-decoration: none;
     border: none;
     background: none;
+    margin-right: 2rem;
     cursor: pointer;
 
     svg {
       transition: var(--transition-color-fast);
       color: var(--grey4);
-      font-size: 22px;
+      font-size: 1.5rem;
     }
 
     &:hover svg {
@@ -176,53 +196,48 @@ export const BtnMenu = styled.button`
 export const HeaderMenu = styled.div`
   display: none;
   @media ${breakpoint.sm2} {
-    transition: all ease-in-out 0.5s;
-    background: linear-gradient(to right, rgb(16, 16, 16), rgb(0, 0, 0) 160%);
-    height: 100vh;
-    width: 20rem;
-    padding: 1rem;
-    gap: 3rem;
-    z-index: 10000;
-    right: 0;
-    border-left: 1px solid var(--grey2);
-    position: fixed;
     display: flex;
     flex-direction: column;
+    z-index: 1000;
+    transition: all ease-in-out 0.5s;
+    background: var(--black1);
+    height: 100vh;
+    width: 25rem;
+    padding: 1rem;
+    gap: 3rem;
+    right: 0;
+    border-left: 4px solid var(--grey1);
+    position: fixed;
+    display: flex;
   }
 `
 export const MenuContainer = styled.section`
-  width: 100%;
   display: flex;
-  flex-direction: column;
+  width: 30rem;
+  height: 20rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* flex-direction: column;/ */
+  gap: 2rem;
+  background-color: red;
 `
 
-export const ElementMenu = styled.a`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+export const ElementBtn = styled.button`
   text-align: center;
   text-decoration: none;
-  padding: 8px 16px;
-  color: var(--greyDefault);
+  padding: 4px 4px;
+  background: none;
+  border: none;
+  color: var(--grey6);
   cursor: pointer;
-  transition: var(--transition-color-slow);
   font-size: 14px;
-  margin-right: 20px;
-  text-decoration: underline;
-
   &:hover {
     color: var(--whiteDefault);
   }
-
-  svg {
-    transition: var(--transition-color-fast);
-    color: var(--greyDefault);
-    font-size: 14px;
-    margin-right: 10px;
+  @media ${breakpoint.bg1} {
+    font-size: 13px;
   }
-
-  &:hover svg {
-    color: var(--whiteDefault);
+  @media ${breakpoint.sm0} {
+    font-size: 9px;
   }
 `

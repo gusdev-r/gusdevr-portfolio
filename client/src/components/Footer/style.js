@@ -4,12 +4,12 @@ import { FaInstagram, FaLinkedin, FaGithub, FaDiscord } from 'react-icons/fa'
 
 export const FooterContainer = styled.footer`
   width: 100%;
-  background-color: var(--black1);
+  background: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 5rem;
   z-index: 1000;
   @media ${breakpoint.sm2} {
     padding: 10px;
@@ -19,10 +19,11 @@ export const FooterContainer = styled.footer`
 export const LogoBox = styled.div`
   display: flex;
   justify-content: center;
+  margin: 1rem 0 2rem 0;
 `
 
 export const Logo = styled.img`
-  max-width: 150px;
+  max-width: 9.5rem;
   height: auto;
 `
 
@@ -49,7 +50,6 @@ export const MainLink = styled.a`
   font-size: 14px;
   padding: 4px;
   transition: var(--transition-color-slow);
-
   &:hover {
     color: var(--whiteDefault);
     text-decoration: underline;
@@ -74,32 +74,6 @@ export const SocialIcon = styled.a`
     color: var(--grey2);
   }
 `
-
-// export const PolicyContainer = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   gap: 30px;
-//   margin-bottom: 20px;
-//   @media ${breakpoint.sm2} {
-//     flex-direction: column;
-//     gap: 15px;
-//   }
-// `
-
-// export const PolicyLink = styled.a`
-//   color: var(--whiteDefault);
-//   text-decoration: none;
-//   font-size: 12px;
-//   transition: var(--transition-color-fast);
-
-//   &:hover {
-//     color: var(--grayDefault);
-//     text-decoration: underline;
-//   }
-//   @media ${breakpoint.sm2} {
-//     font-size: 10px;
-//   }
-// `
 
 export const Copyright = styled.div`
   font-size: 10px;

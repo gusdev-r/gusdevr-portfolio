@@ -1,6 +1,68 @@
-# **SNUG**
+# **_Portifólio - Gustavo Herrique Moreira - Full-Stack_**
 
-<div style="display: inline_block">
+---
+
+<h1>Portifólio</h1>
+
+Olá! Eu sou o Gustavo, um desenvolvedor full-stack que adora transformar ideias em soluções digitais. Sempre busco aprender e crescer, explorando novas tecnologias e priorizando a experiência do usuário em cada projeto. Estou animado para enfrentar novos desafios e compartilhar minha jornada na tecnologia!
+
+---
+
+## Para iniciar a aplicação inteira por meio do Docker
+
+### Builde a imagem
+
+```
+docker-compose build
+```
+
+### Rodar o **docker-compose**
+
+```
+docker-compose up
+```
+
+### Para iniciar as aplicações separadamente
+
+#### **Frontend ou Backend**
+
+Entre na pasta client (para o frontend) ou na pasta server (para o backend), lá você encontrará um tutorial simples de como iniciar a aplicação de forma separada.
+
+### Tecnologias usadas:
+
+#### Backend
+
+- Java
+- Spring Boot
+- Spring Security
+- MySQL
+- Clean Architecture
+- JWT
+- OAuth 2.0
+- Flyway
+
+#### Frotend
+
+- React
+- HTML5
+- CSS3
+- Styled Components
+
+#### DevOps
+
+- Docker
+- Git
+- GitHub
+
+#### Ferramentas
+
+- Postman
+- Beekeeper
+- SMTP Gmail
+- Visual Studio Code
+- IntelliJ IDEA
+
+<div style="display: inline_block;>
     <img align="center" alt="java" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
     <img align="center" alt="react" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
     <img align="center" alt="spring-boot" src="https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge&logo=Spring&logoColor=white"/>
@@ -22,59 +84,3 @@
     <img align="center" alt="vscode" src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"/>
     <img align="center" alt="intellij-idea" src="https://img.shields.io/badge/Intellij%20Idea-000?logo=intellij-idea&style=for-the-badge"/>
 </div>
-
-## Descrição do projeto:
-
-O projeto Snug é uma iniciativa pessoal que desenvolvi para criar uma aplicação robusta e completa, com um foco especial na criação e gestão de cadastros sofisticados. O objetivo principal é construir um sistema que não apenas permita o gerenciamento detalhado de dados de usuários, mas que também integre de forma harmoniosa as tecnologias Java e React, promovendo um desenvolvimento full-stack sólido.
-
-<h2>Objetivo do projeto:</h2>
-No Snug, busquei criar uma plataforma de cadastro bem elaborada, que se destaca pela configuração detalhada e funcionalidades avançadas. Este projeto representa uma oportunidade valiosa para explorar e aplicar conceitos avançados de desenvolvimento, e para aprimorar minhas habilidades na integração entre o backend em Java e o frontend em React.
-
----
-
-## Para iniciar a aplicação inteira por meio do Docker
-
-### Builde a imagem
-
-```
-docker-compose build
-```
-
-### Rodar o **docker-compose**
-
-```
-docker-compose up
-```
-
-## Para iniciar as aplicações separadamente
-
-### **Front-End**
-
-Entre na pasta client, lá você encontrará um tutorial simples de como iniciar a aplicação front-end
-
-### **Back-End**
-
-Entre na pasta server, lá você encontrará um tutorial simples de como iniciar a aplicação back-end
-
-### Tecnologias usadas:
-
-- Java
-- React
-- Spring Boot
-- Spring Security
-- MySQL
-- Docker
-- Clean Architecture
-- JWT
-- OAuth 2.0
-- Flyway
-- Git
-- GitHub
-- Postman
-- Beekeeper
-- SMTP Gmail
-- HTML5
-- CSS3
-- Styled Components
-- Visual Studio Code
-- IntelliJ IDEA

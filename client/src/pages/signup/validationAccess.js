@@ -1,20 +1,15 @@
 import * as yup from 'yup'
 
-const formValidation = yup.object().shape({
-  username: yup
+const formValidationAccess = yup.object().shape({
+  usernameOrEmail: yup
     .string()
     .max(30, 'Excedeu a quantidade de caracteres.')
     .min(3, 'É necessário pelo menos 3 caracteres.')
-    .required('O campo Usuário é obrigatório'),
-  email: yup
-    .string()
-    .max(100, 'Ultrapassou o limite de caracteres')
-    .email('Insira um e-mail válido.')
     .matches(
-      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-      'Formato de e-mail inválido, verifique os dados.',
+      /^(?:[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}|[a-zA-Z0-9]{3,})$/,
+      'Deve ser um e-mail válido ou um nome de usuário.',
     )
-    .required('O campo E-mail é obrigatório'),
+    .required('O campo Usuário é obrigatório'),
   password: yup
     .string()
     .max(100, 'Ultrapassou o limite de caracteres')
@@ -25,4 +20,4 @@ const formValidation = yup.object().shape({
     .required('O campo Senha é obrigatório'),
 })
 
-export default formValidation
+export default formValidationAccess

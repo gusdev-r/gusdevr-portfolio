@@ -1,18 +1,14 @@
 import { useRef, useState } from 'react'
 import { FiLogIn } from 'react-icons/fi'
 import { IoClose, IoMenu } from 'react-icons/io5'
-import logo from '../../assets/images/snug.png'
+import { useNavigate, useLocation } from 'react-router-dom'
+import logo from '../../assets/images/g-black-logo-removebg.png'
 import { useHeaderVisibility } from '../../hooks/useHeader'
 import {
   BtnMenu,
   Button,
-  ContainerButtons,
   ContainerElements,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
   Element,
-  ElementMenu,
   HeaderComp,
   HeaderMenu,
   Logo,
@@ -21,41 +17,65 @@ import {
 } from './style'
 
 export const Header = () => {
+  const navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false)
   const ref = useRef(null)
-
   const showHeader = useHeaderVisibility()
+  const location = useLocation()
+
   return (
     <>
       <HeaderComp
         style={{
-          transform: showHeader ? 'translateY(0)' : 'translateY(-60%)',
+          transform: showHeader ? 'translateY(0)' : 'translateY(-50%)',
         }}
       >
         <LogoBox>
           <Logo src={logo} alt="logo" />
         </LogoBox>
         <ContainerElements>
-          <Element>Link 1</Element>
-          <Element>Link 2</Element>
-          <Dropdown>
-            <Element role="button">Options</Element>
-            <DropdownMenu>
-              <DropdownItem href="#">Ação 1</DropdownItem>
-              <DropdownItem href="#">Ação 2</DropdownItem>
-              <DropdownItem href="#">Ação 3</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-          <ContainerButtons>
-            <Button onClick={() => {}} bgColorHover="#dbdbdb">
-              <FiLogIn style={{ marginLeft: '8px' }} />
-              Login
-            </Button>
-          </ContainerButtons>
-          <BtnMenu onClick={() => setIsOpen(true)}>
-            <IoMenu />
-          </BtnMenu>
+          <Element
+            className={location.pathname === '/' ? 'active' : ''}
+            onClick={() => {
+              navigate('/')
+            }}
+          >
+            Home
+          </Element>
+          <Element
+            className={location.pathname === '/projects' ? 'active' : ''}
+            onClick={() => {
+              navigate('/projects')
+            }}
+          >
+            Projetos
+          </Element>
+          <Element
+            className={location.pathname === '/knowledges' ? 'active' : ''}
+            onClick={() => navigate('/knowledges')}
+          >
+            Conhecimentos
+          </Element>
+          <Element
+            className={location.pathname === '/social' ? 'active' : ''}
+            onClick={() => {
+              navigate('/social')
+            }}
+          >
+            Redes sociais
+          </Element>
+          <Element
+            className={location.pathname === '/auth' ? 'active' : ''}
+            onClick={() => {
+              navigate('/auth')
+            }}
+          >
+            Cadastrar
+          </Element>
         </ContainerElements>
+        <BtnMenu onClick={() => setIsOpen(true)}>
+          <IoMenu />
+        </BtnMenu>
       </HeaderComp>
       <HeaderMenu
         ref={ref}
@@ -68,20 +88,21 @@ export const Header = () => {
           <IoClose />
         </BtnMenu>
         <MenuContainer>
-          <ElementMenu>Link 1</ElementMenu>
-          <ElementMenu>Link 2</ElementMenu>
-          <ElementMenu>
-            Login <FiLogIn style={{ marginLeft: '8px' }} />
-          </ElementMenu>
-          <Dropdown>
-            <Element role="button">Options</Element>
-            <DropdownMenu>
-              <DropdownItem href="#">Ação 1</DropdownItem>
-              <DropdownItem href="#">Ação 2</DropdownItem>
-              <DropdownItem href="#">Ação 3</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
+          <Element
+            onClick={() => {
+              navigate('/')
+            }}
+          >
+            Home
+          </Element>
         </MenuContainer>
+        <Element
+          onClick={() => {
+            navigate('/login')
+          }}
+        >
+          Entrar <FiLogIn style={{ marginLeft: '8px' }} />
+        </Element>
       </HeaderMenu>
     </>
   )

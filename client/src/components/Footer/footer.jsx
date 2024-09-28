@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../assets/images/snug.png'
+import logo from '../../assets/images/g-black-logo-removebg.png'
 import {
   FooterContainer,
   LogoBox,
@@ -9,16 +9,16 @@ import {
   MainLink,
   SocialIcons,
   SocialIcon,
-  // PolicyContainer,
-  // PolicyLink,
   Copyright,
   FaInstagram,
   FaLinkedin,
   FaGithub,
   FaDiscord,
 } from './style'
+import { useNavigate } from 'react-router-dom'
 
 export const Footer = () => {
+  const navigate = useNavigate()
   return (
     <FooterContainer>
       <LogoBox>
@@ -27,11 +27,12 @@ export const Footer = () => {
 
       <LinksContainer>
         <MainContainer>
-          <MainLink href="#">Home</MainLink>
-          <MainLink href="#">About</MainLink>
-          <MainLink href="#">Services</MainLink>
-          <MainLink href="#">Blog</MainLink>
-          <MainLink href="#">Contact</MainLink>
+          <MainLink onClick={() => navigate('/')}>Home</MainLink>
+          <MainLink onClick={() => navigate('/projects')}>Projetos</MainLink>
+          <MainLink onClick={() => navigate('/knowledges')}>
+            Conhecimentos
+          </MainLink>
+          <MainLink onClick={() => navigate('/social')}>Redes sociais</MainLink>
         </MainContainer>
 
         <SocialIcons>
@@ -64,14 +65,9 @@ export const Footer = () => {
             <FaDiscord />
           </SocialIcon>
         </SocialIcons>
-
-        {/* <PolicyContainer>
-          <PolicyLink href="#">Privacy Policy</PolicyLink>
-          <PolicyLink href="#">Terms of Service</PolicyLink>
-          <PolicyLink href="#">Cookie Settings</PolicyLink>
-        </PolicyContainer> */}
-
-        <Copyright>&copy; 2024 Snug. All rights reserved.</Copyright>
+        <Copyright>
+          &copy; 2024 Gustavo Henrique Moreira. All rights reserved.
+        </Copyright>
       </LinksContainer>
     </FooterContainer>
   )

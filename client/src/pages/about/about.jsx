@@ -131,7 +131,9 @@ const Home = () => {
           </div>
           <div>
             <StyledMediumSubTitle textAling="center" fontSize="1.5rem">
-              <span style={{ color: 'var(--grey6)' }}>Principal Contato</span>
+              <span style={{ color: 'var(--grey7)', fontWeight: 700 }}>
+                Principal Contato
+              </span>
             </StyledMediumSubTitle>
             <ContactSection>
               <ContactContainer>
@@ -140,7 +142,7 @@ const Home = () => {
                     <MdEmail />
                   </IconContact>
                   <StyledSmallTitle>Email</StyledSmallTitle>
-                  <StyledSmallSubTitle>
+                  <StyledSmallSubTitle maxWidth="80%">
                     Entre em contato com e-mail abaixo, ou se preferir, na seção
                     de redes sociais, você encontrará outras maneiras de falar
                     comigo.

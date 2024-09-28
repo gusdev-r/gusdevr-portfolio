@@ -9,7 +9,7 @@ export const FooterContainer = styled.footer`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  margin-top: 10rem;
+  margin-top: 5rem;
   z-index: 1000;
   @media ${breakpoint.sm2} {
     padding: 10px;

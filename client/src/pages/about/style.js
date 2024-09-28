@@ -107,10 +107,10 @@ export const ContactBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 40%;
+  width: 60%;
   height: 19rem;
   margin-top: 1rem;
-  padding: 2rem;
+  padding: 2rem 0 0 2rem;
   border-radius: 2rem;
   border: 2px solid var(--grey2);
 

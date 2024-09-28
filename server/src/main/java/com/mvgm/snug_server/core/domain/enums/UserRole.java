@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import static com.mvgm.snug_server.utils.Logging.LOGGER;
+
 @Getter
 public enum UserRole {
     ADMIN(Set.of(
@@ -25,6 +27,7 @@ public enum UserRole {
     }
 
     public List<SimpleGrantedAuthority> getAuthorities() {
+        var name = USER.name();
         var authorities = getPermissions().stream().
                 map(permission -> new SimpleGrantedAuthority(permission.name())).collect(Collectors.toList());
         authorities.add(new SimpleGrantedAuthority("ROLE_" + this.name()));

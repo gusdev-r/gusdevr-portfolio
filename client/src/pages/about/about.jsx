@@ -1,4 +1,4 @@
-import defaultImg from '../../assets/images/grey.png'
+import defaultImg from '../../assets/images/profile-pic.jpg'
 import { Footer } from '../../components/Footer/footer'
 import { HeaderHome } from './components/headerHome/headerHome'
 

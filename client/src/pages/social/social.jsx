@@ -27,9 +27,11 @@ const Social = () => {
               <StyledSmallSubTitle maxWidth="70rem" textAlign="center">
                 Bem-vindo à sessão de Redes Sociais e Comunidade! Aqui, você vai
                 descobrir como me conecto com outros desenvolvedores e
-                compartilho minha jornada. No Instagram, trago dicas, memes e
-                insights sobre programação, criando um espaço divertido para
-                todos.
+                compartilho minha jornada.{' '}
+                <span style={{ color: 'var(--grey6)' }}>
+                  No Instagram, trago dicas, memes e insights sobre programação,
+                </span>{' '}
+                criando um espaço divertido para todos.
               </StyledSmallSubTitle>
               <div className="contSocial">
                 <a

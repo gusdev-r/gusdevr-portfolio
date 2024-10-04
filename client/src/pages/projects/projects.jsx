@@ -34,11 +34,17 @@ const Projects = () => {
                 Projetos de atuação
               </StyledBigTitle>
               <StyledSmallSubTitle textAlign="center">
-                Bem-vindo à sessão de Projetos! Aqui, você encontrará uma
-                seleção dos meus trabalhos mais empolgantes. Cada projeto
-                reflete minha paixão pela programação e meu desejo de impactar
-                positivamente a comunidade. Explore e descubra como cada criação
-                faz parte da minha jornada!
+                Bem-vindo à{' '}
+                <span style={{ color: 'var(--grey6)' }}>
+                  sessão de Projetos!
+                </span>{' '}
+                Aqui, você encontrará uma seleção dos meus trabalhos mais
+                empolgantes.{' '}
+                <span style={{ color: 'var(--grey6)' }}>
+                  Cada projeto reflete minha paixão pela programação e meu
+                  desejo de impactar positivamente a comunidade.
+                </span>{' '}
+                Explore e descubra como cada criação faz parte da minha jornada!
               </StyledSmallSubTitle>
             </InfoContainer>
           </TechSection>
@@ -48,7 +54,7 @@ const Projects = () => {
               subtitle={
                 'O projeto envolve a marcação de vagas de um estacionamento \n' +
                 'para com os moradores que ocupam essas vagas.\n' +
-                'Possui cadastro e login com autenticação.\n' +
+                ' Possui cadastro e login com autenticação.\n' +
                 'Construído com Java, Spring Boot, Spring Sec, Spring JPA, etc.'
               }
               sideTitle={'Projeto no Github'}
@@ -193,14 +199,19 @@ const Projects = () => {
           </ProjContainer>
         </MainContent>
         <div className="aboutThis">
-          <StyledBigTitle textAlign="center" color="var(--grey5)">
+          <StyledBigTitle
+            textAlign="center"
+            fontSize="2.2rem"
+            color="var(--grey5)"
+          >
             Sobre este projeto
           </StyledBigTitle>
           <StyledSmallSubTitle id="desc" textAlign="center">
-            O portifólio possui um Backend em Java e um Frotend com React +
-            JavaScript. Caso você queira executar o projeto, basta seguir o
-            passo a passo no repositório do Github para subir de forma separada
-            ou junta conforme instruções do README.
+            O portifólio é feito em{' '}
+            <span style={{ color: 'var(--grey6)' }}>React + JavaScript.</span>{' '}
+            Caso você queira executar o projeto, basta seguir o passo a passo no
+            repositório do Github para subir de forma separada ou junta conforme
+            instruções do README.
           </StyledSmallSubTitle>
         </div>
         <Footer />

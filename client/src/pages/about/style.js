@@ -88,6 +88,7 @@ export const IconLabel = styled.span`
 export const ContactSection = styled.div`
   height: 30rem;
   align-items: center;
+  margin-top: 0.5rem;
 
   @media ${breakpoint.sm2} {
     height: auto;
@@ -227,6 +228,10 @@ export const StyledMediumSubTitle = styled.p`
 export const DescribeImg = styled.img`
   height: 34rem;
   width: 34rem;
+  filter: brightness(0.8);
+  border-radius: 1rem;
+  border: 4px solid var(--grey2);
+  box-shadow: 0 0 25px 0px rgba(66, 66, 66, 0.646);
 
   @media ${breakpoint.md1} {
     height: 520px;

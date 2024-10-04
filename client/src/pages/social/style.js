@@ -52,6 +52,10 @@ export const InfoContainer = styled.div`
   align-items: center;
   flex-direction: column;
   height: 18rem;
+  width: 100%;
+  p {
+    width: 70%;
+  }
 `
 export const ContainerButtons = styled.div`
   display: flex;
@@ -95,7 +99,8 @@ export const TechSection = styled.div`
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
-  width: 70rem;
+  width: 100%;
+  margin-bottom: 2rem;
 
   svg {
     cursor: pointer;
@@ -119,7 +124,6 @@ export const TechSection = styled.div`
 
   @media ${breakpoint.sm1} {
     padding: 32px 0;
-    margin: 0 50px 0px 50px;
   }
 `
 
@@ -144,7 +148,7 @@ export const IconsGrid = styled.div`
     max-width: 450px;
   }
 
-  @media ${breakpoint.sm2}, ${breakpoint.sm1} {
+  @media ${breakpoint.sm2} {
     gap: 24px;
     max-width: 350px;
     margin-bottom: 2rem;
@@ -183,5 +187,29 @@ export const ExperienceContainer = styled.div`
     margin-right: 2rem;
     color: var(--grey5);
     transition: color 0.5s ease;
+  }
+
+  @media ${breakpoint.sm2} {
+    width: 40rem;
+  }
+  @media ${breakpoint.sm1} {
+    width: 30rem;
+    svg {
+      font-size: 6rem;
+      margin-right: 0.5rem;
+    }
+  }
+  @media ${breakpoint.sm0} {
+    width: 22rem;
+    height: 24rem;
+    p {
+      text-align: center;
+      width: 100%;
+    }
+    flex-direction: column;
+    svg {
+      font-size: 4.5rem;
+      margin-top: 1rem;
+    }
   }
 `

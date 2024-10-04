@@ -8,37 +8,43 @@ import {
   SiSpringsecurity,
 } from 'react-icons/si'
 import { Footer } from '../../components/Footer/footer'
-import { HeaderHome } from '../about/components/headerHome/headerHome'
+import { HeaderAbout } from '../../components/headerMain/header'
 import {
   InfoContainer,
   MainContent,
   PageContainer,
   ProjContainer,
-  StyledBigTitle,
   TechSection,
 } from './style'
 
 import { DiJavascript } from 'react-icons/di'
 import GeneralBoxProject from './components/projectBox/box'
 import { StyledSmallSubTitle } from '../../components/mainTexts/descText/desc'
+import { StyledBigTitle } from '../../components/mainTexts/titleBoldText/title'
 
 const Projects = () => {
   return (
     <>
       <PageContainer>
-        <HeaderHome />
+        <HeaderAbout />
         <MainContent>
           <TechSection>
             <InfoContainer>
-              <StyledBigTitle textAling="center">
+              <StyledBigTitle textAlign="center">
                 Projetos de atuação
               </StyledBigTitle>
-              <StyledSmallSubTitle textAling="center" maxWidth="70%">
-                Bem-vindo à sessão de Projetos! Aqui, você encontrará uma
-                seleção dos meus trabalhos mais empolgantes. Cada projeto
-                reflete minha paixão pela programação e meu desejo de impactar
-                positivamente a comunidade. Explore e descubra como cada criação
-                faz parte da minha jornada!
+              <StyledSmallSubTitle textAlign="center">
+                Bem-vindo à{' '}
+                <span style={{ color: 'var(--grey6)' }}>
+                  sessão de Projetos!
+                </span>{' '}
+                Aqui, você encontrará uma seleção dos meus trabalhos mais
+                empolgantes.{' '}
+                <span style={{ color: 'var(--grey6)' }}>
+                  Cada projeto reflete minha paixão pela programação e meu
+                  desejo de impactar positivamente a comunidade.
+                </span>{' '}
+                Explore e descubra como cada criação faz parte da minha jornada!
               </StyledSmallSubTitle>
             </InfoContainer>
           </TechSection>
@@ -48,7 +54,7 @@ const Projects = () => {
               subtitle={
                 'O projeto envolve a marcação de vagas de um estacionamento \n' +
                 'para com os moradores que ocupam essas vagas.\n' +
-                'Possui cadastro e login com autenticação.\n' +
+                ' Possui cadastro e login com autenticação.\n' +
                 'Construído com Java, Spring Boot, Spring Sec, Spring JPA, etc.'
               }
               sideTitle={'Projeto no Github'}
@@ -194,17 +200,18 @@ const Projects = () => {
         </MainContent>
         <div className="aboutThis">
           <StyledBigTitle
-            fontSize="2rem"
-            textAling="center"
-            color="var(--grey6)"
+            textAlign="center"
+            fontSize="2.2rem"
+            color="var(--grey5)"
           >
             Sobre este projeto
           </StyledBigTitle>
-          <StyledSmallSubTitle id="desc" textAling="center">
-            O portifólio possui um Backend em Java e um Frotend com React +
-            JavaScript. Caso você queira executar o projeto, basta seguir o
-            passo a passo no repositório do Github para subir de forma separada
-            ou junta conforme instruções do README.
+          <StyledSmallSubTitle id="desc" textAlign="center">
+            O portifólio é feito em{' '}
+            <span style={{ color: 'var(--grey6)' }}>React + JavaScript.</span>{' '}
+            Caso você queira executar o projeto, basta seguir o passo a passo no
+            repositório do Github para subir de forma separada ou junta conforme
+            instruções do README.
           </StyledSmallSubTitle>
         </div>
         <Footer />

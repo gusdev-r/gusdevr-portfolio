@@ -21,6 +21,9 @@ export const MainContent = styled.main`
 
   #handleInteress {
     height: 25rem;
+    @media ${breakpoint.sm1} {
+      height: 18rem;
+    }
   }
 
   section {
@@ -44,7 +47,7 @@ export const MainContent = styled.main`
 export const WelcomeSection = styled.section`
   display: flex;
   justify-content: center;
-  height: 30rem;
+  height: 100%;
 
   @media ${breakpoint.sm1} {
     height: auto;
@@ -58,7 +61,7 @@ export const WelcomeContainer = styled.div`
   align-items: center;
   width: 100%;
 
-  @media ${breakpoint.sm2}, ${breakpoint.sm1} {
+  @media ${breakpoint.sm2} {
     flex-direction: column;
     margin: 40px 0;
   }
@@ -85,10 +88,12 @@ export const IconLabel = styled.span`
 export const ContactSection = styled.div`
   height: 30rem;
   align-items: center;
+  margin-top: 0.5rem;
 
   @media ${breakpoint.sm2} {
     height: auto;
     padding: 32px 0;
+    height: 20rem;
   }
 `
 
@@ -107,9 +112,8 @@ export const ContactBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 60%;
+  width: 70%;
   height: 19rem;
-  margin-top: 1rem;
   padding: 2rem 0 0 2rem;
   border-radius: 2rem;
   border: 2px solid var(--grey2);
@@ -118,29 +122,35 @@ export const ContactBox = styled.div`
     margin: 0 10px 50px 10px;
   }
 
-  @media ${breakpoint.sm2}, ${breakpoint.sm1} {
+  @media ${breakpoint.sm2} {
     align-items: center;
     text-align: center;
     margin: 0 50px 50px 50px;
+    padding-right: 1rem;
+    border-radius: 1rem;
+    height: 16rem;
   }
 `
 
 export const IconContact = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
   margin-bottom: 10px;
 
   svg {
-    font-size: 48px;
+    font-size: 3rem;
   }
 
   @media ${breakpoint.sm1} {
     svg {
-      font-size: 38px;
+      font-size: 2rem;
     }
   }
 `
 
 export const ContactLink = styled.a`
-  font-size: 16px;
+  font-size: 1rem;
   text-decoration: underline;
   margin-top: 24px;
   color: var(--greyDefault);
@@ -152,6 +162,9 @@ export const ContactLink = styled.a`
 
   @media ${breakpoint.sm1} {
     font-size: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
     margin-top: 12px;
   }
 `
@@ -178,26 +191,25 @@ export const DescribeSection = styled.div`
 `
 
 export const DescribeContainer = styled.div`
-  padding: 70px;
+  padding: 4rem;
 
   @media ${breakpoint.md1} {
-    padding: 50px;
+    padding: 3rem;
   }
 
   @media ${breakpoint.sm2} {
-    padding: 40px;
+    padding: 2.3rem;
   }
 
   @media ${breakpoint.sm1} {
-    padding: 20px;
+    padding: 2rem;
   }
 `
 
 export const StyledMediumSubTitle = styled.p`
-  font-size: ${({ fontSize }) => fontSize || '1rem)'};
   color: ${({ color }) => color || 'var(--greyDefault)'};
   margin: ${({ margin }) => margin || '0'};
-  text-align: ${({ textAling }) => textAling || 'left'};
+  text-align: ${({ textAlign }) => textAlign || 'left'};
   line-height: 1.6;
 
   @media ${breakpoint.md1} {
@@ -216,7 +228,10 @@ export const StyledMediumSubTitle = styled.p`
 export const DescribeImg = styled.img`
   height: 34rem;
   width: 34rem;
+  filter: brightness(0.8);
   border-radius: 1rem;
+  border: 4px solid var(--grey2);
+  box-shadow: 0 0 25px 0px rgba(66, 66, 66, 0.646);
 
   @media ${breakpoint.md1} {
     height: 520px;
@@ -236,7 +251,7 @@ export const DescribeImg = styled.img`
 `
 export const ContainerButtons = styled.div`
   display: flex;
-  justify-content: ${({ justifyContent }) => justifyContent || 'none'};
+  justify-content: center;
   gap: 16px;
   margin-top: 24px;
 
@@ -268,5 +283,6 @@ export const Buttons = styled.button`
 
   @media ${breakpoint.sm1} {
     padding: 8px 12px;
+    font-size: 0.7rem;
   }
 `

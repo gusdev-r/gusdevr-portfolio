@@ -60,7 +60,7 @@ export const ContainerButtons = styled.div`
     padding: 12px 6rem;
   }
 
-  @media ${breakpoint.sm2}, ${breakpoint.sm1} {
+  @media ${breakpoint.sm2} {
     justify-content: center;
   }
 `
@@ -120,6 +120,7 @@ export const IconsGrid = styled.div`
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  margin-top: 1rem;
 
   @media ${breakpoint.md1} {
     gap: 24px;
@@ -150,12 +151,11 @@ export const IconItem = styled.div`
     }
   }
 
-  @media ${breakpoint.sm2} {
+  @media ${breakpoint.md1} {
     svg {
-      font-size: 42px;
+      font-size: 2rem;
     }
   }
-
   @media ${breakpoint.sm1} {
     svg {
       font-size: 37px;
@@ -187,16 +187,18 @@ export const ContactSection = styled.div`
 `
 
 export const KnowContainer = styled.div`
-  height: 15em;
-  margin-bottom: 10rem;
+  height: 30%;
+  margin-bottom: 5rem;
+  @media ${breakpoint.md1} {
+    margin-bottom: 5rem;
+  }
 `
 
 export const ExperienceContainer = styled.div`
   display: flex;
   justify-content: center;
-  height: 30em;
   align-items: center;
-
+  margin-top: 8rem;
   div {
     text-align: left;
     width: 50%;
@@ -206,6 +208,16 @@ export const ExperienceContainer = styled.div`
     transition: color 0.5s ease;
     &:hover {
       color: var(--grey10);
+    }
+    @media ${breakpoint.md1} {
+      font-size: 16rem;
+    }
+  }
+  @media ${breakpoint.sm1} {
+    flex-direction: column;
+    margin-top: 2rem;
+    p {
+      text-align: center;
     }
   }
 `

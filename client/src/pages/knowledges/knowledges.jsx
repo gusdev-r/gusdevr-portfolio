@@ -27,7 +27,7 @@ import {
 } from 'react-icons/si'
 import { TbBrandVite } from 'react-icons/tb'
 import { Footer } from '../../components/Footer/footer'
-import { HeaderHome } from '../about/components/headerHome/headerHome'
+import { HeaderAbout } from '../../components/headerMain/header'
 import {
   Buttons,
   ContainerButtons,
@@ -49,15 +49,15 @@ const KnowPage = () => {
   return (
     <>
       <PageContainer>
-        <HeaderHome />
+        <HeaderAbout />
         <MainContent>
           <TechSection>
             <KnowContainer>
               <InfoContainer>
-                <StyledBigTitle textAling="center">
+                <StyledBigTitle textAlign="center">
                   Principais Conhecimentos
                 </StyledBigTitle>
-                <StyledSmallSubTitle textAling="center" maxWidth="70%">
+                <StyledSmallSubTitle textAlign="center" maxWidth="70%">
                   Neste espaço, você encontrará uma coleção dos meus principais
                   conhecimentos em tecnologia. Com foco em linguagens como{' '}
                   <span style={{ color: 'var(--grey6)' }}>
@@ -80,7 +80,7 @@ const KnowPage = () => {
               </InfoContainer>
             </KnowContainer>
             <TechContainer>
-              <StyledMediumSubTitle margin="2rem">
+              <StyledMediumSubTitle textAlign="center" margin="2rem">
                 <span style={{ color: 'var(--grey7)' }}>
                   Conhecimento em Back-end
                 </span>
@@ -128,7 +128,7 @@ const KnowPage = () => {
 
           <TechSection>
             <TechContainer>
-              <StyledMediumSubTitle margin="2rem">
+              <StyledMediumSubTitle textAlign="center" margin="2rem">
                 <span style={{ color: 'var(--grey7)' }}>
                   Conhecimento em Front-end
                 </span>
@@ -164,7 +164,7 @@ const KnowPage = () => {
 
           <TechSection>
             <TechContainer>
-              <StyledMediumSubTitle margin="2rem">
+              <StyledMediumSubTitle textAlign="center" margin="2rem">
                 <span style={{ color: 'var(--grey7)' }}>
                   Conhecimento em Dev-Ops
                 </span>

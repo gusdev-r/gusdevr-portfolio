@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import breakpoint from '../../../../styles/breakpoints'
+import breakpoint from '../../styles/breakpoints'
 
 export const HeaderComp = styled.header`
   height: 4.5rem;
@@ -44,12 +44,12 @@ export const Logo = styled.img`
 export const ContainerElements = styled.ul`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-end;
   flex-grow: 1;
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-left: 64px;
+  margin-right: 64px;
   gap: 20px;
 
   .active {

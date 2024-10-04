@@ -1,6 +1,6 @@
-import defaultImg from '../../assets/images/grey.png'
+import defaultImg from '../../assets/images/profile-pic.jpg'
 import { Footer } from '../../components/Footer/footer'
-import { HeaderHome } from './components/headerHome/headerHome'
+import { HeaderAbout } from '../../components/headerMain/header'
 
 import { MdEmail } from 'react-icons/md'
 
@@ -27,22 +27,22 @@ import { StyledMediumSubTitle } from '../../components/mainTexts/mediumBoldText/
 import { StyledBigTitle } from '../../components/mainTexts/titleBoldText/title'
 import { useNavigate } from 'react-router-dom'
 
-const Home = () => {
+const About = () => {
   const navigate = useNavigate()
 
   return (
     <>
       <PageContainer>
-        <HeaderHome />
+        <HeaderAbout />
 
         <MainContent>
           <WelcomeSection>
             <WelcomeContainer>
-              <StyledBigTitle>
+              <StyledBigTitle textAlign="center">
                 Bem-vindo ao portifólio de Gustavo Henrique Moreira
               </StyledBigTitle>
               <InfoContainer>
-                <StyledSmallSubTitle textAling="center" maxWidth="50rem">
+                <StyledSmallSubTitle textAlign="center" maxWidth="50rem">
                   Bem-vindo ao portfólio de{' '}
                   <span style={{ color: 'var(--grey6)' }}>
                     Gustavo Henrique Moreira (gusdev_r).
@@ -52,7 +52,7 @@ const Home = () => {
                   domino. Sinta-se à vontade para explorar e conhecer mais sobre
                   minha trajetória!
                 </StyledSmallSubTitle>{' '}
-                <ContainerButtons justifyContent="center">
+                <ContainerButtons>
                   <Buttons
                     className="projects"
                     onClick={() => navigate('/projects')}
@@ -109,14 +109,14 @@ const Home = () => {
           <div id="handleInteress">
             <DescribeContainer>
               <StyledMediumSubTitle
-                textAling="center"
+                textAlign="center"
                 color="var(--grey6)"
                 maxWidth="40rem"
                 fontSize="2rem"
               >
                 Planos futuros e principais interesses
               </StyledMediumSubTitle>
-              <StyledSmallSubTitle textAling="center">
+              <StyledSmallSubTitle textAlign="center">
                 Além de buscar novos conhecimentos dentro das tecnologias que
                 englobam o{' '}
                 <span style={{ color: 'var(--grey6)' }}>
@@ -133,7 +133,7 @@ const Home = () => {
             </DescribeContainer>
           </div>
           <div>
-            <StyledMediumSubTitle textAling="center" fontSize="1.5rem">
+            <StyledMediumSubTitle textAlign="center" fontSize="1.5rem">
               <span style={{ color: 'var(--grey7)', fontWeight: 700 }}>
                 Principal Contato
               </span>
@@ -145,7 +145,7 @@ const Home = () => {
                     <MdEmail />
                   </IconContact>
                   <StyledMediumSubTitle>Email</StyledMediumSubTitle>
-                  <StyledSmallSubTitle maxWidth="80%">
+                  <StyledSmallSubTitle>
                     Entre em contato com e-mail abaixo, ou se preferir, na seção
                     de redes sociais, você encontrará outras maneiras de falar
                     comigo.
@@ -165,4 +165,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default About

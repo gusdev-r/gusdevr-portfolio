@@ -1,17 +1,9 @@
 import React, { useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import logo from '../../../../assets/images/g-black-logo-removebg.png'
-import {
-  ButtonChoice,
-  ContainerButtons,
-  ContainerElements,
-  Element,
-  HeaderComp,
-  Logo,
-  LogoBox,
-} from './style'
+import logo from '../../assets/images/g-black-logo-removebg.png'
+import { ContainerElements, Element, HeaderComp, Logo, LogoBox } from './style'
 
-export const HeaderHome = () => {
+export const HeaderAbout = () => {
   const navigate = useNavigate()
   const location = useLocation()
   useEffect(() => {
@@ -30,7 +22,7 @@ export const HeaderHome = () => {
             navigate('/')
           }}
         >
-          Home
+          Sobre
         </Element>
         <Element
           className={location.pathname === '/projects' ? 'active' : ''}
@@ -55,16 +47,6 @@ export const HeaderHome = () => {
           Redes sociais
         </Element>
       </ContainerElements>
-      <ContainerButtons>
-        <ButtonChoice
-          className={location.pathname === '/auth' ? 'active' : ''}
-          onClick={() => {
-            navigate('/auth')
-          }}
-        >
-          Cadastrar
-        </ButtonChoice>
-      </ContainerButtons>
     </HeaderComp>
   )
 }

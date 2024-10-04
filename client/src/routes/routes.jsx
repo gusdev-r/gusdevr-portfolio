@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import Signup from '../pages/signup/signup'
-import Home from '../pages/about/about'
+import About from '../pages/about/about'
 import Social from '../pages/social/social'
 import Projects from '../pages/projects/projects'
 import ErrorPage from '../pages/about/about'
@@ -10,8 +9,7 @@ export default function RoutesMainApp() {
   return (
     <Routes>
       <Route>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/auth" element={<Signup />} />
+        <Route path="/" element={<About />}></Route>
         <Route path="/social" element={<Social />} />
         <Route path="/knowledges" element={<KnowPage />} />
         <Route path="/projects" element={<Projects />} />

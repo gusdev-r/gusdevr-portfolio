@@ -22,12 +22,6 @@ docker-compose build
 docker-compose up
 ```
 
-### Para iniciar as aplicações separadamente
-
-#### **Frontend **
-
-Entre na pasta client para saber como inicializar a aplicação.
-
 ### Tecnologias usadas:
 
 #### Frotend

@@ -24,22 +24,11 @@ docker-compose up
 
 ### Para iniciar as aplicações separadamente
 
-#### **Frontend ou Backend**
+#### **Frontend **
 
-Entre na pasta client (para o frontend) ou na pasta server (para o backend), lá você encontrará um tutorial simples de como iniciar a aplicação de forma separada.
+Entre na pasta client para saber como inicializar a aplicação.
 
 ### Tecnologias usadas:
-
-#### Backend
-
-- Java
-- Spring Boot
-- Spring Security
-- MySQL
-- Clean Architecture
-- JWT
-- OAuth 2.0
-- Flyway
 
 #### Frotend
 
@@ -56,9 +45,6 @@ Entre na pasta client (para o frontend) ou na pasta server (para o backend), lá
 
 #### Ferramentas
 
-- Postman
-- Beekeeper
-- SMTP Gmail
 - Visual Studio Code
 - IntelliJ IDEA
 

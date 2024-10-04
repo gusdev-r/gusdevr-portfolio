@@ -27,7 +27,7 @@ import {
 } from 'react-icons/si'
 import { TbBrandVite } from 'react-icons/tb'
 import { Footer } from '../../components/Footer/footer'
-import { HeaderHome } from '../about/components/headerHome/headerHome'
+import { HeaderAbout } from '../../components/headerMain/header'
 import {
   Buttons,
   ContainerButtons,
@@ -49,7 +49,7 @@ const KnowPage = () => {
   return (
     <>
       <PageContainer>
-        <HeaderHome />
+        <HeaderAbout />
         <MainContent>
           <TechSection>
             <KnowContainer>

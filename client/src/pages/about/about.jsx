@@ -1,6 +1,6 @@
 import defaultImg from '../../assets/images/profile-pic.jpg'
 import { Footer } from '../../components/Footer/footer'
-import { HeaderHome } from './components/headerHome/headerHome'
+import { HeaderAbout } from '../../components/headerMain/header'
 
 import { MdEmail } from 'react-icons/md'
 
@@ -27,13 +27,13 @@ import { StyledMediumSubTitle } from '../../components/mainTexts/mediumBoldText/
 import { StyledBigTitle } from '../../components/mainTexts/titleBoldText/title'
 import { useNavigate } from 'react-router-dom'
 
-const Home = () => {
+const About = () => {
   const navigate = useNavigate()
 
   return (
     <>
       <PageContainer>
-        <HeaderHome />
+        <HeaderAbout />
 
         <MainContent>
           <WelcomeSection>
@@ -165,4 +165,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default About

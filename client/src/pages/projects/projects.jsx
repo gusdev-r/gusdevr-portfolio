@@ -8,7 +8,7 @@ import {
   SiSpringsecurity,
 } from 'react-icons/si'
 import { Footer } from '../../components/Footer/footer'
-import { HeaderHome } from '../about/components/headerHome/headerHome'
+import { HeaderAbout } from '../../components/headerMain/header'
 import {
   InfoContainer,
   MainContent,
@@ -26,7 +26,7 @@ const Projects = () => {
   return (
     <>
       <PageContainer>
-        <HeaderHome />
+        <HeaderAbout />
         <MainContent>
           <TechSection>
             <InfoContainer>

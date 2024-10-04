@@ -1,7 +1,7 @@
 import { FaInstagram } from 'react-icons/fa'
 import { FaDiscord, FaGithub, FaLinkedin } from 'react-icons/fa6'
 import { Footer } from '../../components/Footer/footer'
-import { HeaderHome } from '../about/components/headerHome/headerHome'
+import { HeaderAbout } from '../../components/headerMain/header'
 import {
   ExperienceContainer,
   InfoContainer,
@@ -17,7 +17,7 @@ const Social = () => {
   return (
     <>
       <PageContainer>
-        <HeaderHome />
+        <HeaderAbout />
         <MainContent>
           <TechSection>
             <InfoContainer>

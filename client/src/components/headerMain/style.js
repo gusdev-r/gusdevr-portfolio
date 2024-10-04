@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import breakpoint from '../../../../styles/breakpoints'
+import breakpoint from '../../styles/breakpoints'
 
 export const HeaderComp = styled.header`
   height: 4.5rem;

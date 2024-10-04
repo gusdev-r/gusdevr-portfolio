@@ -197,9 +197,8 @@ export const KnowContainer = styled.div`
 export const ExperienceContainer = styled.div`
   display: flex;
   justify-content: center;
-  height: 30%;
   align-items: center;
-
+  margin-top: 8rem;
   div {
     text-align: left;
     width: 50%;
@@ -216,5 +215,9 @@ export const ExperienceContainer = styled.div`
   }
   @media ${breakpoint.sm1} {
     flex-direction: column;
+    margin-top: 2rem;
+    p {
+      text-align: center;
+    }
   }
 `

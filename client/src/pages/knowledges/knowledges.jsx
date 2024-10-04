@@ -80,7 +80,7 @@ const KnowPage = () => {
               </InfoContainer>
             </KnowContainer>
             <TechContainer>
-              <StyledMediumSubTitle margin="2rem">
+              <StyledMediumSubTitle textAling="center" margin="2rem">
                 <span style={{ color: 'var(--grey7)' }}>
                   Conhecimento em Back-end
                 </span>
@@ -128,7 +128,7 @@ const KnowPage = () => {
 
           <TechSection>
             <TechContainer>
-              <StyledMediumSubTitle margin="2rem">
+              <StyledMediumSubTitle textAling="center" margin="2rem">
                 <span style={{ color: 'var(--grey7)' }}>
                   Conhecimento em Front-end
                 </span>
@@ -164,7 +164,7 @@ const KnowPage = () => {
 
           <TechSection>
             <TechContainer>
-              <StyledMediumSubTitle margin="2rem">
+              <StyledMediumSubTitle textAling="center" margin="2rem">
                 <span style={{ color: 'var(--grey7)' }}>
                   Conhecimento em Dev-Ops
                 </span>

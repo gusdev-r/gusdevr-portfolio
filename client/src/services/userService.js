@@ -2,7 +2,7 @@ import { api } from '../api/api'
 
 export const userService = {
   async getAllUsers() {
-    const response = api.get('all')
+    const response = api.get('/all')
     return response
   },
 

@@ -15,6 +15,7 @@ export default function RoutesMainApp() {
         <Route path="/social" element={<Social />} />
         <Route path="/knowledges" element={<KnowPage />} />
         <Route path="/projects" element={<Projects />} />
+        {/* <Route path="/feedbacks" element={<Feedbacks />} /> */}
         <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>

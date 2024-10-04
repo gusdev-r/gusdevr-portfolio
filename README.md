@@ -43,21 +43,7 @@ docker-compose up
 - IntelliJ IDEA
 
 <div style="display: inline_block;>
-    <img align="center" alt="java" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
-    <img align="center" alt="react" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-    <img align="center" alt="spring-boot" src="https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge&logo=Spring&logoColor=white"/>
-    <img align="center" alt="spring-security" src="https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=Spring&logoColor=white"/>
-    <img align="center" alt="mysql" src="https://shields.io/badge/MySQL-lightgrey?logo=mysql&style=plastic&logoColor=white&labelColor=blue"/>
-    <img align="center" alt="docker" src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"/>
-    <img align="center" alt="clean-architecture" src="https://img.shields.io/badge/Clean_Architecture-000000?style=for-the-badge&logoColor=white"/>
-    <img align="center" alt="jwt" src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logoColor=white"/>
-    <img align="center" alt="oauth" src="https://img.shields.io/badge/OAuth_2.0-000000?style=for-the-badge&logoColor=white"/>
-    <img align="center" alt="flyway" src="https://img.shields.io/badge/Flyway-0082FC?style=for-the-badge&logoColor=white"/>
-    <img align="center" alt="git" src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white"/>
-    <img align="center" alt="github" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>
-    <img align="center" alt="postman" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white"/>
-    <img align="center" alt="beekeeper" src="https://img.shields.io/badge/Beekeeper-000000?style=for-the-badge&logoColor=white"/>
-    <img align="center" alt="smtp-gmail" src="https://img.shields.io/badge/SMTP_Gmail-D93025?style=for-the-badge&logo=gmail&logoColor=white"/>
+ <img align="center" alt="react" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
     <img align="center" alt="html" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
     <img align="center" alt="css" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
     <img align="center" alt="styled-components" src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"/>

@@ -64,14 +64,6 @@ export const Header = () => {
           >
             Redes sociais
           </Element>
-          <Element
-            className={location.pathname === '/auth' ? 'active' : ''}
-            onClick={() => {
-              navigate('/auth')
-            }}
-          >
-            Cadastrar
-          </Element>
         </ContainerElements>
         <BtnMenu onClick={() => setIsOpen(true)}>
           <IoMenu />

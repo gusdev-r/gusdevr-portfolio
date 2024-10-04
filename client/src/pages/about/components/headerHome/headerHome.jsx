@@ -55,16 +55,6 @@ export const HeaderHome = () => {
           Redes sociais
         </Element>
       </ContainerElements>
-      <ContainerButtons>
-        <ButtonChoice
-          className={location.pathname === '/auth' ? 'active' : ''}
-          onClick={() => {
-            navigate('/auth')
-          }}
-        >
-          Cadastrar
-        </ButtonChoice>
-      </ContainerButtons>
     </HeaderComp>
   )
 }

@@ -21,10 +21,10 @@ const Social = () => {
         <MainContent>
           <TechSection>
             <InfoContainer>
-              <StyledBigTitle textAling="center">
+              <StyledBigTitle maxWidth="90%" textAlign="center">
                 Redes sociais conteúdos
               </StyledBigTitle>
-              <StyledSmallSubTitle maxWidth="70rem" textAling="center">
+              <StyledSmallSubTitle maxWidth="70rem" textAlign="center">
                 Bem-vindo à sessão de Redes Sociais e Comunidade! Aqui, você vai
                 descobrir como me conecto com outros desenvolvedores e
                 compartilho minha jornada. No Instagram, trago dicas, memes e

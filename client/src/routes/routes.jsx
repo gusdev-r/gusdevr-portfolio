@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom'
-import Signup from '../pages/signup/signup'
 import Home from '../pages/about/about'
 import Social from '../pages/social/social'
 import Projects from '../pages/projects/projects'
@@ -11,7 +10,6 @@ export default function RoutesMainApp() {
     <Routes>
       <Route>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/auth" element={<Signup />} />
         <Route path="/social" element={<Social />} />
         <Route path="/knowledges" element={<KnowPage />} />
         <Route path="/projects" element={<Projects />} />

@@ -14,13 +14,13 @@ import {
   MainContent,
   PageContainer,
   ProjContainer,
-  StyledBigTitle,
   TechSection,
 } from './style'
 
 import { DiJavascript } from 'react-icons/di'
 import GeneralBoxProject from './components/projectBox/box'
 import { StyledSmallSubTitle } from '../../components/mainTexts/descText/desc'
+import { StyledBigTitle } from '../../components/mainTexts/titleBoldText/title'
 
 const Projects = () => {
   return (
@@ -30,10 +30,10 @@ const Projects = () => {
         <MainContent>
           <TechSection>
             <InfoContainer>
-              <StyledBigTitle textAling="center">
+              <StyledBigTitle textAlign="center">
                 Projetos de atuação
               </StyledBigTitle>
-              <StyledSmallSubTitle textAling="center" maxWidth="70%">
+              <StyledSmallSubTitle textAlign="center">
                 Bem-vindo à sessão de Projetos! Aqui, você encontrará uma
                 seleção dos meus trabalhos mais empolgantes. Cada projeto
                 reflete minha paixão pela programação e meu desejo de impactar
@@ -193,14 +193,10 @@ const Projects = () => {
           </ProjContainer>
         </MainContent>
         <div className="aboutThis">
-          <StyledBigTitle
-            fontSize="2rem"
-            textAling="center"
-            color="var(--grey6)"
-          >
+          <StyledBigTitle textAlign="center" color="var(--grey5)">
             Sobre este projeto
           </StyledBigTitle>
-          <StyledSmallSubTitle id="desc" textAling="center">
+          <StyledSmallSubTitle id="desc" textAlign="center">
             O portifólio possui um Backend em Java e um Frotend com React +
             JavaScript. Caso você queira executar o projeto, basta seguir o
             passo a passo no repositório do Github para subir de forma separada

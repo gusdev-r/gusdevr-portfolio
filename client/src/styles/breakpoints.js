@@ -1,4 +1,5 @@
 const sizes = {
+  mob1: '480px',
   sm0: '580px',
   sm1: '680px',
   sm2: '950px',
@@ -7,6 +8,7 @@ const sizes = {
 }
 
 const breakpoint = {
+  mob1: `(max-width: ${sizes.mob1})`,
   sm0: `(max-width: ${sizes.sm0})`,
   sm1: `(max-width: ${sizes.sm1})`,
   sm2: `(max-width: ${sizes.sm2})`,

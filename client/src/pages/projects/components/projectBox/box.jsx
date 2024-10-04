@@ -4,12 +4,13 @@ import { MdCorporateFare } from 'react-icons/md'
 import styled from 'styled-components'
 import { StyledSmallSubTitle } from '../../../../components/mainTexts/descText/desc'
 import { StyledMediumSubTitle } from '../../../../components/mainTexts/mediumBoldText/medium'
+import breakpoint from '../../../../styles/breakpoints'
 
 export const ProjBox = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 18em;
+  height: 18rem;
   width: 42rem;
   align-items: center;
   border-radius: 2rem;
@@ -20,7 +21,7 @@ export const ProjBox = styled.div`
   #hadleIcons {
     display: flex;
     justify-content: flex-end;
-    width: 26rem;
+    width: 80%;
     font-size: 1.6rem;
     color: var(--grey7);
     gap: 0.8rem;
@@ -36,6 +37,21 @@ export const ProjBox = styled.div`
     box-shadow: 0 0 25px 0px rgba(66, 66, 66, 0.546);
     svg {
       color: var(--grey7);
+    }
+  }
+  @media ${breakpoint.bg1} {
+    width: 34rem;
+  }
+  @media ${breakpoint.sm0} {
+    height: 16rem;
+    width: 28rem;
+  }
+  @media ${breakpoint.mob1} {
+    width: 22rem;
+    height: 20rem;
+    border-radius: 1.5rem;
+    svg {
+      font-size: 1.4rem;
     }
   }
 `
@@ -73,16 +89,15 @@ const GeneralBoxProject = ({
         )}
       </div>
       <StyledMediumSubTitle
-        fontSize="1.2rem"
         color="var(--grey6)"
-        width="70%"
-        textAling={changeSide ? 'center' : 'left'}
+        width="80%"
+        textAlign={changeSide ? 'center' : 'left'}
       >
         {changeSide ? sideTitle : title}
       </StyledMediumSubTitle>
       <StyledSmallSubTitle
-        width="70%"
-        textAling={changeSide ? 'center' : 'left'}
+        width="80%"
+        textAlign={changeSide ? 'center' : 'left'}
       >
         {changeSide ? sideSubtile : subtitle}
       </StyledSmallSubTitle>
@@ -103,9 +118,9 @@ const GeneralBoxProject = ({
           onClick={() => {
             window.open({ projectLink }, '_blank')
           }}
-          textAling="center"
+          textAlign="center"
           color="var(--grey7)"
-          fontSize="0.8rem"
+          // fontSize="0.8rem"
         >
           Clique para acessar o projeto
         </StyledSmallSubTitle>

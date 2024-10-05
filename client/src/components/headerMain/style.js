@@ -19,6 +19,16 @@ export const HeaderComp = styled.header`
     height: 3rem;
   }
 `
+export const HBtn = styled.div`
+  display: none;
+  @media ${breakpoint.sm2} {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-right: 3rem;
+  }
+`
 
 export const LogoBox = styled.div`
   height: 100%;
@@ -43,13 +53,13 @@ export const Logo = styled.img`
 
 export const ContainerElements = styled.ul`
   display: flex;
-  align-items: center;
+  text-align: center;
   justify-content: flex-end;
   flex-grow: 1;
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-right: 64px;
+  margin-right: 3rem;
   gap: 20px;
 
   .active {
@@ -59,36 +69,21 @@ export const ContainerElements = styled.ul`
   @media ${breakpoint.md1} {
     margin-left: 14px;
   }
-  @media ${breakpoint.sm1} {
-    justify-content: center;
-    gap: 4px;
-  }
-  @media ${breakpoint.sm0} {
-    margin-left: 0px;
+  @media ${breakpoint.sm2} {
+    display: none;
   }
 `
 
 export const Element = styled.button`
-  text-align: center;
   text-decoration: none;
   padding: 4px 4px;
   background: none;
   border: none;
   color: var(--grey6);
   cursor: pointer;
-  font-size: 14px;
+  transition: all ease 0.5s;
   &:hover {
     color: var(--whiteDefault);
-  }
-
-  @media ${breakpoint.bg1} {
-    font-size: 13px;
-  }
-  @media ${breakpoint.sm0} {
-    font-size: 9px;
-  }
-  @media ${breakpoint.sm2} {
-    justify-items: end;
   }
 `
 
@@ -126,10 +121,84 @@ export const ButtonChoice = styled.button`
     border-color: var(--whiteDefault);
   }
   @media ${breakpoint.bg1} {
-    font-size: 13px;
     padding: 3px 18px;
   }
   @media ${breakpoint.sm2} {
     display: none;
   }
+`
+
+export const Button = styled.a`
+  display: flex;
+  align-items: center;
+  transition: var(--transition-all-slow);
+  color: var(--greyDefault);
+  cursor: pointer;
+
+  svg {
+    margin-right: 10px;
+  }
+  &:hover {
+    color: var(--whiteDefault);
+    svg {
+      color: var(--whiteDefault);
+    }
+  }
+
+  @media ${breakpoint.bg1} {
+    padding: 4px 8px;
+  }
+
+  @media ${breakpoint.sm2} {
+    display: none;
+  }
+`
+export const BtnMenu = styled.button`
+  display: none;
+
+  @media ${breakpoint.sm2} {
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    svg {
+      font-size: 1.8rem;
+      transition: var(--transition-color-fast);
+      color: var(--grey4);
+    }
+
+    &:hover svg {
+      color: var(--whiteDefault);
+    }
+  }
+`
+
+export const HeaderMenu = styled.div`
+  display: none;
+  z-index: 1000;
+  @media ${breakpoint.sm2} {
+    transition: all ease-in-out 0.5s;
+    background: linear-gradient(to right, rgb(16, 16, 16), rgb(0, 0, 0) 160%);
+    height: 100vh;
+    width: 20rem;
+    padding: 1rem;
+    gap: 3rem;
+    right: 0;
+    border-left: 1px solid var(--grey2);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+  }
+  @media ${breakpoint.sm0} {
+    width: 70vw;
+  }
+`
+export const MenuContainer = styled.section`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 `

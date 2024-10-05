@@ -3,8 +3,6 @@ import breakpoint from '../../styles/breakpoints'
 
 export const PageContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
   min-height: 100vh;
   background: radial-gradient(
@@ -24,7 +22,7 @@ export const MainContent = styled.main`
   text-align: center;
   color: var(--greyDefault);
   margin: 2rem 15rem;
-
+  z-index: 1;
   section {
     margin: 0 auto;
     padding: 16px;

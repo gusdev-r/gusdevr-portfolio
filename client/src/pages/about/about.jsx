@@ -34,7 +34,6 @@ const About = () => {
     <>
       <PageContainer>
         <HeaderAbout />
-
         <MainContent>
           <WelcomeSection>
             <WelcomeContainer>

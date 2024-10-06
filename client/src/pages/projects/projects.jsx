@@ -207,7 +207,7 @@ const Projects = () => {
             Sobre este projeto
           </StyledBigTitle>
           <StyledSmallSubTitle id="desc" textAlign="center">
-            O portifólio é feito em{' '}
+            O Portfólio é feito em{' '}
             <span style={{ color: 'var(--grey6)' }}>React + JavaScript.</span>{' '}
             Caso você queira executar o projeto, basta seguir o passo a passo no
             repositório do Github para subir de forma separada ou junta conforme

@@ -38,7 +38,7 @@ const About = () => {
           <WelcomeSection>
             <WelcomeContainer>
               <StyledBigTitle textAlign="center">
-                Bem-vindo ao portifólio de Gustavo Henrique Moreira
+                Bem-vindo ao Portfólio de Gustavo Henrique Moreira
               </StyledBigTitle>
               <InfoContainer>
                 <StyledSmallSubTitle textAlign="center" maxWidth="50rem">

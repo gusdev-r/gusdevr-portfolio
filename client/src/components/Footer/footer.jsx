@@ -27,7 +27,7 @@ export const Footer = () => {
 
       <LinksContainer>
         <MainContainer>
-          <MainLink onClick={() => navigate('/')}>About</MainLink>
+          <MainLink onClick={() => navigate('/')}>Sobre</MainLink>
           <MainLink onClick={() => navigate('/projects')}>Projetos</MainLink>
           <MainLink onClick={() => navigate('/knowledges')}>
             Conhecimentos

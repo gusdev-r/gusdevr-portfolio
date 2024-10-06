@@ -39,6 +39,7 @@ export const MainContainer = styled.div`
   justify-content: center;
   gap: 20px;
   margin-bottom: 20px;
+  cursor: pointer;
   @media ${breakpoint.sm2} {
     gap: 10px;
   }

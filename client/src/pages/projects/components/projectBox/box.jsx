@@ -15,8 +15,8 @@ export const ProjBox = styled.div`
   align-items: center;
   border-radius: 2rem;
   transition: all 0.5s ease;
-  cursor: pointer;
   border: 2px solid var(--grey1);
+  cursor: pointer;
 
   #hadleIcons {
     display: flex;
@@ -116,11 +116,10 @@ const GeneralBoxProject = ({
       {sideTitle === 'Projeto no Github' && changeSide ? (
         <StyledSmallSubTitle
           onClick={() => {
-            window.open({ projectLink }, '_blank')
+            window.open(projectLink, '_blank') // Corrigido aqui
           }}
           textAlign="center"
           color="var(--grey7)"
-          // fontSize="0.8rem"
         >
           Clique para acessar o projeto
         </StyledSmallSubTitle>

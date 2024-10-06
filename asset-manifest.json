@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/gusdevr-portfolio/static/css/main.f029a054.css",
-    "main.js": "/gusdevr-portfolio/static/js/main.ca22af21.js",
+    "main.js": "/gusdevr-portfolio/static/js/main.c4f8a23c.js",
     "static/media/profile-pic.jpg": "/gusdevr-portfolio/static/media/profile-pic.e87466bd8c52af27fc5d.jpg",
     "static/media/g-black-logo-removebg.png": "/gusdevr-portfolio/static/media/g-black-logo-removebg.13afeb03986a1701441b.png",
     "index.html": "/gusdevr-portfolio/index.html",
     "main.f029a054.css.map": "/gusdevr-portfolio/static/css/main.f029a054.css.map",
-    "main.ca22af21.js.map": "/gusdevr-portfolio/static/js/main.ca22af21.js.map"
+    "main.c4f8a23c.js.map": "/gusdevr-portfolio/static/js/main.c4f8a23c.js.map"
   },
   "entrypoints": [
     "static/css/main.f029a054.css",
-    "static/js/main.ca22af21.js"
+    "static/js/main.c4f8a23c.js"
   ]
 }

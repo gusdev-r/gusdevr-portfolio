@@ -63,7 +63,7 @@ cd caminho/para/o/diretorio
 ```
 - Agora, vamos clonar o repositório. Use o comando git clone seguido da URL do repositório. Aqui está o comando para clonar este repositório:
 ```
-git clone https://github.com/gusdev-r/educational-website-ucb.git
+git clone https://github.com/gusdev-r/gusdevr-portfolio.git
 ```
 Agora o projeto pode ser acessado a partir da pasta em que o repositório foi clonado, vale ressaltar que, até o momento do projeto, para uma melhor 
 experiência, baixe as imagens no seu computador e confira o projeto 100%.

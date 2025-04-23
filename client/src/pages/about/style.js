@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import breakpoint from '../../styles/breakpoints'
+import styled from "styled-components";
+import breakpoint from "../../styles/breakpoints";
 
 export const PageContainer = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ export const PageContainer = styled.div`
     var(--grey8) -350%,
     var(--blackDefault) 60%
   );
-`
+`;
 
 export const MainContent = styled.main`
   padding-top: 5rem;
@@ -42,7 +42,7 @@ export const MainContent = styled.main`
   @media ${breakpoint.sm1} {
     margin: 0;
   }
-`
+`;
 
 export const WelcomeSection = styled.section`
   display: flex;
@@ -53,7 +53,7 @@ export const WelcomeSection = styled.section`
     height: auto;
     padding: 2rem 0;
   }
-`
+`;
 
 export const WelcomeContainer = styled.div`
   display: flex;
@@ -65,13 +65,13 @@ export const WelcomeContainer = styled.div`
     flex-direction: column;
     margin: 40px 0;
   }
-`
+`;
 
 export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
-`
+`;
 
 export const IconLabel = styled.span`
   font-size: 16px;
@@ -83,38 +83,33 @@ export const IconLabel = styled.span`
   @media ${breakpoint.sm1} {
     font-size: 14px;
   }
-`
+`;
 
 export const ContactSection = styled.div`
-  height: 30rem;
+  display: flex;
   align-items: center;
-  margin-top: 0.5rem;
-
-  @media ${breakpoint.sm2} {
-    height: auto;
-    padding: 32px 0;
-    height: 20rem;
-  }
-`
+  margin-top: 1.5rem;
+`;
 
 export const ContactContainer = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  gap: 1rem;
 
   @media ${breakpoint.sm2}, ${breakpoint.sm1} {
     flex-direction: column;
     align-items: center;
   }
-`
+`;
 
 export const ContactBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 70%;
-  height: 19rem;
-  padding: 2rem 0 0 2rem;
+  padding: 2rem;
   border-radius: 2rem;
   border: 2px solid var(--grey2);
 
@@ -130,24 +125,7 @@ export const ContactBox = styled.div`
     border-radius: 1rem;
     height: 16rem;
   }
-`
-
-export const IconContact = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
-  margin-bottom: 10px;
-
-  svg {
-    font-size: 3rem;
-  }
-
-  @media ${breakpoint.sm1} {
-    svg {
-      font-size: 2rem;
-    }
-  }
-`
+`;
 
 export const ContactLink = styled.a`
   font-size: 1rem;
@@ -167,7 +145,7 @@ export const ContactLink = styled.a`
     justify-content: flex-start;
     margin-top: 12px;
   }
-`
+`;
 
 export const DescribeSection = styled.div`
   height: 50rem;
@@ -188,7 +166,7 @@ export const DescribeSection = styled.div`
   @media ${breakpoint.sm1} {
     padding: 32px 0;
   }
-`
+`;
 
 export const DescribeContainer = styled.div`
   padding: 4rem;
@@ -204,12 +182,12 @@ export const DescribeContainer = styled.div`
   @media ${breakpoint.sm1} {
     padding: 2rem;
   }
-`
+`;
 
 export const StyledMediumSubTitle = styled.p`
-  color: ${({ color }) => color || 'var(--greyDefault)'};
-  margin: ${({ margin }) => margin || '0'};
-  text-align: ${({ textAlign }) => textAlign || 'left'};
+  color: ${({ color }) => color || "var(--greyDefault)"};
+  margin: ${({ margin }) => margin || "0"};
+  text-align: ${({ textAlign }) => textAlign || "left"};
   line-height: 1.6;
 
   @media ${breakpoint.md1} {
@@ -223,32 +201,31 @@ export const StyledMediumSubTitle = styled.p`
   @media ${breakpoint.sm1} {
     font-size: 14px;
   }
-`
+`;
 
 export const DescribeImg = styled.img`
-  height: 34rem;
-  width: 34rem;
+  height: 30rem;
+  width: 30rem;
   filter: brightness(0.8);
   border-radius: 1rem;
-  border: 4px solid var(--grey2);
-  box-shadow: 0 0 25px 0px rgba(66, 66, 66, 0.646);
+  border: 2px solid var(--grey2);
 
   @media ${breakpoint.md1} {
-    height: 520px;
-    width: 540px;
+    height: 32.5rem;
+    width: 33.75rem;
   }
 
   @media ${breakpoint.sm2} {
-    height: 420px;
-    width: 440px;
+    height: 26.25rem;
+    width: 27.5rem;
   }
 
   @media ${breakpoint.sm1} {
-    height: 320px;
-    width: 340px;
+    height: 20rem;
+    width: 21.25rem;
     padding: 0;
   }
-`
+`;
 export const ContainerButtons = styled.div`
   display: flex;
   justify-content: center;
@@ -262,7 +239,7 @@ export const ContainerButtons = styled.div`
   @media ${breakpoint.sm2}, ${breakpoint.sm1} {
     justify-content: center;
   }
-`
+`;
 
 export const Buttons = styled.button`
   padding: 12px 20px;
@@ -285,4 +262,4 @@ export const Buttons = styled.button`
     padding: 8px 12px;
     font-size: 0.7rem;
   }
-`
+`;

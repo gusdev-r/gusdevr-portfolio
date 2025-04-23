@@ -1,9 +1,9 @@
-import { Route, Routes } from 'react-router-dom'
-import About from '../pages/about/about'
-import Social from '../pages/social/social'
-import Projects from '../pages/projects/projects'
-import ErrorPage from '../pages/about/about'
-import KnowPage from '../pages/knowledges/knowledges'
+import { Route, Routes } from "react-router-dom";
+import About from "../pages/about/about";
+import Social from "../pages/social/social";
+import Projects from "../pages/projects/projects";
+import ErrorPage from "../pages/about/about";
+import KnowPage from "../pages/knowledges/knowledges";
 
 export default function RoutesMainApp() {
   return (
@@ -16,5 +16,5 @@ export default function RoutesMainApp() {
         <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>
-  )
+  );
 }

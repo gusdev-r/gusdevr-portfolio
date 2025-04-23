@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import breakpoint from '../../styles/breakpoints'
+import styled from "styled-components";
+import breakpoint from "../../styles/breakpoints";
 
 export const PageContainer = styled.div`
   display: flex;
@@ -21,7 +21,7 @@ export const PageContainer = styled.div`
     flex-direction: column;
     gap: 3rem;
   }
-`
+`;
 
 export const MainContent = styled.main`
   padding-top: 5rem;
@@ -45,21 +45,21 @@ export const MainContent = styled.main`
   @media ${breakpoint.sm1} {
     margin: 0;
   }
-`
+`;
 
 export const InfoContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 18rem;
+  height: 12rem;
   width: 100%;
   p {
     width: 70%;
   }
-`
+`;
 export const ContainerButtons = styled.div`
   display: flex;
-  justify-content: ${({ justifyContent }) => justifyContent || 'none'};
+  justify-content: ${({ justifyContent }) => justifyContent || "none"};
   gap: 16px;
   margin-top: 24px;
 
@@ -70,7 +70,7 @@ export const ContainerButtons = styled.div`
   @media ${breakpoint.sm2}, ${breakpoint.sm1} {
     justify-content: center;
   }
-`
+`;
 
 export const Buttons = styled.button`
   padding: 12px 20px;
@@ -92,7 +92,7 @@ export const Buttons = styled.button`
   @media ${breakpoint.sm1} {
     padding: 8px 12px;
   }
-`
+`;
 
 export const TechSection = styled.div`
   display: flex;
@@ -125,7 +125,7 @@ export const TechSection = styled.div`
   @media ${breakpoint.sm1} {
     padding: 32px 0;
   }
-`
+`;
 
 export const TechContainer = styled.div`
   display: flex;
@@ -133,7 +133,7 @@ export const TechContainer = styled.div`
   justify-content: center;
   align-items: start;
   text-align: left;
-`
+`;
 
 export const IconsGrid = styled.div`
   display: flex;
@@ -153,7 +153,7 @@ export const IconsGrid = styled.div`
     max-width: 350px;
     margin-bottom: 2rem;
   }
-`
+`;
 
 export const ExperienceContainer = styled.div`
   display: flex;
@@ -212,4 +212,4 @@ export const ExperienceContainer = styled.div`
       margin-top: 1rem;
     }
   }
-`
+`;

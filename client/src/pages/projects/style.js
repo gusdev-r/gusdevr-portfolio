@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import breakpoint from '../../styles/breakpoints'
+import styled from "styled-components";
+import breakpoint from "../../styles/breakpoints";
 
 export const PageContainer = styled.div`
   display: flex;
@@ -11,7 +11,6 @@ export const PageContainer = styled.div`
     var(--grey8) -400%,
     var(--blackDefault) 70%
   );
-
   .aboutThis {
     display: flex;
     align-items: center;
@@ -19,11 +18,8 @@ export const PageContainer = styled.div`
     flex-direction: column;
     height: 20rem;
     margin: 2rem;
-    #desc {
-      max-width: 70%;
-    }
   }
-`
+`;
 export const MainContent = styled.main`
   padding-top: 5rem;
   flex: 1;
@@ -40,7 +36,7 @@ export const MainContent = styled.main`
   @media ${breakpoint.sm1} {
     margin: 0;
   }
-`
+`;
 
 export const TechSection = styled.div`
   display: flex;
@@ -66,7 +62,7 @@ export const TechSection = styled.div`
     padding: 32px 0;
     margin: 0 50px 0px 50px;
   }
-`
+`;
 
 export const InfoContainer = styled.div`
   display: flex;
@@ -84,7 +80,7 @@ export const InfoContainer = styled.div`
       max-width: 100%;
     }
   }
-`
+`;
 
 export const ProjContainer = styled.section`
   display: grid;
@@ -96,4 +92,4 @@ export const ProjContainer = styled.section`
   @media ${breakpoint.md1} {
     grid-template-columns: repeat(1, 0fr);
   }
-`
+`;
